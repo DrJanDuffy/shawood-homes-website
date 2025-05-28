@@ -5,8 +5,6 @@ import { insertLeadSchema, insertPropertySchema, insertMarketDataSchema } from "
 import { crmIntegration } from "./crm-integration";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-export async function registerRoutes(app: Express): Promise<Server> {):
-
   // SEO Routes
   app.get("/sitemap.xml", (req, res) => {
     res.set('Content-Type', 'text/xml');
@@ -38,14 +36,15 @@ export async function registerRoutes(app: Express): Promise<Server> {):
   </url>
 </urlset>`);
   });
+
   app.get("/robots.txt", (req, res) => {
     res.set('Content-Type', 'text/plain');
     res.send(`User-agent: *
 Allow: /
-Sitemap: https://shawoodhomes.com/sitemap.xml
-Host: shawoodhomes.com`);
+Sitemap: https://shawoodhomes.com/sitemap.xml`);
   });
-    // Properties
+
+  // Properties
   app.get("/api/properties", async (req, res) => {
     try {
       const status = req.query.status as string;
@@ -127,10 +126,8 @@ Host: shawoodhomes.com`);
     try {
       const validatedData = insertLeadSchema.parse(req.body);
       
-      // Create lead in local database
       const lead = await storage.createLead(validatedData);
       
-      // Send lead to Follow Up Boss CRM
       const crmResult = await crmIntegration.createLead({
         name: `${validatedData.firstName} ${validatedData.lastName}`,
         email: validatedData.email,
