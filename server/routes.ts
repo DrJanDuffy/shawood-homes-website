@@ -45,8 +45,7 @@ Allow: /
 Sitemap: https://shawoodhomes.com/sitemap.xml
 Host: shawoodhomes.com`);
   });
-  
-  // Properties
+    // Properties
   app.get("/api/properties", async (req, res) => {
     try {
       const status = req.query.status as string;
