@@ -1,5 +1,6 @@
 import { Mountain, GraduationCap, ShoppingBag, TreePine } from "lucide-react";
 import { InteractiveMap } from "./InteractiveMap";
+import { imageUrls } from "@/lib/imageUrls";
 
 export function WhyChooseArcadia() {
   return (

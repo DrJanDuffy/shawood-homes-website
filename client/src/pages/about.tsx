@@ -1,4 +1,5 @@
 import { Award, Star, Home, Users, Phone, Mail, Calendar, MapPin } from "lucide-react";
+import { imageUrls } from "@/lib/imageUrls";
 
 export default function About() {
   return (
