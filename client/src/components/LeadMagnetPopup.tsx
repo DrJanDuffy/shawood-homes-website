@@ -98,6 +98,33 @@ export function LeadMagnetPopup() {
     localStorage.setItem('leadMagnetPopupClosed', 'true');
   };
 
+  // Close on escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isVisible) {
+        handleClose();
+      }
+    };
+    
+    if (isVisible) {
+      document.addEventListener('keydown', handleEscape);
+      // Prevent body scroll when popup is open
+      document.body.style.overflow = 'hidden';
+    }
+    
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isVisible]);
+
+  // Close on outside click
+  const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) {
+      handleClose();
+    }
+  };
+
   // Check if popup was already closed in this session
   useEffect(() => {
     const wasClosed = localStorage.getItem('leadMagnetPopupClosed');
@@ -109,61 +136,64 @@ export function LeadMagnetPopup() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-xl max-w-md w-full shadow-2xl relative animate-fade-in">
+    <div 
+      className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+      onClick={handleBackdropClick}
+    >
+      <div className="bg-white rounded-xl max-w-sm w-full shadow-2xl relative animate-fade-in max-h-[90vh] overflow-y-auto">
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 z-10 transition-colors"
+          className="absolute top-3 right-3 text-gray-400 hover:text-gray-900 hover:bg-gray-100 rounded-full p-1 z-20 transition-all"
           aria-label="Close popup"
           title="Close"
         >
-          <X className="w-6 h-6" />
+          <X className="w-5 h-5" />
         </button>
 
-        <div className="p-6">
+        <div className="p-5">
           {/* Header */}
-          <div className="text-center mb-6">
-            <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
-              <Download className="w-8 h-8 text-white" />
+          <div className="text-center mb-4">
+            <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-3">
+              <Download className="w-6 h-6 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">
-              FREE Summerlin West Market Report
+            <h3 className="text-xl font-bold text-gray-900 mb-2">
+              FREE Market Report
             </h3>
-            <p className="text-gray-600">
-              Get exclusive insights on luxury home values ($2M-$4M), market trends, and upcoming inventory in the guard-gated 89135 area. Includes recent sales data and price predictions.
+            <p className="text-sm text-gray-600">
+              Get exclusive insights on luxury home values ($2M-$4M) and market trends in the guard-gated 89135 area.
             </p>
           </div>
 
-          {/* Value bullets */}
-          <div className="mb-6 space-y-2">
-            <div className="flex items-center space-x-2 text-sm">
-              <span className="text-green-500">✓</span>
-              <span>Current market values for Arcadia Homes Las Vegas</span>
+          {/* Value bullets - more compact */}
+          <div className="mb-4 grid grid-cols-2 gap-2 text-xs">
+            <div className="flex items-start space-x-1">
+              <span className="text-green-500 mt-0.5">✓</span>
+              <span>Market values</span>
             </div>
-            <div className="flex items-center space-x-2 text-sm">
-              <span className="text-green-500">✓</span>
-              <span>Upcoming luxury listings (not public yet)</span>
+            <div className="flex items-start space-x-1">
+              <span className="text-green-500 mt-0.5">✓</span>
+              <span>Upcoming listings</span>
             </div>
-            <div className="flex items-center space-x-2 text-sm">
-              <span className="text-green-500">✓</span>
-              <span>Neighborhood investment outlook</span>
+            <div className="flex items-start space-x-1">
+              <span className="text-green-500 mt-0.5">✓</span>
+              <span>Investment outlook</span>
             </div>
-            <div className="flex items-center space-x-2 text-sm">
-              <span className="text-green-500">✓</span>
-              <span>Dr. Duffy's insider market predictions</span>
+            <div className="flex items-start space-x-1">
+              <span className="text-green-500 mt-0.5">✓</span>
+              <span>Insider predictions</span>
             </div>
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="grid grid-cols-2 gap-3">
+          <form onSubmit={handleSubmit} className="space-y-3" onClick={(e) => e.stopPropagation()}>
+            <div className="grid grid-cols-2 gap-2">
               <Input
                 type="text"
                 placeholder="First Name"
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
                 required
-                className="w-full"
+                className="w-full text-sm"
               />
               <Input
                 type="text"
@@ -171,85 +201,83 @@ export function LeadMagnetPopup() {
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
                 required
-                className="w-full"
+                className="w-full text-sm"
               />
             </div>
-            <div>
-              <Input
-                type="email"
-                placeholder="Your email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="w-full"
-              />
-            </div>
-            <div>
-              <Input
-                type="tel"
-                placeholder="(702) 500-0337"
-                value={phone}
-                onChange={(e) => {
-                  const formatted = formatPhoneNumber(e.target.value);
-                  setPhone(formatted);
-                }}
-                maxLength={14}
-                required
-                className="w-full"
-              />
-            </div>
+            <Input
+              type="email"
+              placeholder="Your email address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="w-full text-sm"
+            />
+            <Input
+              type="tel"
+              placeholder="Phone number"
+              value={phone}
+              onChange={(e) => {
+                const formatted = formatPhoneNumber(e.target.value);
+                setPhone(formatted);
+              }}
+              maxLength={14}
+              required
+              className="w-full text-sm"
+            />
             
             <Button 
               type="submit" 
               disabled={createLead.isPending || isSuccess}
-              className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold py-3 relative overflow-hidden"
+              className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold py-2.5 text-sm"
             >
               {createLead.isPending ? (
                 <>
                   <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                  Sending Report...
+                  Sending...
                 </>
               ) : isSuccess ? (
                 <>
                   <CheckCircle2 className="w-4 h-4 mr-2" />
-                  Success! Check your email
+                  Success!
                 </>
               ) : (
                 <>
                   <Download className="w-4 h-4 mr-2" />
-                  Get FREE Market Report
+                  Get FREE Report
                 </>
               )}
             </Button>
           </form>
 
           {/* Alternative contact methods */}
-          <div className="mt-6 pt-4 border-t border-gray-200">
-            <p className="text-center text-sm text-gray-600 mb-3">
+          <div className="mt-4 pt-3 border-t border-gray-200">
+            <p className="text-center text-xs text-gray-600 mb-2">
               Prefer to speak directly?
             </p>
-            <div className="flex space-x-3">
+            <div className="flex space-x-2">
               <a
                 href="tel:702-500-0337"
-                className="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-2 rounded-lg text-sm font-medium flex items-center justify-center space-x-1"
+                className="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-2 rounded-lg text-xs font-medium flex items-center justify-center space-x-1"
+                onClick={(e) => e.stopPropagation()}
               >
-                <Phone className="w-4 h-4" />
-                <span>Call Now</span>
+                <Phone className="w-3 h-3" />
+                <span>Call</span>
               </a>
               <a
                 href="mailto:DrDuffy@arcadiahomeslasvegas.com"
-                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 rounded-lg text-sm font-medium flex items-center justify-center space-x-1"
+                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 rounded-lg text-xs font-medium flex items-center justify-center space-x-1"
+                onClick={(e) => e.stopPropagation()}
               >
-                <Mail className="w-4 h-4" />
+                <Mail className="w-3 h-3" />
                 <span>Email</span>
               </a>
             </div>
           </div>
 
           {/* Trust indicators */}
-          <div className="mt-4 text-center">
+          <div className="mt-3 text-center">
             <p className="text-xs text-gray-500">
-              🔒 Your information is secure and never shared
+              🔒 Secure & confidential
             </p>
           </div>
         </div>
