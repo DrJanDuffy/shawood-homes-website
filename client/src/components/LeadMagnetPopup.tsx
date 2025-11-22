@@ -26,6 +26,13 @@ export function LeadMagnetPopup() {
   const { toast } = useToast();
 
   useEffect(() => {
+    // Check if popup was already closed in this session
+    const wasClosed = localStorage.getItem('leadMagnetPopupClosed');
+    if (wasClosed === 'true') {
+      setHasShown(true);
+      return;
+    }
+
     // Exit intent detection - only show when user is leaving the site
     const handleMouseLeave = (e: MouseEvent) => {
       // Only trigger if mouse is leaving from the top of the page
@@ -35,10 +42,10 @@ export function LeadMagnetPopup() {
       }
     };
 
-    // Add delay to prevent immediate triggering (wait at least 3 seconds)
+    // Add delay to prevent immediate triggering (wait at least 5 seconds for better UX)
     const timer = setTimeout(() => {
       document.addEventListener('mouseleave', handleMouseLeave);
-    }, 3000);
+    }, 5000);
 
     return () => {
       clearTimeout(timer);
@@ -98,23 +105,24 @@ export function LeadMagnetPopup() {
     localStorage.setItem('leadMagnetPopupClosed', 'true');
   };
 
-  // Close on escape key
+  // Close on escape key and prevent body scroll
   useEffect(() => {
+    if (!isVisible) return;
+
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isVisible) {
+      if (e.key === 'Escape') {
         handleClose();
       }
     };
     
-    if (isVisible) {
-      document.addEventListener('keydown', handleEscape);
-      // Prevent body scroll when popup is open
-      document.body.style.overflow = 'hidden';
-    }
+    document.addEventListener('keydown', handleEscape);
+    // Prevent body scroll when popup is open
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
     
     return () => {
       document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = originalOverflow;
     };
   }, [isVisible]);
 
@@ -125,13 +133,6 @@ export function LeadMagnetPopup() {
     }
   };
 
-  // Check if popup was already closed in this session
-  useEffect(() => {
-    const wasClosed = localStorage.getItem('leadMagnetPopupClosed');
-    if (wasClosed === 'true') {
-      setHasShown(true);
-    }
-  }, []);
 
   if (!isVisible) return null;
 

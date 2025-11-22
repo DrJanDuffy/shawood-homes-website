@@ -2,29 +2,22 @@ import { useEffect, useState } from "react";
 import { Link } from "wouter";
 
 export function FeaturedHomes() {
-  const [scriptLoaded, setScriptLoaded] = useState(false);
-
   // Ensure RealScout script is loaded
   useEffect(() => {
     const checkScript = () => {
-      const script = document.querySelector('script[src*="realscout-web-components"]');
-      if (script) {
-        setScriptLoaded(true);
-        return;
-      }
+      // Check if script already exists
+      const existingScript = document.querySelector('script[src*="realscout-web-components"]');
+      if (existingScript) return;
       
-      // Check if custom elements are defined (indicates script loaded)
-      if (customElements.get('realscout-office-listings')) {
-        setScriptLoaded(true);
-        return;
-      }
+      // Check if custom elements are already defined
+      if (customElements.get('realscout-office-listings')) return;
 
       // Load script if not present
       const realScoutScript = document.createElement('script');
       realScoutScript.src = 'https://em.realscout.com/widgets/realscout-web-components.umd.js';
       realScoutScript.type = 'module';
-      realScoutScript.onload = () => setScriptLoaded(true);
       realScoutScript.onerror = () => {
+        // Silent fail in production
         if (process.env.NODE_ENV === 'development') {
           console.warn('RealScout script failed to load');
         }
@@ -32,10 +25,8 @@ export function FeaturedHomes() {
       document.head.appendChild(realScoutScript);
     };
 
-    // Check immediately
+    // Check immediately and after a short delay
     checkScript();
-
-    // Also check after a short delay in case script loads asynchronously
     const timer = setTimeout(checkScript, 500);
     
     return () => clearTimeout(timer);
