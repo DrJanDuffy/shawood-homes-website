@@ -137,6 +137,8 @@ export default function Gallery() {
             <button 
               onClick={closeLightbox}
               className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
+              aria-label="Close image viewer"
+              title="Close"
             >
               <X className="w-8 h-8" />
             </button>
@@ -145,6 +147,8 @@ export default function Gallery() {
             <button 
               onClick={prevImage}
               className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 transition-colors"
+              aria-label="Previous image"
+              title="Previous image"
             >
               <ChevronLeft className="w-12 h-12" />
             </button>
@@ -152,6 +156,8 @@ export default function Gallery() {
             <button 
               onClick={nextImage}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 transition-colors"
+              aria-label="Next image"
+              title="Next image"
             >
               <ChevronRight className="w-12 h-12" />
             </button>
