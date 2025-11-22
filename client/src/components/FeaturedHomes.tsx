@@ -1,16 +1,44 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "wouter";
 
 export function FeaturedHomes() {
+  const [scriptLoaded, setScriptLoaded] = useState(false);
+
   // Ensure RealScout script is loaded
   useEffect(() => {
-    const script = document.querySelector('script[src*="realscout-web-components"]');
-    if (!script) {
+    const checkScript = () => {
+      const script = document.querySelector('script[src*="realscout-web-components"]');
+      if (script) {
+        setScriptLoaded(true);
+        return;
+      }
+      
+      // Check if custom elements are defined (indicates script loaded)
+      if (customElements.get('realscout-office-listings')) {
+        setScriptLoaded(true);
+        return;
+      }
+
+      // Load script if not present
       const realScoutScript = document.createElement('script');
       realScoutScript.src = 'https://em.realscout.com/widgets/realscout-web-components.umd.js';
       realScoutScript.type = 'module';
+      realScoutScript.onload = () => setScriptLoaded(true);
+      realScoutScript.onerror = () => {
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('RealScout script failed to load');
+        }
+      };
       document.head.appendChild(realScoutScript);
-    }
+    };
+
+    // Check immediately
+    checkScript();
+
+    // Also check after a short delay in case script loads asynchronously
+    const timer = setTimeout(checkScript, 500);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   return (
