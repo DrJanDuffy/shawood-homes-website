@@ -138,7 +138,7 @@ export default function PropertyAlerts() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="tel:702-222-1964" 
+                href="tel:702-500-0337" 
                 className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Call Now: (702) 222-1964

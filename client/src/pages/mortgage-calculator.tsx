@@ -269,7 +269,7 @@ export default function MortgageCalculator() {
                     </Button>
                     <div className="grid grid-cols-2 gap-3">
                       <a 
-                        href="tel:702-222-1964"
+                        href="tel:702-500-0337"
                         className="btn-secondary text-center py-2"
                       >
                         Call Dr. Duffy
@@ -317,7 +317,7 @@ export default function MortgageCalculator() {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <a 
-                  href="tel:702-222-1964"
+                  href="tel:702-500-0337"
                   className="btn-primary py-3 text-center"
                 >
                   Discuss Your Home Value with Dr. Duffy

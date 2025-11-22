@@ -373,7 +373,7 @@ export default function MarketPredictions() {
                 <h3 className="text-xl font-bold mb-4">Take Action Now</h3>
                 <div className="space-y-3">
                   <a 
-                    href="tel:702-222-1964"
+                    href="tel:702-500-0337"
                     className="block w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-lg text-center transition-colors"
                   >
                     Schedule Market Strategy Call
