@@ -47,76 +47,13 @@ export default function Homes() {
         </div>
       </section>
 
-      {/* Filters */}
+      {/* Note: Filters are now handled by RealScout widget below */}
       <section className="py-8 bg-white border-b">
         <div className="container-max">
-          <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
-            <div className="flex flex-wrap gap-4 items-center">
-              <div className="flex items-center space-x-2">
-                <SlidersHorizontal className="w-5 h-5 text-gray-500" />
-                <span className="text-sm font-medium text-gray-700">Filters:</span>
-              </div>
-              
-              <Select value={statusFilter} onValueChange={setStatusFilter}>
-                <SelectTrigger className="w-40">
-                  <SelectValue placeholder="Status" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">All Status</SelectItem>
-                  <SelectItem value="active">Active</SelectItem>
-                  <SelectItem value="pending">Pending</SelectItem>
-                  <SelectItem value="sold">Sold</SelectItem>
-                </SelectContent>
-              </Select>
-
-              <div className="flex items-center space-x-2">
-                <Input
-                  type="number"
-                  placeholder="Min Price"
-                  value={priceMin}
-                  onChange={(e) => setPriceMin(e.target.value)}
-                  className="w-32"
-                />
-                <span className="text-gray-500">-</span>
-                <Input
-                  type="number"
-                  placeholder="Max Price"
-                  value={priceMax}
-                  onChange={(e) => setPriceMax(e.target.value)}
-                  className="w-32"
-                />
-              </div>
-
-              <Select value={bedroomsFilter} onValueChange={setBedroomsFilter}>
-                <SelectTrigger className="w-40">
-                  <SelectValue placeholder="Bedrooms" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">Any Bedrooms</SelectItem>
-                  <SelectItem value="3">3+ Bedrooms</SelectItem>
-                  <SelectItem value="4">4+ Bedrooms</SelectItem>
-                  <SelectItem value="5">5+ Bedrooms</SelectItem>
-                  <SelectItem value="6">6+ Bedrooms</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div className="flex items-center space-x-4">
-              <span className="text-sm text-gray-600">
-                {filteredProperties?.length || 0} homes found
-              </span>
-              <Button
-                variant="outline"
-                onClick={() => {
-                  setStatusFilter("all");
-                  setPriceMin("");
-                  setPriceMax("");
-                  setBedroomsFilter("all");
-                }}
-              >
-                Clear Filters
-              </Button>
-            </div>
+          <div className="text-center">
+            <p className="text-gray-600">
+              Use the filters in the RealScout widget below to search by price, bedrooms, bathrooms, and more.
+            </p>
           </div>
         </div>
       </section>
