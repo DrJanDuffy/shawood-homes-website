@@ -32,7 +32,10 @@ export function ExitIntentPopup() {
         try {
           (window as any).Homebot('#homebot_homeowner_popup', '35de8cf0a487cf0fec06278f2023805ea02eba0b58960a43');
         } catch (error) {
-          console.log('Homebot widget initialization in popup');
+          // Homebot widget initialization failed silently
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('Homebot widget initialization in popup failed:', error);
+          }
         }
       }, 100);
     }
