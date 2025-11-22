@@ -1,7 +1,8 @@
 export function InteractiveMap() {
   // Arcadia Homes Las Vegas location in Summerlin West (89135)
-  // Coordinates: approximately 36.15°N, 115.32°W
-  const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3214.7234567891234!2d-115.32!3d36.15!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c8b8b8b8b8b8%3A0x0!2zMzbCsDA5JzAwLjAiTiAxMTXCsDE5JzEyLjAiVw!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus&q=Summerlin+West+Las+Vegas+NV+89135";
+  // Google Maps embed with search for Summerlin West area
+  // This will show the general area - for exact location, get embed URL from Google Maps
+  const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3214.7234567891234!2d-115.32!3d36.15!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDA5JzAwLjAiTiAxMTXCsDE5JzEyLjAiVw!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus&q=Summerlin+West+Las+Vegas+NV+89135";
 
   return (
     <div className="bg-gray-50 rounded-2xl p-8">
@@ -39,7 +40,7 @@ export function InteractiveMap() {
 
       {/* Google Maps Embed */}
       <div className="rounded-xl overflow-hidden shadow-xl mb-6">
-        <div className="relative">
+        <div className="relative bg-gray-200">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3214.7234567891234!2d-115.32!3d36.15!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDA5JzAwLjAiTiAxMTXCsDE5JzEyLjAiVw!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus&q=Summerlin+West+Las+Vegas+NV+89135"
             width="100%"
@@ -50,7 +51,16 @@ export function InteractiveMap() {
             referrerPolicy="no-referrer-when-downgrade"
             title="Arcadia Homes Las Vegas Summerlin West Location with Nearby Amenities"
             className="w-full"
+            aria-label="Interactive map showing Arcadia Homes Las Vegas location in Summerlin West with nearby amenities including Red Rock Canyon, Downtown Summerlin, and Harry Reid Airport"
           />
+        </div>
+        <div className="mt-4 text-center bg-white p-4 rounded-lg">
+          <p className="text-sm text-gray-700">
+            <span className="font-semibold text-gray-900">📍 Location:</span> Summerlin West, Las Vegas, NV 89135
+          </p>
+          <p className="text-xs text-gray-500 mt-2">
+            Use the map controls above to explore nearby amenities, get directions, and view the area in detail
+          </p>
         </div>
       </div>
 
