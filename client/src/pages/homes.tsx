@@ -132,7 +132,7 @@ export default function Homes() {
             </p>
             
             <div dangerouslySetInnerHTML={{
-              __html: `<realscout-office-listings agent-encoded-id="QWdlbnQtMjI1MDUw" sort-order="NEWEST" listing-status="For Sale" property-types="SFR,TC" price-min="450000" price-max="4000000"></realscout-office-listings>`
+              __html: `<realscout-office-listings agent-encoded-id="QWdlbnQtMjI1MDUw" sort-order="NEWEST" listing-status="For Sale" property-types="SFR,TC" price-min="2000000" price-max="4000000"></realscout-office-listings>`
             }} />
             
             <div className="mt-8 text-center">
