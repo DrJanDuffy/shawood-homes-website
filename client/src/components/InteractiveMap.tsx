@@ -1,7 +1,7 @@
 export function InteractiveMap() {
-  // Arcadia Homes Las Vegas location: 1020 Natural Harmony Street, Las Vegas, NV 89135
-  // Using simple Google Maps embed URL with address query
-  const mapEmbedUrl = "https://www.google.com/maps?q=1020+Natural+Harmony+Street,+Las+Vegas,+NV+89135&output=embed";
+  // Arcadia Homes Las Vegas location: Summerlin West, Las Vegas, NV 89135
+  // Using simple Google Maps embed URL with Summerlin West query
+  const mapEmbedUrl = "https://www.google.com/maps?q=Summerlin+West,+Las+Vegas,+NV+89135&output=embed";
 
   return (
     <div className="bg-gray-50 rounded-2xl p-8">
@@ -41,7 +41,7 @@ export function InteractiveMap() {
       <div className="rounded-xl overflow-hidden shadow-xl mb-6">
         <div className="relative bg-gray-200">
           <iframe
-            src="https://www.google.com/maps?q=1020+Natural+Harmony+Street,+Las+Vegas,+NV+89135&output=embed"
+            src="https://www.google.com/maps?q=Summerlin+West,+Las+Vegas,+NV+89135&output=embed"
             width="100%"
             height="500"
             style={{ border: 0 }}
@@ -50,7 +50,7 @@ export function InteractiveMap() {
             referrerPolicy="no-referrer-when-downgrade"
             title="Arcadia Homes Las Vegas Summerlin West Location with Nearby Amenities"
             className="w-full"
-            aria-label="Interactive map showing Arcadia Homes Las Vegas location at 1020 Natural Harmony Street in Summerlin West with nearby amenities including Red Rock Canyon, Downtown Summerlin, and Harry Reid Airport"
+            aria-label="Interactive map showing Arcadia Homes Las Vegas location in Summerlin West with nearby amenities including Red Rock Canyon, Downtown Summerlin, and Harry Reid Airport"
           />
         </div>
         <div className="mt-4 text-center bg-white p-4 rounded-lg">
@@ -127,7 +127,7 @@ export function InteractiveMap() {
         <div className="mt-8 pt-6 border-t border-gray-200">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 
-              href="https://www.google.com/maps/search/1020+Natural+Harmony+Street,+Las+Vegas,+NV+89135"
+              href="https://www.google.com/maps/search/Summerlin+West,+Las+Vegas,+NV+89135"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-flex items-center space-x-2"
