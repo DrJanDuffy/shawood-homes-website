@@ -55,7 +55,7 @@ export function InteractiveMap() {
         </div>
         <div className="mt-4 text-center bg-white p-4 rounded-lg">
           <p className="text-sm text-gray-700">
-            <span className="font-semibold text-gray-900">📍 Location:</span> 1020 Natural Harmony Street, Las Vegas, NV 89135
+            <span className="font-semibold text-gray-900">📍 Location:</span> Summerlin West
           </p>
           <p className="text-xs text-gray-500 mt-2">
             Use the map controls above to explore nearby amenities, get directions, and view the area in detail
@@ -144,7 +144,7 @@ export function InteractiveMap() {
             </a>
           </div>
           <p className="text-center text-sm text-gray-500 mt-4">
-            Address: 1020 Natural Harmony Street, Las Vegas, NV 89135
+            Location: Summerlin West, Las Vegas, NV 89135
           </p>
         </div>
       </div>
