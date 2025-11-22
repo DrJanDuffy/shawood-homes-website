@@ -55,17 +55,24 @@ export default function About() {
               
               <div className="space-y-6 text-lg text-gray-600">
                 <p>
-                  Dr. Jan Duffy brings a unique combination of academic rigor and real estate expertise 
-                  to every transaction. With a doctoral degree in business administration and over 
-                  15 years of experience in Las Vegas luxury real estate, she has become the 
-                  go-to specialist for Arcadia Homes Las Vegas.
+                  <span className="font-semibold text-gray-900">📍 Hyper-Local Advantage:</span> Dr. Jan Duffy brings a unique combination of academic rigor 
+                  and hyper-local real estate expertise to every Arcadia Homes Las Vegas transaction. With a doctoral degree 
+                  in business administration and 15+ years exclusively serving Summerlin West's guard-gated communities in 
+                  the 89135 zip code, she has become the definitive expert for Arcadia Homes Las Vegas buyers and sellers.
                 </p>
                 
                 <p>
-                  As a long-time Summerlin resident herself, Dr. Duffy understands the nuances 
-                  of each neighborhood and community. Her deep knowledge of Arcadia Homes Las Vegas comes 
-                  from years of dedicated focus on this exclusive enclave, where she has 
-                  successfully represented both buyers and sellers.
+                  <span className="font-semibold text-gray-900">🎯 Service-Focused Expertise:</span> As a Summerlin West resident who lives within minutes 
+                  of Arcadia Homes Las Vegas, Dr. Duffy provides hyper-local insights that only come from daily life in the 
+                  community. Her deep knowledge comes from years of dedicated focus on this exclusive guard-gated enclave, 
+                  where she has successfully represented both buyers and sellers in $2M-$4M luxury home transactions.
+                </p>
+                
+                <p>
+                  <span className="font-semibold text-gray-900">🏡 Arcadia-Specific Services:</span> Pre-market property previews, guard-gate community 
+                  insights, Red Rock Canyon view assessments, custom home builder relationships, and exclusive access to 
+                  Arcadia Homes Las Vegas inventory before it hits the MLS. Dr. Duffy doesn't just list homes—she provides 
+                  concierge-level service tailored specifically to the Arcadia Homes Las Vegas community.
                 </p>
                 
                 <p>
