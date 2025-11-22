@@ -8,6 +8,7 @@ import { apiRequest } from "@/lib/queryClient";
 
 export function LeadMagnetPopup() {
   const [isVisible, setIsVisible] = useState(false);
+  const [hasShown, setHasShown] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -16,13 +17,25 @@ export function LeadMagnetPopup() {
   const { toast } = useToast();
 
   useEffect(() => {
-    // Show popup after 5 seconds
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 5000);
+    // Exit intent detection - only show when user is leaving the site
+    const handleMouseLeave = (e: MouseEvent) => {
+      // Only trigger if mouse is leaving from the top of the page
+      if (e.clientY <= 0 && !hasShown) {
+        setIsVisible(true);
+        setHasShown(true);
+      }
+    };
 
-    return () => clearTimeout(timer);
-  }, []);
+    // Add delay to prevent immediate triggering (wait at least 3 seconds)
+    const timer = setTimeout(() => {
+      document.addEventListener('mouseleave', handleMouseLeave);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, [hasShown]);
 
   const createLead = useMutation({
     mutationFn: async (data: any) => {
@@ -34,6 +47,8 @@ export function LeadMagnetPopup() {
         description: "Your exclusive market report is being sent to your email.",
       });
       setIsVisible(false);
+      // Store in localStorage to prevent showing again after successful submission
+      localStorage.setItem('leadMagnetPopupClosed', 'true');
     },
     onError: () => {
       toast({
@@ -62,18 +77,30 @@ export function LeadMagnetPopup() {
 
   const handleClose = () => {
     setIsVisible(false);
+    // Store in localStorage to prevent showing again in this session
+    localStorage.setItem('leadMagnetPopupClosed', 'true');
   };
+
+  // Check if popup was already closed in this session
+  useEffect(() => {
+    const wasClosed = localStorage.getItem('leadMagnetPopupClosed');
+    if (wasClosed === 'true') {
+      setHasShown(true);
+    }
+  }, []);
 
   if (!isVisible) return null;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-xl max-w-md w-full shadow-2xl relative">
+      <div className="bg-white rounded-xl max-w-md w-full shadow-2xl relative animate-fade-in">
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 z-10 transition-colors"
+          aria-label="Close popup"
+          title="Close"
         >
-          <X className="w-5 h-5" />
+          <X className="w-6 h-6" />
         </button>
 
         <div className="p-6">
@@ -174,7 +201,7 @@ export function LeadMagnetPopup() {
             </p>
             <div className="flex space-x-3">
               <a
-                href="tel:702-555-0123"
+                href="tel:702-500-0337"
                 className="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-2 rounded-lg text-sm font-medium flex items-center justify-center space-x-1"
               >
                 <Phone className="w-4 h-4" />
