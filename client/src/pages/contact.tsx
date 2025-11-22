@@ -97,7 +97,7 @@ export default function Contact() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Quick Contact</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <a
-                    href="tel:702-555-0123"
+                    href="tel:702-500-0337"
                     className="flex items-center justify-center space-x-2 btn-primary"
                   >
                     <Phone className="w-4 h-4" />
@@ -304,11 +304,11 @@ export default function Contact() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:702-555-0123"
+              href="tel:702-500-0337"
               className="flex items-center justify-center space-x-2 btn-secondary"
             >
               <Phone className="w-4 h-4" />
-              <span>Call (702) 555-0123</span>
+              <span>Call (702) 500-0337</span>
             </a>
             <a
                       href="mailto:DrDuffy@arcadiahomeslasvegas.com"

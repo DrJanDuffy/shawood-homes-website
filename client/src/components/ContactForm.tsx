@@ -111,7 +111,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className="text-gray-700">Phone</FormLabel>
               <FormControl>
-                <Input type="tel" placeholder="(702) 555-0123" {...field} />
+                <Input type="tel" placeholder="(702) 500-0337" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

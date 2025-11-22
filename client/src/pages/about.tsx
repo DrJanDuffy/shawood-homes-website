@@ -311,7 +311,7 @@ export default function About() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:702-555-0123"
+              href="tel:702-500-0337"
               className="flex items-center justify-center space-x-2 btn-secondary"
             >
               <Phone className="w-4 h-4" />

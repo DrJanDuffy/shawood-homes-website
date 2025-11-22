@@ -297,7 +297,7 @@ export default function Schools() {
             school enrollment and the Arcadia Homes Las Vegas advantage.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:702-555-0123" className="btn-secondary">
+            <a href="tel:702-500-0337" className="btn-secondary">
               Discuss School Options
             </a>
             <a href="/contact" className="btn-primary bg-white text-primary hover:bg-gray-100">

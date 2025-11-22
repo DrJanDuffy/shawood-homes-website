@@ -261,7 +261,7 @@ export default function Amenities() {
             the perfect blend of luxury living and convenient access to everything Las Vegas offers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:702-555-0123" className="btn-secondary">
+            <a href="tel:702-500-0337" className="btn-secondary">
               Schedule Tour
             </a>
             <a href="/contact" className="btn-primary bg-white text-primary hover:bg-gray-100">

@@ -46,7 +46,7 @@ export function AboutDrDuffy() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="tel:702-555-0123"
+                href="tel:702-500-0337"
                 className="flex items-center justify-center space-x-2 btn-primary"
               >
                 <Phone className="w-4 h-4" />
