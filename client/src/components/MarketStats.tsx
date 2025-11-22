@@ -20,12 +20,12 @@ export function MarketStats() {
     medianPrice: 3000000,
     pricePerSqft: 450,
     averageDaysOnMarket: 45,
-    monthsOfInventory: 2.5,
-    priceAppreciation: 5.2,
+    monthsOfInventory: "2.5",
+    priceAppreciation: "5.2",
     activeListings: 12,
     homesSold: 8,
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
   };
 
   const latest = marketData?.[0] || (marketData && marketData.length > 0 ? undefined : fallbackData);
