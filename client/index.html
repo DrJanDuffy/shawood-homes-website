@@ -170,17 +170,32 @@
         --rs-listing-price-color: rgb(35, 93, 137);
         --rs-listing-title-color: #1f2937;
         --rs-listing-details-color: #6b7280;
+        --rs-listing-button-color: rgb(35, 93, 137);
+        --rs-listing-button-hover-color: rgb(28, 75, 110);
         width: 100%;
         min-height: 400px;
+        display: block;
       }
       
-      realscout-office-listings::part(listing-card) {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      /* Ensure RealScout widgets are visible and properly styled */
+      realscout-office-listings,
+      realscout-home-value,
+      realscout-advanced-search {
+        font-family: inherit;
       }
       
-      realscout-office-listings::part(listing-card:hover) {
-        transform: translateY(-4px);
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      /* Loading state for RealScout widgets */
+      realscout-office-listings:not(:defined) {
+        min-height: 400px;
+        display: block;
+        background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+        background-size: 200% 100%;
+        animation: loading 1.5s infinite;
+      }
+      
+      @keyframes loading {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
       }
     </style>
   </head>

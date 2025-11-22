@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "wouter";
 import { type Property } from "@shared/schema";
 import { PropertyCard } from "@/components/PropertyCard";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -141,7 +142,7 @@ export default function Homes() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="tel:702-222-1964"
+                  href="tel:702-500-0337"
                   className="btn-primary"
                 >
                   Schedule Private Showing
