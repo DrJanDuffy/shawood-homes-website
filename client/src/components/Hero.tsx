@@ -17,6 +17,8 @@ export function Hero() {
           src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2075&q=80"
           alt="Luxury home in Arcadia Homes Las Vegas Summerlin"
           className="w-full h-full object-cover"
+          fetchPriority="high"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
       </div>
@@ -53,10 +55,18 @@ export function Hero() {
 
         {/* Primary CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-          <Link href="/homes" className="btn-primary text-lg px-8 py-4 shadow-xl hover:scale-105 transition-transform">
+          <Link 
+            href="/homes" 
+            className="btn-primary text-lg px-8 py-4 shadow-xl hover:scale-105 transition-transform"
+            aria-label="View available luxury homes in Arcadia Homes Las Vegas"
+          >
             View Exclusive Homes
           </Link>
-          <Link href="/contact" className="btn-secondary text-lg px-8 py-4 shadow-xl hover:scale-105 transition-transform">
+          <Link 
+            href="/contact" 
+            className="btn-secondary text-lg px-8 py-4 shadow-xl hover:scale-105 transition-transform"
+            aria-label="Schedule a consultation with Dr. Jan Duffy"
+          >
             Schedule Consultation
           </Link>
         </div>
@@ -72,7 +82,11 @@ export function Hero() {
           <Link href="/mortgage-calculator" className="bg-white/90 hover:bg-white text-gray-900 px-6 py-3 rounded-lg font-medium shadow-lg transition-all hover:scale-105">
             🧮 Calculator
           </Link>
-          <a href="mailto:DrDuffy@arcadiahomeslasvegas.com" className="bg-white/90 hover:bg-white text-gray-900 px-6 py-3 rounded-lg font-medium shadow-lg transition-all hover:scale-105 flex items-center space-x-2">
+          <a 
+            href="mailto:DrDuffy@arcadiahomeslasvegas.com" 
+            className="bg-white/90 hover:bg-white text-gray-900 px-6 py-3 rounded-lg font-medium shadow-lg transition-all hover:scale-105 flex items-center space-x-2"
+            aria-label="Email Dr. Jan Duffy at DrDuffy@arcadiahomeslasvegas.com"
+          >
             <span>✉️</span>
             <span>Email</span>
           </a>

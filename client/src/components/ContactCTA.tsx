@@ -17,27 +17,35 @@ export function ContactCTA() {
             
             {/* Contact Info */}
             <div className="space-y-4">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+              <a 
+                href="tel:702-500-0337" 
+                className="flex items-center space-x-4 p-4 bg-white/10 hover:bg-white/20 rounded-lg transition-all group cursor-pointer"
+                aria-label="Call Dr. Jan Duffy at (702) 500-0337"
+              >
+                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <div className="font-semibold">Call or Text</div>
-                  <div className="text-gray-300">(702) 500-0337</div>
+                  <div className="text-gray-300 group-hover:text-white transition-colors">(702) 500-0337</div>
                 </div>
-              </div>
+              </a>
               
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center">
+              <a 
+                href="mailto:DrDuffy@arcadiahomeslasvegas.com" 
+                className="flex items-center space-x-4 p-4 bg-white/10 hover:bg-white/20 rounded-lg transition-all group cursor-pointer"
+                aria-label="Email Dr. Jan Duffy at DrDuffy@arcadiahomeslasvegas.com"
+              >
+                <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Mail className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <div className="font-semibold">Email</div>
-                  <div className="text-gray-300">DrDuffy@arcadiahomeslasvegas.com</div>
+                  <div className="text-gray-300 group-hover:text-white transition-colors">DrDuffy@arcadiahomeslasvegas.com</div>
                 </div>
-              </div>
+              </a>
               
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
                 <div className="w-12 h-12 bg-yellow-600 rounded-lg flex items-center justify-center">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>

@@ -67,12 +67,12 @@ export function LocalLandmarks() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {landmarks.map((landmark, index) => (
-            <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+            <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-200 hover:border-primary/30">
               <div className="flex items-start justify-between mb-4">
-                <h3 className="text-xl font-semibold text-gray-900 pr-4">
+                <h3 className="text-xl font-semibold text-gray-900 pr-4 group-hover:text-primary transition-colors">
                   {landmark.name}
                 </h3>
-                <div className="flex items-center text-primary text-sm font-medium">
+                <div className="flex items-center text-primary text-sm font-medium bg-primary/10 px-3 py-1 rounded-full">
                   <Car className="w-4 h-4 mr-1" />
                   {landmark.driveTime}
                 </div>
@@ -93,7 +93,7 @@ export function LocalLandmarks() {
                   {landmark.highlights.map((highlight, idx) => (
                     <span 
                       key={idx}
-                      className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full"
+                      className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full hover:bg-primary/20 transition-colors"
                     >
                       {highlight}
                     </span>
@@ -105,22 +105,22 @@ export function LocalLandmarks() {
         </div>
 
         {/* ZIP Code Info */}
-        <div className="mt-16 bg-gradient-to-r from-primary to-secondary rounded-xl p-8 text-white text-center">
+        <div className="mt-16 bg-gradient-to-r from-primary to-secondary rounded-xl p-8 text-white text-center shadow-xl hover:shadow-2xl transition-shadow duration-300">
           <h3 className="text-3xl font-bold mb-4">89135 ZIP Code</h3>
           <p className="text-xl mb-6">
             Summerlin West's premier residential area featuring master-planned communities, 
             top-rated schools, and easy access to Red Rock Canyon.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div>
+            <div className="bg-white/10 rounded-lg p-4 hover:bg-white/20 transition-colors">
               <div className="text-3xl font-bold">15 min</div>
               <div className="text-sm opacity-90">to Las Vegas Strip</div>
             </div>
-            <div>
+            <div className="bg-white/10 rounded-lg p-4 hover:bg-white/20 transition-colors">
               <div className="text-3xl font-bold">A+</div>
               <div className="text-sm opacity-90">School District Rating</div>
             </div>
-            <div>
+            <div className="bg-white/10 rounded-lg p-4 hover:bg-white/20 transition-colors">
               <div className="text-3xl font-bold">2,200+</div>
               <div className="text-sm opacity-90">Elevation (feet)</div>
             </div>

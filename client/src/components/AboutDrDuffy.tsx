@@ -58,11 +58,13 @@ export function AboutDrDuffy() {
             </div>
           </div>
 
-          <div className="order-1 lg:order-2">
+          <div className="order-1 lg:order-2 relative group overflow-hidden rounded-xl shadow-lg">
             <img
               src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-              alt="Dr. Jan Duffy, Arcadia Homes Las Vegas real estate specialist"
-              className="rounded-xl shadow-lg w-full h-auto"
+              alt="Dr. Jan Duffy, licensed real estate agent and Arcadia Homes Las Vegas specialist in Summerlin West"
+              className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

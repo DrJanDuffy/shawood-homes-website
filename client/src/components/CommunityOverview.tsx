@@ -16,11 +16,15 @@ export function CommunityOverview() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="order-2 lg:order-1">
-            <img
-              src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-              alt="Aerial view of Arcadia Homes Las Vegas luxury community"
-              className="rounded-xl shadow-lg w-full h-auto"
-            />
+            <div className="relative group overflow-hidden rounded-xl shadow-lg">
+              <img
+                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Aerial view of Arcadia Homes Las Vegas luxury community showing guard-gated homes with Red Rock Canyon views"
+                className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
           </div>
           <div className="order-1 lg:order-2 space-y-6">
             <h3 className="text-3xl font-display font-semibold text-gray-900">

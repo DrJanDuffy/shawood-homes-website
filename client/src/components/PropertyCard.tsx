@@ -16,16 +16,28 @@ export function PropertyCard({ property }: PropertyCardProps) {
 
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-      <div className="relative">
-        <img
-          src={property.imageUrl || "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"}
-          alt={`Home at ${property.address}`}
-          className="w-full h-64 object-cover"
-        />
-        <Badge className={`absolute top-4 right-4 ${statusColors[property.status as keyof typeof statusColors]}`}>
-          {property.status.charAt(0).toUpperCase() + property.status.slice(1)}
-        </Badge>
-      </div>
+      <Link 
+        href={`/homes/${property.id}`} 
+        className="block"
+        aria-label={`View details for ${property.bedrooms} bedroom home at ${property.address} priced at ${formatPrice(property.price)}`}
+      >
+        <div className="relative group overflow-hidden">
+          <img
+            src={property.imageUrl || "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"}
+            alt={`${property.bedrooms} bedroom, ${formatDecimal(property.bathrooms)} bathroom home at ${property.address} in Arcadia Homes Las Vegas`}
+            className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+            loading="lazy"
+            decoding="async"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <Badge className={`absolute top-4 right-4 ${statusColors[property.status as keyof typeof statusColors]}`}>
+            {property.status.charAt(0).toUpperCase() + property.status.slice(1)}
+          </Badge>
+          <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p className="text-white font-semibold text-sm">Click to view details</p>
+          </div>
+        </div>
+      </Link>
       
       <div className="p-6">
         <div className="flex justify-between items-start mb-4">
@@ -59,7 +71,8 @@ export function PropertyCard({ property }: PropertyCardProps) {
         
         <Link
           href={`/homes/${property.id}`}
-          className="w-full btn-primary text-center block"
+          className="w-full btn-primary text-center block hover:shadow-lg transition-all"
+          aria-label={`View full details for ${property.address}`}
         >
           View Details
         </Link>
