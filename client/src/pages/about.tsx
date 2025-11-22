@@ -35,9 +35,11 @@ export default function About() {
             </div>
             <div className="order-1 lg:order-2">
               <img
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80"
-                alt="Dr. Jan Duffy, Arcadia Homes Las Vegas real estate specialist"
+                src={imageUrls.about.professional}
+                alt="Dr. Jan Duffy, Arcadia Homes Las Vegas real estate specialist in Summerlin West"
                 className="rounded-xl shadow-lg w-full h-auto"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

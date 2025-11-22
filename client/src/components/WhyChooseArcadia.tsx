@@ -67,8 +67,8 @@ export function WhyChooseArcadia() {
 
           <div className="relative group overflow-hidden rounded-xl shadow-lg">
             <img
-              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-              alt="Red Rock Canyon landscape with dramatic sandstone formations near Arcadia Homes Las Vegas in Summerlin West"
+              src={imageUrls.community.golfCourse}
+              alt="Red Rock Canyon landscape with dramatic sandstone formations near Arcadia Homes Las Vegas in Summerlin West, showing luxury golf course community"
               className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
               loading="lazy"
               decoding="async"

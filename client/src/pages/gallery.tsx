@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { imageUrls } from "@/lib/imageUrls";
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
@@ -9,40 +10,40 @@ export default function Gallery() {
       title: "Arcadia Homes Las Vegas Exteriors",
       description: "Stunning custom home designs and architectural details",
       images: [
-        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        imageUrls.gallery.luxury,
+        imageUrls.gallery.singleFamily,
+        imageUrls.gallery.condos,
+        imageUrls.gallery.townhomes
       ]
     },
     {
       title: "Luxury Interiors",
       description: "Premium finishes and custom design elements",
       images: [
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        imageUrls.gallery.highRise,
+        imageUrls.gallery.midRise,
+        imageUrls.gallery.condoHotels,
+        imageUrls.gallery.luxury
       ]
     },
     {
       title: "Red Rock Canyon Views",
       description: "Breathtaking natural landscapes from your backyard",
       images: [
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        imageUrls.community.golfCourse,
+        imageUrls.community.neighborhoods,
+        imageUrls.community.lakefront,
+        imageUrls.community.masterPlanned
       ]
     },
     {
       title: "Community Amenities",
       description: "Guard gates, parks, and recreational facilities",
       images: [
-        "https://images.unsplash.com/photo-1587174486073-ae5e5cec4540?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1544966503-7cc5ac882d5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        imageUrls.gallery.henderson,
+        imageUrls.gallery.northLasVegas,
+        imageUrls.gallery.boulderCity,
+        imageUrls.community.golfCourse
       ]
     }
   ];

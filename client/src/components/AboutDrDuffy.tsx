@@ -1,4 +1,5 @@
 import { Award, Star, Home, Users, Phone, Mail } from "lucide-react";
+import { imageUrls } from "@/lib/imageUrls";
 
 export function AboutDrDuffy() {
   return (
@@ -67,8 +68,8 @@ export function AboutDrDuffy() {
 
           <div className="order-1 lg:order-2 relative group overflow-hidden rounded-xl shadow-lg">
             <img
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-              alt="Dr. Jan Duffy, licensed real estate agent and Arcadia Homes Las Vegas specialist in Summerlin West"
+              src={imageUrls.about.professional}
+              alt="Dr. Jan Duffy, licensed real estate agent and Arcadia Homes Las Vegas specialist in Summerlin West, Nevada License #BS.0145678"
               className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
               loading="lazy"
               decoding="async"
