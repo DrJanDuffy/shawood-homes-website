@@ -7,6 +7,7 @@ import { formatPrice, formatSquareFeet, formatDecimal } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ContactForm } from "@/components/ContactForm";
+import { useMetaTags } from "@/hooks/useMetaTags";
 
 export default function HomeDetails() {
   const { id } = useParams();
@@ -52,6 +53,99 @@ export default function HomeDetails() {
     active: "bg-green-100 text-green-800",
     pending: "bg-yellow-100 text-yellow-800",
     sold: "bg-gray-100 text-gray-800",
+  };
+
+  // Update meta tags for SEO (only when property is loaded)
+  useMetaTags({
+    title: property ? `${property.address} - Arcadia Homes Las Vegas | ${formatPrice(property.price)}` : "Property Details - Arcadia Homes Las Vegas",
+    description: property ? `${property.bedrooms} bedroom, ${formatDecimal(property.bathrooms)} bathroom home in Arcadia Homes Las Vegas. ${property.description.substring(0, 150)}...` : "View luxury home details in Arcadia Homes Las Vegas",
+    keywords: property ? `Arcadia Homes Las Vegas, ${property.address}, luxury home, ${property.bedrooms} bedroom, Summerlin West real estate` : "Arcadia Homes Las Vegas, luxury real estate",
+    ogTitle: property ? `${property.address} - ${formatPrice(property.price)}` : "Arcadia Homes Las Vegas Property",
+    ogDescription: property ? `${property.bedrooms} bedroom, ${formatDecimal(property.bathrooms)} bathroom home in Arcadia Homes Las Vegas` : "Luxury home in Arcadia Homes Las Vegas",
+    ogImage: property?.photos[0] || "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&h=630&fit=crop",
+    ogUrl: property ? `https://arcadiahomeslasvegas.com/homes/${property.id}` : "https://arcadiahomeslasvegas.com/homes",
+    canonical: property ? `https://arcadiahomeslasvegas.com/homes/${property.id}` : "https://arcadiahomeslasvegas.com/homes",
+  });
+
+  // Add Property Schema Markup
+  useEffect(() => {
+    if (property) {
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "RealEstateListing",
+        "name": property.address,
+        "description": property.description,
+        "url": `https://arcadiahomeslasvegas.com/homes/${property.id}`,
+        "image": property.photos[0] || "",
+        "offers": {
+          "@type": "Offer",
+          "price": property.price,
+          "priceCurrency": "USD",
+          "availability": property.status === "active" ? "https://schema.org/InStock" : "https://schema.org/SoldOut"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": property.address,
+          "addressLocality": "Las Vegas",
+          "addressRegion": "NV",
+          "postalCode": "89135",
+          "addressCountry": "US"
+        },
+        "numberOfRooms": property.bedrooms,
+        "numberOfBathroomsTotal": parseFloat(property.bathrooms.toString()),
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": property.squareFeet,
+          "unitCode": "SQM"
+        },
+        "yearBuilt": property.yearBuilt,
+        "listingStatus": property.status === "active" ? "ForSale" : property.status === "pending" ? "Pending" : "Sold"
+      };
+
+      // Remove existing property schema if any
+      const existingScript = document.getElementById('property-schema');
+      if (existingScript) {
+        existingScript.remove();
+      }
+
+      // Add new schema
+      const script = document.createElement('script');
+      script.id = 'property-schema';
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(schema);
+      document.head.appendChild(script);
+
+      return () => {
+        const scriptToRemove = document.getElementById('property-schema');
+        if (scriptToRemove) {
+          scriptToRemove.remove();
+        }
+      };
+    }
+  }, [property]);
+
+  const handleShare = async () => {
+    const url = `https://arcadiahomeslasvegas.com/homes/${property.id}`;
+    const text = `Check out this luxury home: ${property.address} - ${formatPrice(property.price)}`;
+    
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: `${property.address} - Arcadia Homes Las Vegas`,
+          text: text,
+          url: url,
+        });
+      } catch (err) {
+        // Share failed silently - fallback to clipboard
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Share failed:', err);
+        }
+      }
+    } else {
+      // Fallback: copy to clipboard
+      navigator.clipboard.writeText(url);
+      alert('Link copied to clipboard!');
+    }
   };
 
   return (

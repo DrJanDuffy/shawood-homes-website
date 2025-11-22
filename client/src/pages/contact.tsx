@@ -1,7 +1,17 @@
 import { Phone, Mail, MapPin, Clock, MessageSquare, Calendar } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
+import { useMetaTags } from "@/hooks/useMetaTags";
 
 export default function Contact() {
+  useMetaTags({
+    title: "Contact Dr. Jan Duffy - Arcadia Homes Las Vegas Realtor | (702) 500-0337",
+    description: "Contact Dr. Jan Duffy, your Arcadia Homes Las Vegas real estate specialist. Call (702) 500-0337 or email DrDuffy@arcadiahomeslasvegas.com for personalized luxury home services in Summerlin West.",
+    keywords: "contact Dr Jan Duffy, Arcadia Homes Las Vegas realtor, Summerlin West real estate agent, (702) 500-0337, luxury home consultation",
+    ogTitle: "Contact Dr. Jan Duffy - Arcadia Homes Las Vegas Specialist",
+    ogDescription: "Get in touch with Dr. Jan Duffy for expert real estate services in Arcadia Homes Las Vegas. Available 7 days a week.",
+    canonical: "https://arcadiahomeslasvegas.com/contact",
+  });
+
   return (
     <div className="pt-20">
       {/* Hero Section */}
