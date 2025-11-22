@@ -35,10 +35,6 @@ export function AboutDrDuffy() {
                 <span className="text-gray-700">Top 1% Las Vegas Realtors 2023</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Home className="w-5 h-5 text-yellow-600" />
-                <span className="text-gray-700">200+ Homes Sold in Arcadia Homes Las Vegas</span>
-              </div>
-              <div className="flex items-center space-x-3">
                 <Users className="w-5 h-5 text-yellow-600" />
                 <span className="text-gray-700">Certified Luxury Home Marketing Specialist</span>
               </div>
