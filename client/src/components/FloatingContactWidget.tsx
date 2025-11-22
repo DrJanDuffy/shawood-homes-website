@@ -84,7 +84,7 @@ export function FloatingContactWidget() {
       <button
         onClick={() => setIsExpanded(!isExpanded)}
         aria-label={isExpanded ? "Close contact options" : "Open contact options"}
-        aria-expanded={isExpanded ? "true" : "false"}
+        aria-expanded={isExpanded}
         className={`
           flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2
           ${isExpanded 
