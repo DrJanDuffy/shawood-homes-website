@@ -1,8 +1,7 @@
 export function InteractiveMap() {
-  // Arcadia Homes Las Vegas location in Summerlin West (89135)
-  // Google Maps embed with search for Summerlin West area
-  // This will show the general area - for exact location, get embed URL from Google Maps
-  const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3214.7234567891234!2d-115.32!3d36.15!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDA5JzAwLjAiTiAxMTXCsDE5JzEyLjAiVw!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus&q=Summerlin+West+Las+Vegas+NV+89135";
+  // Arcadia Homes Las Vegas location: 1020 Natural Harmony Street, Las Vegas, NV 89135
+  // Google Maps embed URL for the exact location
+  const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3214.7234567891234!2d-115.32!3d36.15!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDA5JzAwLjAiTiAxMTXCsDE5JzEyLjAiVw!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus&q=1020+Natural+Harmony+Street+Las+Vegas+NV+89135";
 
   return (
     <div className="bg-gray-50 rounded-2xl p-8">
@@ -42,7 +41,7 @@ export function InteractiveMap() {
       <div className="rounded-xl overflow-hidden shadow-xl mb-6">
         <div className="relative bg-gray-200">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3214.7234567891234!2d-115.32!3d36.15!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDA5JzAwLjAiTiAxMTXCsDE5JzEyLjAiVw!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus&q=Summerlin+West+Las+Vegas+NV+89135"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3214.7234567891234!2d-115.32!3d36.15!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDA5JzAwLjAiTiAxMTXCsDE5JzEyLjAiVw!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus&q=1020+Natural+Harmony+Street+Las+Vegas+NV+89135"
             width="100%"
             height="500"
             style={{ border: 0 }}
@@ -51,12 +50,12 @@ export function InteractiveMap() {
             referrerPolicy="no-referrer-when-downgrade"
             title="Arcadia Homes Las Vegas Summerlin West Location with Nearby Amenities"
             className="w-full"
-            aria-label="Interactive map showing Arcadia Homes Las Vegas location in Summerlin West with nearby amenities including Red Rock Canyon, Downtown Summerlin, and Harry Reid Airport"
+            aria-label="Interactive map showing Arcadia Homes Las Vegas location at 1020 Natural Harmony Street in Summerlin West with nearby amenities including Red Rock Canyon, Downtown Summerlin, and Harry Reid Airport"
           />
         </div>
         <div className="mt-4 text-center bg-white p-4 rounded-lg">
           <p className="text-sm text-gray-700">
-            <span className="font-semibold text-gray-900">📍 Location:</span> Summerlin West, Las Vegas, NV 89135
+            <span className="font-semibold text-gray-900">📍 Location:</span> 1020 Natural Harmony Street, Las Vegas, NV 89135
           </p>
           <p className="text-xs text-gray-500 mt-2">
             Use the map controls above to explore nearby amenities, get directions, and view the area in detail
@@ -128,7 +127,7 @@ export function InteractiveMap() {
         <div className="mt-8 pt-6 border-t border-gray-200">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 
-              href="https://maps.google.com/maps?q=Summerlin+West+Las+Vegas+NV+89135"
+              href="https://maps.google.com/maps?q=1020+Natural+Harmony+Street+Las+Vegas+NV+89135"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-flex items-center space-x-2"
@@ -145,7 +144,7 @@ export function InteractiveMap() {
             </a>
           </div>
           <p className="text-center text-sm text-gray-500 mt-4">
-            Address: Summerlin West, Las Vegas, NV 89135
+            Address: 1020 Natural Harmony Street, Las Vegas, NV 89135
           </p>
         </div>
       </div>
