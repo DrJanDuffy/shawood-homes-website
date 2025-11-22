@@ -13,20 +13,21 @@ export function MarketStats() {
   });
 
   // Fallback market data if API fails or returns empty
-  const fallbackData: MarketData = {
+  // Using type assertion since we know the structure matches MarketData
+  const fallbackData = {
     id: 0,
     month: "January",
     year: 2025,
     medianPrice: 3000000,
     pricePerSqft: 450,
     averageDaysOnMarket: 45,
-    monthsOfInventory: "2.5",
-    priceAppreciation: "5.2",
+    monthsOfInventory: "2.5" as string,
+    priceAppreciation: "5.2" as string,
     activeListings: 12,
     homesSold: 8,
     createdAt: new Date(),
     updatedAt: new Date(),
-  };
+  } as MarketData;
 
   const latest = marketData?.[0] || (marketData && marketData.length > 0 ? undefined : fallbackData);
 
