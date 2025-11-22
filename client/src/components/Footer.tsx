@@ -28,6 +28,24 @@ export function Footer() {
                 <Award className="w-4 h-4 text-yellow-400" />
                 <span>Top 1% Las Vegas Realtors 2023</span>
               </p>
+              {/* Berkshire Hathaway HomeServices Logo */}
+              <div className="mt-4 pt-4 border-t border-gray-700">
+                <img 
+                  src="https://www.berkshirehathawayhs.com/wp-content/uploads/2021/06/BHHSNV-Logo-White.png" 
+                  alt="Berkshire Hathaway HomeServices Nevada Properties" 
+                  className="h-10 w-auto opacity-90 hover:opacity-100 transition-opacity"
+                  onError={(e) => {
+                    // Fallback to a text-based version if image fails to load
+                    const target = e.target as HTMLImageElement;
+                    target.classList.add('hidden');
+                    const fallback = target.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.classList.remove('hidden');
+                  }}
+                />
+                <div className="hidden text-xs text-gray-500 mt-2">
+                  Berkshire Hathaway HomeServices
+                </div>
+              </div>
             </div>
           </div>
 
