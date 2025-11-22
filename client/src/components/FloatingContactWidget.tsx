@@ -23,7 +23,7 @@ export function FloatingContactWidget() {
 
           {/* Text/SMS Button */}
           <a
-            href="sms:702-500-0337?body=Hi Dr. Duffy, I'm interested in Shawood Homes. Please contact me."
+            href="sms:702-500-0337?body=Hi Dr. Duffy, I'm interested in Arcadia Homes Las Vegas. Please contact me."
             className="flex items-center space-x-3 bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
           >
             <MessageCircle className="w-5 h-5" />
@@ -35,13 +35,13 @@ export function FloatingContactWidget() {
 
           {/* Email Button */}
           <a
-            href="mailto:jan.duffy@shawoodhomes.com?subject=Shawood Homes Inquiry&body=Hi Dr. Duffy, I'm interested in learning more about Shawood Homes. Please contact me."
+            href="mailto:DrDuffy@arcadiahomeslasvegas.com?subject=Arcadia Homes Las Vegas Inquiry&body=Hi Dr. Duffy, I'm interested in learning more about Arcadia Homes Las Vegas. Please contact me."
             className="flex items-center space-x-3 bg-purple-600 hover:bg-purple-700 text-white px-4 py-3 rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
           >
             <Mail className="w-5 h-5" />
             <div>
               <div className="font-semibold text-sm">Email</div>
-              <div className="text-xs opacity-90">jan.duffy@shawoodhomes.com</div>
+              <div className="text-xs opacity-90">DrDuffy@arcadiahomeslasvegas.com</div>
             </div>
           </a>
         </div>

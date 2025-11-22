@@ -6,7 +6,7 @@ export default function Gallery() {
 
   const galleries = [
     {
-      title: "Shawood Homes Exteriors",
+      title: "Arcadia Homes Las Vegas Exteriors",
       description: "Stunning custom home designs and architectural details",
       images: [
         "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -74,7 +74,7 @@ export default function Gallery() {
       <section className="relative bg-gradient-to-r from-primary to-secondary text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Shawood Homes Gallery
+            Arcadia Homes Las Vegas Gallery
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto">
             Explore the beauty and elegance of luxury living in Summerlin West's 
@@ -168,7 +168,7 @@ export default function Gallery() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Virtual Tours Available</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Experience Shawood Homes from anywhere with our immersive virtual tours. 
+            Experience Arcadia Homes Las Vegas from anywhere with our immersive virtual tours. 
             Walk through luxury properties and explore every detail from the comfort of your current home.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

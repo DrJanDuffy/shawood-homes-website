@@ -78,7 +78,7 @@ export class PostgresStorage implements IStorage {
             "/api/placeholder/800/600",
             "/api/placeholder/800/600"
           ],
-          description: "Stunning custom home in prestigious Shawood Homes community featuring panoramic Red Rock Canyon views. This architectural masterpiece boasts soaring ceilings, premium finishes, and seamless indoor-outdoor living. Chef's kitchen with top-of-the-line appliances, spacious master suite with spa-like bathroom, and private backyard oasis with pool and outdoor kitchen.",
+          description: "Stunning custom home in prestigious Arcadia Homes Las Vegas community featuring panoramic Red Rock Canyon views. This architectural masterpiece boasts soaring ceilings, premium finishes, and seamless indoor-outdoor living. Chef's kitchen with top-of-the-line appliances, spacious master suite with spa-like bathroom, and private backyard oasis with pool and outdoor kitchen.",
           features: [
             "Red Rock Canyon Views",
             "Custom Design",
@@ -198,7 +198,7 @@ export class PostgresStorage implements IStorage {
           name: "Guard Gate Security",
           description: "24/7 manned guard gate providing exclusive access and enhanced security for all residents.",
           category: "Security",
-          address: "Shawood Homes Main Entrance",
+          address: "Arcadia Homes Las Vegas Main Entrance",
           distance: "0.1 miles",
           imageUrl: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop&auto=format"
         },
@@ -403,7 +403,7 @@ class MemoryStorage implements IStorage {
       {
         id: 1,
         title: "Luxury Estate with Red Rock Views",
-        description: "Stunning 4,200 sq ft custom home with panoramic Red Rock Canyon views in guard-gated Shawood Homes.",
+        description: "Stunning 4,200 sq ft custom home with panoramic Red Rock Canyon views in guard-gated Arcadia Homes Las Vegas.",
         price: 2850000,
         bedrooms: 5,
         bathrooms: 4,
@@ -446,7 +446,7 @@ class MemoryStorage implements IStorage {
         name: "Guard Gate Security",
         description: "24/7 manned guard gate providing exclusive access and enhanced security for all residents.",
         category: "Security",
-        address: "Shawood Homes Main Entrance",
+        address: "Arcadia Homes Las Vegas Main Entrance",
         distance: "0.1 miles",
         imageUrl: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop&auto=format"
       },

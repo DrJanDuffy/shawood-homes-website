@@ -57,7 +57,7 @@ export default function Schools() {
               Schools & Education
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Shawood Homes students attend some of the highest-rated schools in Clark County. 
+              Arcadia Homes Las Vegas students attend some of the highest-rated schools in Clark County. 
               Excellence in education is one of the many advantages of this premier community.
             </p>
           </div>
@@ -73,7 +73,7 @@ export default function Schools() {
                 Clark County School District
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Shawood Homes is served by the Clark County School District, one of the largest 
+                Arcadia Homes Las Vegas is served by the Clark County School District, one of the largest 
                 and most progressive school districts in the United States. The district is 
                 committed to providing quality education and preparing students for college and career success.
               </p>
@@ -255,7 +255,7 @@ export default function Schools() {
               Educational Programs & Opportunities
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Students in the Shawood Homes area have access to exceptional educational programs 
+              Students in the Arcadia Homes Las Vegas area have access to exceptional educational programs 
               and extracurricular opportunities.
             </p>
           </div>
@@ -294,7 +294,7 @@ export default function Schools() {
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Give your children access to exceptional education in one of Las Vegas's 
             most sought-after school districts. Contact Dr. Duffy to learn more about 
-            school enrollment and the Shawood Homes advantage.
+            school enrollment and the Arcadia Homes Las Vegas advantage.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:702-555-0123" className="btn-secondary">

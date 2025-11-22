@@ -42,7 +42,7 @@ export function FeaturedHomes() {
             Available Homes
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover luxury homes currently available in Shawood Homes community
+            Discover luxury homes currently available in Arcadia Homes Las Vegas community
           </p>
         </div>
 

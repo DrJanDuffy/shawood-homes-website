@@ -12,7 +12,7 @@ export default function Contact() {
               Contact Dr. Duffy
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to explore Shawood Homes? Get in touch with Dr. Jan Duffy, your trusted 
+              Ready to explore Arcadia Homes Las Vegas? Get in touch with Dr. Jan Duffy, your trusted 
               real estate specialist for personalized service and expert guidance.
             </p>
           </div>
@@ -54,10 +54,10 @@ export default function Contact() {
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
                     <p className="text-gray-600 mb-2">Professional correspondence</p>
                     <a 
-                      href="mailto:jan@shawoodhomes.com" 
+                      href="mailto:DrDuffy@arcadiahomeslasvegas.com" 
                       className="text-secondary font-semibold hover:text-secondary/80 transition-colors"
                     >
-                      jan@shawoodhomes.com
+                      DrDuffy@arcadiahomeslasvegas.com
                     </a>
                   </div>
                 </div>
@@ -104,7 +104,7 @@ export default function Contact() {
                     <span>Call Now</span>
                   </a>
                   <a
-                    href="mailto:jan@shawoodhomes.com"
+                      href="mailto:DrDuffy@arcadiahomeslasvegas.com"
                     className="flex items-center justify-center space-x-2 btn-secondary"
                   >
                     <Mail className="w-4 h-4" />
@@ -136,7 +136,7 @@ export default function Contact() {
               How Dr. Duffy Can Help
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive real estate services tailored to your Shawood Homes needs
+              Comprehensive real estate services tailored to your Arcadia Homes Las Vegas needs
             </p>
           </div>
 
@@ -148,7 +148,7 @@ export default function Contact() {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Buyer Consultation</h3>
               <p className="text-gray-600">
                 Comprehensive market analysis, property tours, and expert guidance through 
-                the home buying process in Shawood Homes.
+                the home buying process in Arcadia Homes Las Vegas.
               </p>
             </div>
 
@@ -158,7 +158,7 @@ export default function Contact() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Property Showings</h3>
               <p className="text-gray-600">
-                Private tours of available Shawood Homes properties, including off-market 
+                Private tours of available Arcadia Homes Las Vegas properties, including off-market 
                 opportunities and coming soon listings.
               </p>
             </div>
@@ -170,7 +170,7 @@ export default function Contact() {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Market Analysis</h3>
               <p className="text-gray-600">
                 Detailed market reports, property valuations, and investment analysis 
-                specific to the Shawood Homes community.
+                specific to the Arcadia Homes Las Vegas community.
               </p>
             </div>
 
@@ -181,7 +181,7 @@ export default function Contact() {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Selling Services</h3>
               <p className="text-gray-600">
                 Strategic marketing, professional photography, and expert pricing to 
-                maximize your Shawood home's sale potential.
+                maximize your Arcadia Homes Las Vegas home's sale potential.
               </p>
             </div>
 
@@ -203,7 +203,7 @@ export default function Contact() {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Investment Guidance</h3>
               <p className="text-gray-600">
                 Investment property analysis, rental market insights, and long-term 
-                appreciation forecasts for Shawood Homes.
+                appreciation forecasts for Arcadia Homes Las Vegas.
               </p>
             </div>
           </div>
@@ -218,7 +218,7 @@ export default function Contact() {
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Common questions about working with Dr. Duffy and buying in Shawood Homes
+              Common questions about working with Dr. Duffy and buying in Arcadia Homes Las Vegas
             </p>
           </div>
 
@@ -226,10 +226,10 @@ export default function Contact() {
             <div className="space-y-8">
               <div className="bg-gray-50 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  How long have you been selling in Shawood Homes?
+                  How long have you been selling in Arcadia Homes Las Vegas?
                 </h3>
                 <p className="text-gray-600">
-                  I've been specializing in Shawood Homes since 2008 and have sold over 200 properties 
+                  I've been specializing in Arcadia Homes Las Vegas since 2008 and have sold over 200 properties 
                   in this exclusive community. My deep knowledge of the neighborhood gives my clients 
                   a significant advantage.
                 </p>
@@ -240,17 +240,17 @@ export default function Contact() {
                   Do you represent both buyers and sellers?
                 </h3>
                 <p className="text-gray-600">
-                  Yes, I provide comprehensive services to both buyers and sellers in Shawood Homes. 
+                  Yes, I provide comprehensive services to both buyers and sellers in Arcadia Homes Las Vegas. 
                   My expertise allows me to effectively represent clients on either side of the transaction.
                 </p>
               </div>
 
               <div className="bg-gray-50 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  What sets Shawood Homes apart from other communities?
+                  What sets Arcadia Homes Las Vegas apart from other communities?
                 </h3>
                 <p className="text-gray-600">
-                  Shawood Homes offers a unique combination of 24/7 guard-gated security, stunning 
+                  Arcadia Homes Las Vegas offers a unique combination of 24/7 guard-gated security, stunning 
                   Red Rock Canyon views, custom luxury homes, and proximity to top amenities in 
                   Summerlin West.
                 </p>
@@ -260,10 +260,10 @@ export default function Contact() {
             <div className="space-y-8">
               <div className="bg-gray-50 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  How quickly do homes sell in Shawood?
+                  How quickly do homes sell in Arcadia Homes Las Vegas?
                 </h3>
                 <p className="text-gray-600">
-                  Currently, well-priced homes in Shawood typically sell within 18-25 days. The exact 
+                  Currently, well-priced homes in Arcadia Homes Las Vegas typically sell within 18-25 days. The exact 
                   timeframe depends on pricing, condition, and market conditions at the time of listing.
                 </p>
               </div>
@@ -273,7 +273,7 @@ export default function Contact() {
                   Do you have access to off-market properties?
                 </h3>
                 <p className="text-gray-600">
-                  Yes, my network and reputation in Shawood Homes often gives me access to properties 
+                  Yes, my network and reputation in Arcadia Homes Las Vegas often gives me access to properties 
                   before they hit the market. This can be a significant advantage for serious buyers.
                 </p>
               </div>
@@ -296,10 +296,10 @@ export default function Contact() {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container-max text-center">
           <h2 className="text-4xl font-display font-bold mb-6">
-            Let's Start Your Shawood Journey
+            Let's Start Your Arcadia Homes Las Vegas Journey
           </h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Whether you're ready to buy, sell, or just explore your options in Shawood Homes, 
+            Whether you're ready to buy, sell, or just explore your options in Arcadia Homes Las Vegas, 
             Dr. Duffy is here to help. Contact her today to get started.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -311,7 +311,7 @@ export default function Contact() {
               <span>Call (702) 555-0123</span>
             </a>
             <a
-              href="mailto:jan@shawoodhomes.com"
+                      href="mailto:DrDuffy@arcadiahomeslasvegas.com"
               className="btn-primary bg-white text-primary hover:bg-gray-100"
             >
               Send Email

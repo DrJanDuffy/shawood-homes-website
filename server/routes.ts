@@ -11,25 +11,25 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.send(`<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://shawoodhomes.com/</loc>
+    <loc>https://arcadiahomeslasvegas.com/</loc>
     <lastmod>2025-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://shawoodhomes.com/homes</loc>
+    <loc>https://arcadiahomeslasvegas.com/homes</loc>
     <lastmod>2025-01-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://shawoodhomes.com/about</loc>
+    <loc>https://arcadiahomeslasvegas.com/about</loc>
     <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://shawoodhomes.com/home-value</loc>
+    <loc>https://arcadiahomeslasvegas.com/home-value</loc>
     <lastmod>2025-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -41,7 +41,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.set('Content-Type', 'text/plain');
     res.send(`User-agent: *
 Allow: /
-Sitemap: https://shawoodhomes.com/sitemap.xml`);
+Sitemap: https://arcadiahomeslasvegas.com/sitemap.xml`);
   });
 
   // Properties
@@ -132,9 +132,9 @@ Sitemap: https://shawoodhomes.com/sitemap.xml`);
         name: `${validatedData.firstName} ${validatedData.lastName}`,
         email: validatedData.email,
         phone: validatedData.phone,
-        source: `Shawood Homes Website - ${validatedData.source}`,
+        source: `Arcadia Homes Las Vegas Website - ${validatedData.source}`,
         message: validatedData.message || undefined,
-        tags: ['Website Lead', 'Shawood Homes Inquiry'],
+        tags: ['Website Lead', 'Arcadia Homes Las Vegas Inquiry'],
         customFields: {
           lead_source: validatedData.source,
           interest_type: validatedData.interest,

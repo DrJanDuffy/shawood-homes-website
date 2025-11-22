@@ -5,25 +5,25 @@ export default function Testimonials() {
     {
       id: 1,
       name: "Michael & Sarah Chen",
-      location: "The Summit - Shawood Homes",
+      location: "The Summit - Arcadia Homes Las Vegas",
       rating: 5,
-      text: "Dr. Jan Duffy made our dream of living in Summerlin West a reality. Her knowledge of the area and attention to detail throughout the entire process was exceptional. Our home in Shawood Homes exceeds every expectation.",
+      text: "Dr. Jan Duffy made our dream of living in Summerlin West a reality. Her knowledge of the area and attention to detail throughout the entire process was exceptional. Our home in Arcadia Homes Las Vegas exceeds every expectation.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
       date: "November 2024"
     },
     {
       id: 2,
       name: "Robert & Linda Martinez",
-      location: "The Pinnacle - Shawood Homes",
+      location: "The Pinnacle - Arcadia Homes Las Vegas",
       rating: 5,
-      text: "After looking at homes throughout Las Vegas for months, we knew Shawood Homes was special the moment we drove through the guard gate. Dr. Duffy understood exactly what we wanted and found us the perfect home with Red Rock Canyon views.",
+      text: "After looking at homes throughout Las Vegas for months, we knew Arcadia Homes Las Vegas was special the moment we drove through the guard gate. Dr. Duffy understood exactly what we wanted and found us the perfect home with Red Rock Canyon views.",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
       date: "October 2024"
     },
     {
       id: 3,
       name: "David Thompson",
-      location: "The Estate - Shawood Homes",
+      location: "The Estate - Arcadia Homes Las Vegas",
       rating: 5,
       text: "As a CEO relocating to Las Vegas, I needed someone who understood luxury real estate. Dr. Duffy's expertise in the Summerlin West market and her professional approach made the entire transaction seamless. The community is exactly what I was looking for.",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
@@ -32,27 +32,27 @@ export default function Testimonials() {
     {
       id: 4,
       name: "Jennifer & Mark Wilson",
-      location: "The Vista - Shawood Homes",
+      location: "The Vista - Arcadia Homes Las Vegas",
       rating: 5,
-      text: "Dr. Duffy's knowledge of Shawood Homes and the entire 89135 area is unmatched. She helped us navigate the custom home building process and ensured every detail met our high standards. We couldn't be happier with our decision.",
+      text: "Dr. Duffy's knowledge of Arcadia Homes Las Vegas and the entire 89135 area is unmatched. She helped us navigate the custom home building process and ensured every detail met our high standards. We couldn't be happier with our decision.",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
       date: "August 2024"
     },
     {
       id: 5,
       name: "Thomas & Patricia Johnson",
-      location: "Custom Estate - Shawood Homes",
+      location: "Custom Estate - Arcadia Homes Las Vegas",
       rating: 5,
-      text: "After 30 years in Manhattan, we wanted a different lifestyle but with the same level of luxury. Shawood Homes delivers on both fronts. Dr. Duffy made the transition from New York to Las Vegas effortless.",
+      text: "After 30 years in Manhattan, we wanted a different lifestyle but with the same level of luxury. Arcadia Homes Las Vegas delivers on both fronts. Dr. Duffy made the transition from New York to Las Vegas effortless.",
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
       date: "July 2024"
     },
     {
       id: 6,
       name: "Dr. Amanda Rodriguez",
-      location: "The Summit - Shawood Homes",
+      location: "The Summit - Arcadia Homes Las Vegas",
       rating: 5,
-      text: "As a fellow doctor, I appreciate attention to detail and professionalism. Dr. Duffy provided both throughout our home buying experience. The security and privacy of Shawood Homes, combined with the Red Rock Canyon views, make this the perfect place to call home.",
+      text: "As a fellow doctor, I appreciate attention to detail and professionalism. Dr. Duffy provided both throughout our home buying experience. The security and privacy of Arcadia Homes Las Vegas, combined with the Red Rock Canyon views, make this the perfect place to call home.",
       image: "https://images.unsplash.com/photo-1559941619-638ecf0b396d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
       date: "June 2024"
     }
@@ -60,7 +60,7 @@ export default function Testimonials() {
 
   const stats = [
     { number: "98%", label: "Client Satisfaction" },
-    { number: "45+", label: "Homes Sold in Shawood" },
+    { number: "45+", label: "Homes Sold in Arcadia Homes Las Vegas" },
     { number: "$180M+", label: "Total Sales Volume" },
     { number: "15+", label: "Years Experience" }
   ];
@@ -74,7 +74,7 @@ export default function Testimonials() {
             Client Testimonials
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-            Discover why discerning buyers choose Dr. Jan Duffy and Shawood Homes 
+            Discover why discerning buyers choose Dr. Jan Duffy and Arcadia Homes Las Vegas 
             for their luxury real estate needs in Summerlin West.
           </p>
         </div>
@@ -100,7 +100,7 @@ export default function Testimonials() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">What Our Clients Say</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Read authentic reviews from Shawood Homes residents who trusted Dr. Jan Duffy 
+              Read authentic reviews from Arcadia Homes Las Vegas residents who trusted Dr. Jan Duffy 
               with their luxury real estate investment.
             </p>
           </div>
@@ -143,7 +143,7 @@ export default function Testimonials() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Video Testimonials</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Hear directly from Shawood Homes residents about their experience 
+              Hear directly from Arcadia Homes Las Vegas residents about their experience 
               working with Dr. Jan Duffy and living in this exclusive community.
             </p>
           </div>
@@ -158,7 +158,7 @@ export default function Testimonials() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-semibold mb-2">The Chen Family</h3>
-                  <p className="text-sm opacity-90">Their journey to Shawood Homes</p>
+                  <p className="text-sm opacity-90">Their journey to Arcadia Homes Las Vegas</p>
                 </div>
               </div>
             </div>

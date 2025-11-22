@@ -323,7 +323,7 @@ export default function MortgageCalculator() {
                   Discuss Your Home Value with Dr. Duffy
                 </a>
                 <a 
-                  href="mailto:sales@shawoodhomes.com"
+                  href="mailto:DrDuffy@arcadiahomeslasvegas.com"
                   className="btn-secondary py-3 text-center"
                 >
                   Get Personalized Market Report

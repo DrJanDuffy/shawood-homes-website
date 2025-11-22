@@ -25,10 +25,10 @@ export default function MarketReport() {
         <div className="container-max">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-display font-bold text-gray-900 mb-6">
-              Shawood Market Report
+              Arcadia Homes Las Vegas Market Report
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get comprehensive market insights and analytics for Shawood Homes community. 
+              Get comprehensive market insights and analytics for Arcadia Homes Las Vegas community. 
               Stay informed with the latest trends, pricing data, and market forecasts.
             </p>
           </div>
@@ -158,7 +158,7 @@ export default function MarketReport() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Price Trends</h4>
                     <p className="text-gray-600">
-                      Shawood Homes continues to show strong appreciation with a median price of{' '}
+                      Arcadia Homes Las Vegas continues to show strong appreciation with a median price of{' '}
                       {formatPrice(latest.medianPrice)}. The community maintains its position as one of 
                       Summerlin's most desirable luxury neighborhoods.
                     </p>
@@ -189,7 +189,7 @@ export default function MarketReport() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Appreciation Forecast</h4>
                     <p className="text-gray-600">
-                      Based on current trends and Las Vegas market fundamentals, Shawood Homes 
+                      Based on current trends and Las Vegas market fundamentals, Arcadia Homes Las Vegas 
                       is positioned for continued steady appreciation driven by limited supply 
                       and strong demand for luxury properties.
                     </p>
@@ -215,10 +215,10 @@ export default function MarketReport() {
         <div className="container-max">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-display font-bold text-gray-900 mb-6">
-              How Shawood Compares
+              How Arcadia Homes Las Vegas Compares
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how Shawood Homes stacks up against other luxury communities in Summerlin
+              See how Arcadia Homes Las Vegas stacks up against other luxury communities in Summerlin
             </p>
           </div>
 
@@ -236,7 +236,7 @@ export default function MarketReport() {
                 </thead>
                 <tbody className="divide-y divide-gray-200">
                   <tr className="bg-primary/5">
-                    <td className="px-6 py-4 font-semibold text-gray-900">Shawood Homes</td>
+                    <td className="px-6 py-4 font-semibold text-gray-900">Arcadia Homes Las Vegas</td>
                     <td className="px-6 py-4 text-right font-semibold text-primary">
                       {latest ? formatPrice(latest.medianPrice) : 'N/A'}
                     </td>
@@ -298,7 +298,7 @@ export default function MarketReport() {
               </h2>
               <p className="text-xl opacity-90 mb-8">
                 Receive a comprehensive 15-page market analysis including price trends, 
-                neighborhood comparisons, and investment forecasts specifically for Shawood Homes.
+                neighborhood comparisons, and investment forecasts specifically for Arcadia Homes Las Vegas.
               </p>
               <ul className="space-y-3 opacity-90">
                 <li className="flex items-center space-x-3">

@@ -15,7 +15,7 @@ export default function Community() {
         <div className="container-max">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-display font-bold text-gray-900 mb-6">
-              Shawood Homes Community
+              Arcadia Homes Las Vegas Community
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               An exclusive guard-gated luxury community in the heart of Summerlin West, 
@@ -34,7 +34,7 @@ export default function Community() {
                 The Pinnacle of Luxury Living
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Shawood Homes represents the ultimate in luxury living within the prestigious 
+                Arcadia Homes Las Vegas represents the ultimate in luxury living within the prestigious 
                 Summerlin master-planned community. This exclusive enclave features custom-built 
                 homes on premium lots, each offering spectacular views of the surrounding desert 
                 landscape and Red Rock Canyon.
@@ -61,7 +61,7 @@ export default function Community() {
             <div>
               <img
                 src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1000&q=80"
-                alt="Shawood Homes community aerial view"
+                alt="Arcadia Homes Las Vegas community aerial view"
                 className="rounded-xl shadow-lg"
               />
             </div>
@@ -162,7 +162,7 @@ export default function Community() {
                 Community Standards & HOA
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Shawood Homes maintains the highest standards through comprehensive HOA guidelines 
+                Arcadia Homes Las Vegas maintains the highest standards through comprehensive HOA guidelines 
                 that preserve property values and ensure a pristine living environment for all residents.
               </p>
               <ul className="space-y-3">

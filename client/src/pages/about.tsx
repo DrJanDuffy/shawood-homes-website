@@ -12,18 +12,18 @@ export default function About() {
                 Meet Dr. Jan Duffy
               </h1>
               <h2 className="text-2xl text-primary font-semibold mb-6">
-                Your Shawood Homes Specialist
+                Your Arcadia Homes Las Vegas Specialist
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
                 With over 15 years of real estate expertise in Las Vegas and specialized knowledge 
-                of the Shawood Homes community, Dr. Jan Duffy has helped over 200 families find 
+                of the Arcadia Homes Las Vegas community, Dr. Jan Duffy has helped over 200 families find 
                 their dream homes in this exclusive neighborhood.
               </p>
             </div>
             <div className="order-1 lg:order-2">
               <img
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80"
-                alt="Dr. Jan Duffy, Shawood Homes real estate specialist"
+                alt="Dr. Jan Duffy, Arcadia Homes Las Vegas real estate specialist"
                 className="rounded-xl shadow-lg w-full h-auto"
               />
             </div>
@@ -45,12 +45,12 @@ export default function About() {
                   Dr. Jan Duffy brings a unique combination of academic rigor and real estate expertise 
                   to every transaction. With a doctoral degree in business administration and over 
                   15 years of experience in Las Vegas luxury real estate, she has become the 
-                  go-to specialist for Shawood Homes.
+                  go-to specialist for Arcadia Homes Las Vegas.
                 </p>
                 
                 <p>
                   As a long-time Summerlin resident herself, Dr. Duffy understands the nuances 
-                  of each neighborhood and community. Her deep knowledge of Shawood Homes comes 
+                  of each neighborhood and community. Her deep knowledge of Arcadia Homes Las Vegas comes 
                   from years of dedicated focus on this exclusive enclave, where she has 
                   successfully represented both buyers and sellers.
                 </p>
@@ -115,7 +115,7 @@ export default function About() {
                   </div>
                   <div className="flex items-center space-x-3">
                     <Mail className="w-5 h-5" />
-                    <span>jan@shawoodhomes.com</span>
+                    <span>DrDuffy@arcadiahomeslasvegas.com</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <MapPin className="w-5 h-5" />
@@ -170,7 +170,7 @@ export default function About() {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Home className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Shawood Expert</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Arcadia Homes Las Vegas Expert</h3>
               <p className="text-gray-600 text-sm">Community Specialist Since 2008</p>
             </div>
           </div>
@@ -206,7 +206,7 @@ export default function About() {
               What Clients Say
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Read what Shawood Homes clients have to say about their experience working with Dr. Duffy
+              Read what Arcadia Homes Las Vegas clients have to say about their experience working with Dr. Duffy
             </p>
           </div>
 
@@ -218,11 +218,11 @@ export default function About() {
                 ))}
               </div>
               <p className="text-gray-600 mb-4">
-                "Dr. Duffy's knowledge of Shawood Homes is unmatched. She helped us find the perfect 
+                "Dr. Duffy's knowledge of Arcadia Homes Las Vegas is unmatched. She helped us find the perfect 
                 home and guided us through every step of the process with professionalism and care."
               </p>
               <div className="font-semibold text-gray-900">Sarah & Michael Johnson</div>
-              <div className="text-sm text-gray-600">Shawood Homeowners since 2022</div>
+              <div className="text-sm text-gray-600">Arcadia Homes Las Vegas Homeowners since 2022</div>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-8">
@@ -232,7 +232,7 @@ export default function About() {
                 ))}
               </div>
               <p className="text-gray-600 mb-4">
-                "Selling our Shawood home was seamless thanks to Dr. Duffy's marketing expertise. 
+                "Selling our Arcadia Homes Las Vegas home was seamless thanks to Dr. Duffy's marketing expertise. 
                 We received multiple offers and sold above asking price within a week."
               </p>
               <div className="font-semibold text-gray-900">Robert & Linda Chen</div>
@@ -247,7 +247,7 @@ export default function About() {
               </div>
               <p className="text-gray-600 mb-4">
                 "As first-time luxury home buyers, we appreciated Dr. Duffy's patience and expertise. 
-                She truly understands the Shawood market and negotiated an excellent deal for us."
+                She truly understands the Arcadia Homes Las Vegas market and negotiated an excellent deal for us."
               </p>
               <div className="font-semibold text-gray-900">David & Jennifer Martinez</div>
               <div className="text-sm text-gray-600">Purchased 892 Sunset Ridge Court</div>
@@ -273,7 +273,7 @@ export default function About() {
                 
                 <p>
                   "Living in Summerlin for over a decade has given me intimate knowledge of what 
-                  makes each community special. Shawood Homes holds a particular place in my heart 
+                  makes each community special. Arcadia Homes Las Vegas holds a particular place in my heart 
                   because of its unique combination of luxury, security, and natural beauty."
                 </p>
                 
@@ -285,7 +285,7 @@ export default function About() {
               
               <div className="mt-8 text-right">
                 <div className="text-2xl font-display font-semibold text-gray-900">Dr. Jan Duffy</div>
-                <div className="text-gray-600">Shawood Homes Specialist</div>
+                <div className="text-gray-600">Arcadia Homes Las Vegas Specialist</div>
               </div>
             </div>
             <div>
@@ -306,7 +306,7 @@ export default function About() {
             Ready to Work Together?
           </h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Whether you're buying or selling in Shawood Homes, Dr. Duffy is here to provide 
+            Whether you're buying or selling in Arcadia Homes Las Vegas, Dr. Duffy is here to provide 
             expert guidance and exceptional service. Let's discuss your real estate goals today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

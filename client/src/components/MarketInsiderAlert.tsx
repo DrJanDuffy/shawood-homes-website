@@ -19,7 +19,7 @@ export function MarketInsiderAlert() {
     onSuccess: () => {
       toast({
         title: "Welcome to Market Insider Alerts!",
-        description: "You'll receive exclusive notifications for new Shawood Homes listings.",
+        description: "You'll receive exclusive notifications for new Arcadia Homes Las Vegas listings.",
       });
       setEmail("");
       setFirstName("");
@@ -43,7 +43,7 @@ export function MarketInsiderAlert() {
       email,
       phone: "",
       interest: "market_insider_alerts",
-      message: "Signed up for exclusive Market Insider Alerts for Shawood Homes",
+      message: "Signed up for exclusive Market Insider Alerts for Arcadia Homes Las Vegas",
       source: "Market Insider Alert Widget"
     };
 
@@ -63,7 +63,7 @@ export function MarketInsiderAlert() {
               </h2>
             </div>
             <p className="text-xl text-white/90 mb-6">
-              Get exclusive early access to new Shawood Homes listings before they hit the market
+              Get exclusive early access to new Arcadia Homes Las Vegas listings before they hit the market
             </p>
           </div>
 

@@ -129,7 +129,7 @@ export function CRMTestForm() {
           <li>Create a lead in your local database</li>
           <li>Send the lead to Follow Up Boss CRM</li>
           <li>Assign to Dr. Jan Duffy automatically</li>
-          <li>Add Shawood Homes tags and source tracking</li>
+          <li>Add Arcadia Homes Las Vegas tags and source tracking</li>
         </ul>
       </div>
     </div>

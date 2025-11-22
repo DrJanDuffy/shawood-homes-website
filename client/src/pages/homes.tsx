@@ -39,7 +39,7 @@ export default function Homes() {
               Available Homes
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover luxury homes currently available in Shawood Homes community. 
+              Discover luxury homes currently available in Arcadia Homes Las Vegas community. 
               Each property offers exceptional quality and stunning desert views.
             </p>
           </div>
@@ -147,7 +147,7 @@ export default function Homes() {
                   Schedule Private Showing
                 </a>
                 <a 
-                  href="mailto:sales@shawoodhomes.com"
+                  href="mailto:DrDuffy@arcadiahomeslasvegas.com"
                   className="btn-secondary"
                 >
                   Get Property Details
@@ -166,7 +166,7 @@ export default function Homes() {
           </h2>
           <p className="text-xl mb-8 opacity-90">
             Dr. Duffy has access to off-market properties and upcoming listings. 
-            Get notified first about new Shawood Homes opportunities.
+            Get notified first about new Arcadia Homes Las Vegas opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="secondary" size="lg">

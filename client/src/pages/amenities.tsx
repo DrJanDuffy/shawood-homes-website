@@ -58,7 +58,7 @@ export default function Amenities() {
               Amenities & Attractions
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover world-class amenities and attractions within minutes of Shawood Homes. 
+              Discover world-class amenities and attractions within minutes of Arcadia Homes Las Vegas. 
               From luxury shopping to outdoor recreation, everything you need is nearby.
             </p>
           </div>
@@ -73,7 +73,7 @@ export default function Amenities() {
               Everything You Need Nearby
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Shawood Homes' prime location in Summerlin West puts you at the center of Las Vegas's 
+              Arcadia Homes Las Vegas' prime location in Summerlin West puts you at the center of Las Vegas's 
               most desirable amenities and attractions.
             </p>
           </div>
@@ -201,7 +201,7 @@ export default function Amenities() {
               Signature Destinations
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              These premier destinations make Shawood Homes location truly exceptional
+              These premier destinations make Arcadia Homes Las Vegas location truly exceptional
             </p>
           </div>
 
@@ -254,10 +254,10 @@ export default function Amenities() {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container-max text-center">
           <h2 className="text-4xl font-display font-bold mb-6">
-            Experience the Shawood Lifestyle
+            Experience the Arcadia Homes Las Vegas Lifestyle
           </h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Schedule a private tour and experience firsthand why Shawood Homes offers 
+            Schedule a private tour and experience firsthand why Arcadia Homes Las Vegas offers 
             the perfect blend of luxury living and convenient access to everything Las Vegas offers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

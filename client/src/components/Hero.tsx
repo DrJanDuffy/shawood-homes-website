@@ -15,7 +15,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2075&q=80"
-          alt="Luxury home in Shawood Homes Summerlin"
+          alt="Luxury home in Arcadia Homes Las Vegas Summerlin"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -24,7 +24,7 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center text-white container-max px-4 animate-fade-in">
         <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
-          Shawood Homes
+          Arcadia Homes Las Vegas
           <span className="block text-3xl md:text-4xl text-yellow-300 mt-2">
             Luxury Living in Summerlin West
           </span>
@@ -104,9 +104,9 @@ export function Hero() {
           <Link href="/mortgage-calculator" className="btn-secondary text-lg px-8 py-4 shadow-xl">
             🧮 Calculate Payments
           </Link>
-          <a href="mailto:sales@shawoodhomes.com" className="btn-secondary text-lg px-8 py-4 shadow-xl flex items-center justify-center space-x-2">
+          <a href="mailto:DrDuffy@arcadiahomeslasvegas.com" className="btn-secondary text-lg px-8 py-4 shadow-xl flex items-center justify-center space-x-2">
             <span>✉️</span>
-            <span>Email: sales@shawoodhomes.com</span>
+            <span>Email: DrDuffy@arcadiahomeslasvegas.com</span>
           </a>
         </div>
 

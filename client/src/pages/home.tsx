@@ -5,7 +5,7 @@ import { MarketStats } from "@/components/MarketStats";
 import { FeaturedHomes } from "@/components/FeaturedHomes";
 import { MarketInsiderAlert } from "@/components/MarketInsiderAlert";
 import { LocalLandmarks } from "@/components/LocalLandmarks";
-import { WhyChooseShawood } from "@/components/WhyChooseShawood";
+import { WhyChooseArcadia } from "@/components/WhyChooseArcadia";
 import { AboutDrDuffy } from "@/components/AboutDrDuffy";
 import { ContactCTA } from "@/components/ContactCTA";
 import { LeadMagnetPopup } from "@/components/LeadMagnetPopup";
@@ -21,7 +21,7 @@ export default function Home() {
       <FeaturedHomes />
       <MarketInsiderAlert />
       <LocalLandmarks />
-      <WhyChooseShawood />
+      <WhyChooseArcadia />
       <AboutDrDuffy />
       <ContactCTA />
       <LeadMagnetPopup />

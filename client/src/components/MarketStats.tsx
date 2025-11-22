@@ -30,10 +30,10 @@ export function MarketStats() {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">
-            Shawood Market Report
+            Arcadia Homes Las Vegas Market Report
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay informed with the latest market trends and statistics for Shawood Homes community.
+            Stay informed with the latest market trends and statistics for Arcadia Homes Las Vegas community.
           </p>
         </div>
 
@@ -103,7 +103,7 @@ export function MarketStats() {
               <TrendingUp className="w-24 h-24 text-primary/40 mx-auto mb-4" />
               <h4 className="text-xl font-semibold text-gray-700 mb-2">Price Trend Analysis</h4>
               <p className="text-gray-600">
-                Interactive chart showing Shawood Homes price trends over the past 12 months
+                Interactive chart showing Arcadia Homes Las Vegas price trends over the past 12 months
               </p>
             </div>
           </div>
@@ -115,7 +115,7 @@ export function MarketStats() {
             Get Your Personalized Market Report
           </h3>
           <p className="text-primary-foreground/80 mb-6">
-            Receive detailed market analysis and home valuations for Shawood Homes
+            Receive detailed market analysis and home valuations for Arcadia Homes Las Vegas
           </p>
           <button className="bg-white text-primary font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
             Download Report

@@ -33,7 +33,7 @@ export function Navigation() {
             </div>
             <div>
               <div className="font-display text-xl font-bold text-gray-900">
-                Shawood Homes
+                Arcadia Homes Las Vegas
               </div>
               <div className="text-sm text-gray-600">Summerlin West</div>
             </div>
@@ -75,7 +75,7 @@ export function Navigation() {
                 </svg>
               </button>
               <div className="absolute top-full left-0 mt-2 w-52 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border">
-                <Link href="/community" className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors rounded-t-lg">About Shawood Homes</Link>
+                <Link href="/community" className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors rounded-t-lg">About Arcadia Homes Las Vegas</Link>
                 <Link href="/neighborhood" className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Neighborhood</Link>
                 <Link href="/lifestyle" className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Lifestyle</Link>
                 <Link href="/amenities" className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Amenities</Link>

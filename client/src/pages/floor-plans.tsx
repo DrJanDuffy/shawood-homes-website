@@ -184,7 +184,7 @@ export default function FloorPlans() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Unlimited Customization</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Every Shawood Homes residence is custom-built to your specifications. 
+              Every Arcadia Homes Las Vegas residence is custom-built to your specifications. 
               Choose from endless design options to create your dream home.
             </p>
           </div>
@@ -237,7 +237,7 @@ export default function FloorPlans() {
             <div className="text-center">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">4</div>
               <h3 className="text-xl font-semibold mb-2">Move-In</h3>
-              <p className="text-gray-600">Receive your keys and begin enjoying your custom luxury home in Shawood Homes.</p>
+              <p className="text-gray-600">Receive your keys and begin enjoying your custom luxury home in Arcadia Homes Las Vegas.</p>
             </div>
           </div>
         </div>

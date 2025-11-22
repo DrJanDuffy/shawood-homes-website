@@ -2,7 +2,7 @@ export function InteractiveMap() {
   return (
     <div className="bg-gray-50 rounded-2xl p-8">
       <h3 className="text-2xl font-display font-semibold text-gray-900 mb-6 text-center">
-        Exclusive Shawood Homes Location
+        Exclusive Arcadia Homes Las Vegas Location
       </h3>
       
       {/* Location Highlights */}
@@ -34,7 +34,7 @@ export function InteractiveMap() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Shawood Homes Summerlin West Location"
+          title="Arcadia Homes Las Vegas Summerlin West Location"
         />
       </div>
 
@@ -63,13 +63,13 @@ export function InteractiveMap() {
         
         <div className="mt-6 text-center">
           <a 
-            href="https://maps.google.com/maps?q=Shawood+Homes+Summerlin+West+Las+Vegas"
+            href="https://maps.google.com/maps?q=Arcadia+Homes+Las+Vegas+Summerlin+West+Las+Vegas"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary inline-flex items-center space-x-2"
           >
             <span>📍</span>
-            <span>Get Directions to Shawood Homes</span>
+            <span>Get Directions to Arcadia Homes Las Vegas</span>
           </a>
         </div>
       </div>

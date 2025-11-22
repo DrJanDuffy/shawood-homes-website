@@ -13,12 +13,12 @@ export function Footer() {
                 <span className="text-primary-foreground font-bold text-lg font-display">S</span>
               </div>
               <div>
-                <div className="font-display text-xl font-bold">Shawood Homes</div>
+                <div className="font-display text-xl font-bold">Arcadia Homes Las Vegas</div>
                 <div className="text-sm text-gray-400">Summerlin West Luxury Real Estate</div>
               </div>
             </div>
             <p className="text-gray-400 mb-4 max-w-md">
-              Your trusted partner for luxury real estate in Shawood Homes, Summerlin West. 
+              Your trusted partner for luxury real estate in Arcadia Homes Las Vegas, Summerlin West. 
               Specializing in this exclusive guard-gated community since 2008.
             </p>
             <div className="text-sm text-gray-400">
@@ -49,7 +49,7 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>sales@shawoodhomes.com</span>
+                <span>DrDuffy@arcadiahomeslasvegas.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4" />
@@ -62,7 +62,7 @@ export function Footer() {
         {/* Bottom Footer */}
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2024 Shawood Homes Real Estate. All rights reserved.
+            © 2024 Arcadia Homes Las Vegas Real Estate. All rights reserved.
           </div>
           <div className="flex space-x-6 text-gray-400 text-sm">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

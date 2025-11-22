@@ -1,15 +1,15 @@
 import { Mountain, GraduationCap, ShoppingBag, TreePine } from "lucide-react";
 
-export function WhyChooseShawood() {
+export function WhyChooseArcadia() {
   return (
     <section className="py-20 bg-white">
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">
-            Why Choose Shawood Homes?
+            Why Choose Arcadia Homes Las Vegas?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover what makes Shawood Homes the premier luxury community in Summerlin West
+            Discover what makes Arcadia Homes Las Vegas the premier luxury community in Summerlin West
           </p>
         </div>
 
@@ -67,7 +67,7 @@ export function WhyChooseShawood() {
           <div>
             <img
               src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-              alt="Red Rock Canyon landscape near Shawood Homes"
+              alt="Red Rock Canyon landscape near Arcadia Homes Las Vegas"
               className="rounded-xl shadow-lg w-full h-auto"
             />
           </div>
@@ -76,7 +76,7 @@ export function WhyChooseShawood() {
         {/* Interactive Map Section */}
         <div className="bg-gray-50 rounded-2xl p-8">
           <h3 className="text-2xl font-display font-semibold text-gray-900 mb-6 text-center">
-            Shawood Homes Location
+            Arcadia Homes Las Vegas Location
           </h3>
           <div className="mapbox-placeholder bg-gray-200 rounded-xl h-96 flex items-center justify-center">
             <div className="text-center">
@@ -84,7 +84,7 @@ export function WhyChooseShawood() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
               </svg>
               <h4 className="text-lg font-semibold text-gray-600 mb-2">Interactive Map</h4>
-              <p className="text-gray-500">Shawood Homes location with nearby amenities</p>
+              <p className="text-gray-500">Arcadia Homes Las Vegas location with nearby amenities</p>
             </div>
           </div>
         </div>
@@ -92,3 +92,4 @@ export function WhyChooseShawood() {
     </section>
   );
 }
+

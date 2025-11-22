@@ -8,10 +8,10 @@ export function ContactCTA() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-              Ready to Call Shawood Home?
+              Ready to Call Arcadia Homes Las Vegas Home?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let Dr. Jan Duffy guide you through your Shawood Homes journey. From market analysis 
+              Let Dr. Jan Duffy guide you through your Arcadia Homes Las Vegas journey. From market analysis 
               to closing, experience white-glove service every step of the way.
             </p>
             
@@ -33,7 +33,7 @@ export function ContactCTA() {
                 </div>
                 <div>
                   <div className="font-semibold">Email</div>
-                  <div className="text-gray-300">jan@shawoodhomes.com</div>
+                  <div className="text-gray-300">DrDuffy@arcadiahomeslasvegas.com</div>
                 </div>
               </div>
               

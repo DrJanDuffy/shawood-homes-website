@@ -94,7 +94,7 @@ export function LeadMagnetPopup() {
           <div className="mb-6 space-y-2">
             <div className="flex items-center space-x-2 text-sm">
               <span className="text-green-500">✓</span>
-              <span>Current market values for Shawood Homes</span>
+              <span>Current market values for Arcadia Homes Las Vegas</span>
             </div>
             <div className="flex items-center space-x-2 text-sm">
               <span className="text-green-500">✓</span>
@@ -181,7 +181,7 @@ export function LeadMagnetPopup() {
                 <span>Call Now</span>
               </a>
               <a
-                href="mailto:jan.duffy@shawoodhomes.com"
+                href="mailto:DrDuffy@arcadiahomeslasvegas.com"
                 className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 rounded-lg text-sm font-medium flex items-center justify-center space-x-1"
               >
                 <Mail className="w-4 h-4" />

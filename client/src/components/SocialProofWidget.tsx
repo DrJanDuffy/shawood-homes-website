@@ -9,7 +9,7 @@ export function SocialProofWidget() {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
             Trusted by Luxury Home Buyers
           </h2>
-          <p className="text-gray-600">Join exclusive clients who chose Shawood Homes</p>
+          <p className="text-gray-600">Join exclusive clients who chose Arcadia Homes Las Vegas</p>
         </div>
 
         {/* Stats Grid */}
@@ -67,7 +67,7 @@ export function SocialProofWidget() {
                 </div>
               </div>
               <p className="text-sm text-gray-700 italic">
-                "Dr. Duffy found us the perfect home in Shawood. Her expertise in the area is unmatched."
+                "Dr. Duffy found us the perfect home in Arcadia Homes Las Vegas. Her expertise in the area is unmatched."
               </p>
             </div>
 
@@ -109,7 +109,7 @@ export function SocialProofWidget() {
                 </div>
               </div>
               <p className="text-sm text-gray-700 italic">
-                "Professional service from start to finish. Shawood Homes exceeded expectations."
+                "Professional service from start to finish. Arcadia Homes Las Vegas exceeded expectations."
               </p>
             </div>
           </div>

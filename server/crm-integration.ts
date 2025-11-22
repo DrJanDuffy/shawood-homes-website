@@ -39,16 +39,16 @@ export class FollowUpBossIntegration implements CRMIntegration {
           emails: [{ value: lead.email, type: 'work' }],
           phones: lead.phone ? [{ value: lead.phone, type: 'mobile' }] : [],
           source: lead.source,
-          notes: lead.message ? `Website inquiry: ${lead.message}` : 'Website lead from Shawood Homes',
+          notes: lead.message ? `Website inquiry: ${lead.message}` : 'Website lead from Arcadia Homes Las Vegas',
           tags: [
-            'Shawood Homes',
+            'Arcadia Homes Las Vegas',
             'Summerlin West',
             'Luxury Real Estate',
             ...(lead.tags || [])
           ],
           assignedTo: 'DrDuffy@bhhsnv.com', // Dr. Jan Duffy's email
           customFields: {
-            website_source: 'shawoodhomes.com',
+            website_source: 'arcadiahomeslasvegas.com',
             lead_type: 'luxury_buyer',
             price_range: '$2M-$4M',
             location_interest: 'Summerlin West 89135',

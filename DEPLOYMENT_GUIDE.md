@@ -1,10 +1,10 @@
-# 🚀 Shawood Homes - Deployment Guide
+# 🚀 Arcadia Homes Las Vegas - Deployment Guide
 
 ## Step 1: GitHub Backup
 
 1. **Create a new GitHub repository:**
    - Go to https://github.com and create a new repository
-   - Name it: `shawood-homes-website`
+   - Name it: `arcadia-homes-las-vegas-website`
    - Make it private for security
 
 2. **Upload your project files:**
@@ -19,7 +19,7 @@
    - Go to https://vercel.com
    - Sign up/login with your GitHub account
    - Click "New Project"
-   - Import your `shawood-homes-website` repository
+   - Import your `arcadia-homes-las-vegas-website` repository
 
 2. **Configure Build Settings:**
    - Framework Preset: `Vite`
@@ -35,10 +35,10 @@
 
 ## Step 3: Domain Setup
 
-1. **Custom Domain (shawoodhomes.com):**
+1. **Custom Domain (arcadiahomeslasvegas.com):**
    - In Vercel dashboard, go to your project
    - Click "Domains" tab
-   - Add your custom domain: `shawoodhomes.com`
+   - Add your custom domain: `arcadiahomeslasvegas.com`
    - Follow DNS configuration instructions
 
 2. **SSL Certificate:**
@@ -101,4 +101,4 @@ Configure email notifications in your CRM system to receive immediate alerts whe
 
 ---
 
-**Your luxury real estate website is ready to capture qualified Shawood Homes buyers!**
+**Your luxury real estate website is ready to capture qualified Arcadia Homes Las Vegas buyers!**

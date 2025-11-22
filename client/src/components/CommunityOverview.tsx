@@ -6,7 +6,7 @@ export function CommunityOverview() {
       <div className="container-max">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">
-            Welcome to Shawood Homes
+            Welcome to Arcadia Homes Las Vegas
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Summerlin West's most exclusive guard-gated community in the 89135 ZIP code, 
@@ -18,7 +18,7 @@ export function CommunityOverview() {
           <div className="order-2 lg:order-1">
             <img
               src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-              alt="Aerial view of Shawood Homes luxury community"
+              alt="Aerial view of Arcadia Homes Las Vegas luxury community"
               className="rounded-xl shadow-lg w-full h-auto"
             />
           </div>
@@ -28,7 +28,7 @@ export function CommunityOverview() {
             </h3>
             <p className="text-lg text-gray-600 leading-relaxed">
               Located on West Charleston Boulevard between Buffalo Drive and Hualapai Way, 
-              Shawood Homes features custom estates from 3,500 to 8,000 square feet with 
+              Arcadia Homes Las Vegas features custom estates from 3,500 to 8,000 square feet with 
               direct views of Red Rock Canyon Conservation Area and Spring Mountains.
             </p>
             <ul className="space-y-3">

@@ -16,7 +16,7 @@ export default function PropertyAlerts() {
           {/* Urgency Banner */}
           <div className="bg-red-600 bg-opacity-90 rounded-lg px-6 py-4 max-w-2xl mx-auto mb-12">
             <p className="text-white text-center font-medium text-lg">
-              🚨 Only 3 luxury homes available in Shawood • Inventory extremely limited
+              🚨 Only 3 luxury homes available in Arcadia Homes Las Vegas • Inventory extremely limited
             </p>
           </div>
 
@@ -104,7 +104,7 @@ export default function PropertyAlerts() {
                 </div>
               </div>
               <p className="text-gray-700 italic">
-                "Dr. Duffy's alert system helped us find our dream home in Shawood before it even hit the MLS. 
+                "Dr. Duffy's alert system helped us find our dream home in Arcadia Homes Las Vegas before it even hit the MLS. 
                 We were the only buyers who saw it!"
               </p>
             </div>

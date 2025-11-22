@@ -131,8 +131,8 @@ export function ContactForm() {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="buying">Buying in Shawood Homes</SelectItem>
-                  <SelectItem value="selling">Selling my Shawood home</SelectItem>
+                  <SelectItem value="buying">Buying in Arcadia Homes Las Vegas</SelectItem>
+                  <SelectItem value="selling">Selling my Arcadia Homes Las Vegas home</SelectItem>
                   <SelectItem value="market_analysis">Market analysis</SelectItem>
                   <SelectItem value="investment">Investment opportunities</SelectItem>
                 </SelectContent>
