@@ -196,11 +196,8 @@ export default function HomeDetails() {
                     Virtual Tour
                   </Button>
                 )}
-                <Button variant="outline">
-                  <Heart className="w-4 h-4 mr-2" />
-                  Save Property
-                </Button>
-                <Button variant="outline">
+                <Button variant="outline" onClick={handleShare}>
+                  <Share2 className="w-4 h-4 mr-2" />
                   Share
                 </Button>
               </div>
