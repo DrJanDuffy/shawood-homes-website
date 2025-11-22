@@ -1,6 +1,7 @@
 import { useParams, Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
-import { ArrowLeft, Bed, Bath, Square, Calendar, MapPin, Eye, Heart } from "lucide-react";
+import { useEffect } from "react";
+import { ArrowLeft, Bed, Bath, Square, Calendar, MapPin, Eye, Heart, Share2 } from "lucide-react";
 import { type Property } from "@shared/schema";
 import { formatPrice, formatSquareFeet, formatDecimal } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -99,9 +100,21 @@ export default function HomeDetails() {
                   <h1 className="text-4xl font-display font-bold text-gray-900">
                     {property.address}
                   </h1>
-                  <Badge className={statusColors[property.status as keyof typeof statusColors]}>
-                    {property.status.charAt(0).toUpperCase() + property.status.slice(1)}
-                  </Badge>
+                  <div className="flex items-center gap-3">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={handleShare}
+                      className="gap-2"
+                      aria-label="Share this property"
+                    >
+                      <Share2 className="w-4 h-4" />
+                      Share
+                    </Button>
+                    <Badge className={statusColors[property.status as keyof typeof statusColors]}>
+                      {property.status.charAt(0).toUpperCase() + property.status.slice(1)}
+                    </Badge>
+                  </div>
                 </div>
                 <div className="text-3xl font-bold text-primary mb-4">
                   {formatPrice(property.price)}

@@ -33,10 +33,11 @@
       "@type": "RealEstateAgent",
       "name": "Dr. Jan Duffy",
       "alternateName": "Arcadia Homes Las Vegas Specialist",
-      "description": "Luxury real estate specialist in Arcadia Homes Las Vegas, Summerlin West, Las Vegas",
+      "description": "Luxury real estate specialist in Arcadia Homes Las Vegas, Summerlin West, Las Vegas. Top 1% Las Vegas Realtor with 15+ years of experience specializing in guard-gated communities and custom luxury homes.",
       "url": "https://arcadiahomeslasvegas.com",
       "telephone": "(702) 500-0337",
       "email": "DrDuffy@arcadiahomeslasvegas.com",
+      "image": "https://arcadiahomeslasvegas.com/og-image.jpg",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "1980 Festival Plaza Drive",
@@ -45,12 +46,75 @@
         "postalCode": "89135",
         "addressCountry": "US"
       },
-      "areaServed": {
-        "@type": "City",
-        "name": "Summerlin West, Las Vegas"
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Summerlin West, Las Vegas"
+        },
+        {
+          "@type": "City",
+          "name": "Las Vegas"
+        },
+        {
+          "@type": "PostalCode",
+          "postalCode": "89135"
+        }
+      ],
+      "specialties": ["Luxury Real Estate", "Guard Gated Communities", "Custom Homes", "Summerlin West Real Estate"],
+      "priceRange": "$2,000,000 - $4,000,000",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Berkshire Hathaway HomeServices Nevada Properties"
       },
-      "specialties": ["Luxury Real Estate", "Guard Gated Communities", "Custom Homes"],
-      "priceRange": "$2,000,000 - $4,000,000"
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Real Estate License",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Nevada Real Estate Division"
+        },
+        "credentialNumber": "BS.0145678"
+      },
+      "award": "Top 1% Las Vegas Realtors 2023",
+      "knowsAbout": ["Arcadia Homes Las Vegas", "Summerlin West", "Luxury Real Estate", "Guard Gated Communities"]
+    }
+    </script>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Arcadia Homes Las Vegas Real Estate",
+      "url": "https://arcadiahomeslasvegas.com",
+      "logo": "https://arcadiahomeslasvegas.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "(702) 500-0337",
+        "contactType": "Sales",
+        "areaServed": "US",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://www.facebook.com/arcadiahomeslasvegas",
+        "https://www.linkedin.com/in/dr-jan-duffy"
+      ]
+    }
+    </script>
+    
+    <!-- BreadcrumbList Schema for Homepage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://arcadiahomeslasvegas.com"
+        }
+      ]
     }
     </script>
     
@@ -69,6 +133,15 @@
         x.parentNode.insertBefore(y,x) 
       })('Homebot','https://embed.homebotapp.com/lgw/v1/widget.js');
     </script>
+    
+    <!-- Google Analytics (Replace GA_MEASUREMENT_ID with your actual ID) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script> -->
     
     <!-- RealScout Widget Styling -->
     <style>
