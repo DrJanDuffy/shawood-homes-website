@@ -1,10 +1,18 @@
 import { useState, useEffect } from "react";
-import { X, Download, Mail, Phone } from "lucide-react";
+import { X, Download, Mail, Phone, CheckCircle2, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
+
+// Phone number formatting function
+function formatPhoneNumber(value: string): string {
+  const phoneNumber = value.replace(/\D/g, '');
+  if (phoneNumber.length <= 3) return phoneNumber;
+  if (phoneNumber.length <= 6) return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
+  return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6, 10)}`;
+}
 
 export function LeadMagnetPopup() {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,6 +22,7 @@ export function LeadMagnetPopup() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -42,18 +51,26 @@ export function LeadMagnetPopup() {
       return await apiRequest("POST", "/api/leads", data);
     },
     onSuccess: () => {
+      setIsSuccess(true);
       toast({
         title: "Success!",
         description: "Your exclusive market report is being sent to your email.",
       });
-      setIsVisible(false);
-      // Store in localStorage to prevent showing again after successful submission
-      localStorage.setItem('leadMagnetPopupClosed', 'true');
+      setTimeout(() => {
+        setIsVisible(false);
+        // Store in localStorage to prevent showing again after successful submission
+        localStorage.setItem('leadMagnetPopupClosed', 'true');
+        setIsSuccess(false);
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPhone("");
+      }, 2000);
     },
-    onError: () => {
+    onError: (error: any) => {
       toast({
         title: "Error",
-        description: "Something went wrong. Please try again.",
+        description: error?.message || "Something went wrong. Please try again or call (702) 500-0337.",
         variant: "destructive",
       });
     },
@@ -170,9 +187,13 @@ export function LeadMagnetPopup() {
             <div>
               <Input
                 type="tel"
-                placeholder="Your phone number"
+                placeholder="(702) 500-0337"
                 value={phone}
-                onChange={(e) => setPhone(e.target.value)}
+                onChange={(e) => {
+                  const formatted = formatPhoneNumber(e.target.value);
+                  setPhone(formatted);
+                }}
+                maxLength={14}
                 required
                 className="w-full"
               />
@@ -180,11 +201,19 @@ export function LeadMagnetPopup() {
             
             <Button 
               type="submit" 
-              disabled={createLead.isPending}
-              className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold py-3"
+              disabled={createLead.isPending || isSuccess}
+              className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold py-3 relative overflow-hidden"
             >
               {createLead.isPending ? (
-                "Sending Report..."
+                <>
+                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                  Sending Report...
+                </>
+              ) : isSuccess ? (
+                <>
+                  <CheckCircle2 className="w-4 h-4 mr-2" />
+                  Success! Check your email
+                </>
               ) : (
                 <>
                   <Download className="w-4 h-4 mr-2" />

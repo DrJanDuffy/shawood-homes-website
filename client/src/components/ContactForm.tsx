@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -11,6 +11,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { insertLeadSchema } from "@shared/schema";
+import { CheckCircle2, Loader2 } from "lucide-react";
 
 const formSchema = insertLeadSchema.extend({
   source: z.string().default("Contact Form"),
@@ -18,8 +19,17 @@ const formSchema = insertLeadSchema.extend({
 
 type FormData = z.infer<typeof formSchema>;
 
+// Phone number formatting function
+function formatPhoneNumber(value: string): string {
+  const phoneNumber = value.replace(/\D/g, '');
+  if (phoneNumber.length <= 3) return phoneNumber;
+  if (phoneNumber.length <= 6) return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
+  return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6, 10)}`;
+}
+
 export function ContactForm() {
   const { toast } = useToast();
+  const [isSuccess, setIsSuccess] = useState(false);
   
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -39,16 +49,18 @@ export function ContactForm() {
       return await apiRequest("POST", "/api/leads", data);
     },
     onSuccess: () => {
+      setIsSuccess(true);
       toast({
         title: "Thank you for your interest!",
         description: "Dr. Duffy will contact you within 24 hours.",
       });
       form.reset();
+      setTimeout(() => setIsSuccess(false), 3000);
     },
-    onError: () => {
+    onError: (error: any) => {
       toast({
         title: "Error",
-        description: "Failed to submit form. Please try again.",
+        description: error?.message || "Failed to submit form. Please try again or call (702) 500-0337.",
         variant: "destructive",
       });
     },
@@ -111,7 +123,16 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className="text-gray-700">Phone</FormLabel>
               <FormControl>
-                <Input type="tel" placeholder="(702) 500-0337" {...field} />
+                <Input 
+                  type="tel" 
+                  placeholder="(702) 500-0337" 
+                  {...field}
+                  onChange={(e) => {
+                    const formatted = formatPhoneNumber(e.target.value);
+                    field.onChange(formatted);
+                  }}
+                  maxLength={14}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -162,10 +183,22 @@ export function ContactForm() {
         
         <Button 
           type="submit" 
-          className="w-full btn-primary" 
-          disabled={createLead.isPending}
+          className="w-full btn-primary relative overflow-hidden" 
+          disabled={createLead.isPending || isSuccess}
         >
-          {createLead.isPending ? "Submitting..." : "Get My Free Analysis"}
+          {createLead.isPending ? (
+            <>
+              <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+              Submitting...
+            </>
+          ) : isSuccess ? (
+            <>
+              <CheckCircle2 className="w-4 h-4 mr-2" />
+              Success! We'll be in touch soon
+            </>
+          ) : (
+            "Get My Free Analysis"
+          )}
         </Button>
       </form>
     </Form>

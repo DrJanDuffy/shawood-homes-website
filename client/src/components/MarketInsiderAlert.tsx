@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Bell, Star, TrendingUp, Home } from "lucide-react";
+import { Bell, Star, TrendingUp, Home, CheckCircle2, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
@@ -10,6 +10,7 @@ export function MarketInsiderAlert() {
   const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const { toast } = useToast();
 
   const createLead = useMutation({
@@ -17,18 +18,22 @@ export function MarketInsiderAlert() {
       return await apiRequest("POST", "/api/leads", data);
     },
     onSuccess: () => {
+      setIsSuccess(true);
       toast({
         title: "Welcome to Market Insider Alerts!",
         description: "You'll receive exclusive notifications for new Arcadia Homes Las Vegas listings.",
       });
-      setEmail("");
-      setFirstName("");
-      setIsExpanded(false);
+      setTimeout(() => {
+        setEmail("");
+        setFirstName("");
+        setIsExpanded(false);
+        setIsSuccess(false);
+      }, 3000);
     },
-    onError: () => {
+    onError: (error: any) => {
       toast({
         title: "Error",
-        description: "Please try again or call Dr. Duffy directly at (702) 500-0337.",
+        description: error?.message || "Please try again or call Dr. Duffy directly at (702) 500-0337.",
         variant: "destructive",
       });
     },
@@ -123,11 +128,19 @@ export function MarketInsiderAlert() {
               
               <Button
                 type="submit"
-                disabled={createLead.isPending}
-                className="w-full bg-white text-primary hover:bg-white/90 font-semibold py-3 text-lg"
+                disabled={createLead.isPending || isSuccess}
+                className="w-full bg-white text-primary hover:bg-white/90 font-semibold py-3 text-lg relative overflow-hidden"
               >
                 {createLead.isPending ? (
-                  "Activating Your Alerts..."
+                  <>
+                    <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                    Activating Your Alerts...
+                  </>
+                ) : isSuccess ? (
+                  <>
+                    <CheckCircle2 className="w-5 h-5 mr-2" />
+                    Alerts Activated!
+                  </>
                 ) : (
                   <>
                     <Bell className="w-5 h-5 mr-2" />
