@@ -10,17 +10,24 @@ export function AboutDrDuffy() {
               Meet Dr. Jan Duffy
             </h2>
             <h3 className="text-xl text-primary font-semibold mb-6">
-              Your Arcadia Homes Las Vegas Specialist
+              The Only Realtor® Exclusively Focused on Arcadia Homes Las Vegas
             </h3>
             <div className="space-y-4 text-lg text-gray-700 mb-8">
-              <p>
-                With over 15 years of real estate expertise in Las Vegas and specialized knowledge 
-                of the Arcadia Homes Las Vegas community, Dr. Jan Duffy has helped over 200 families find 
-                their dream homes in this exclusive neighborhood.
+              <p className="font-semibold text-gray-900">
+                <span className="text-primary">📍 Hyper-Local Expertise:</span> Dr. Jan Duffy lives in Summerlin West, 
+                shops at Downtown Summerlin, and knows every guard-gated street in the 89135 zip code. She's not just 
+                a Las Vegas realtor—she's your Arcadia Homes Las Vegas neighborhood specialist.
               </p>
               <p>
-                As a long-time Summerlin resident and Arcadia Homes Las Vegas specialist, Dr. Duffy provides 
-                unmatched local market insight and personalized service to every client.
+                <span className="text-primary font-semibold">🎯 Service-Focused Approach:</span> Dr. Duffy doesn't just list homes—she provides 
+                concierge-level service for Arcadia Homes Las Vegas buyers and sellers. From off-market property access 
+                to insider knowledge of upcoming listings, she delivers the white-glove experience that $2M-$4M luxury 
+                home transactions demand.
+              </p>
+              <p>
+                <span className="text-primary font-semibold">🏡 Arcadia-Specific Services:</span> Pre-market property previews, guard-gate 
+                community insights, Red Rock Canyon view assessments, custom home builder relationships, and exclusive 
+                access to Arcadia Homes Las Vegas inventory before it hits the MLS.
               </p>
             </div>
 
