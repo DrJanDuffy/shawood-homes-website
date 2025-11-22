@@ -1,34 +1,41 @@
-import { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { useEffect } from "react";
 import { Link } from "wouter";
-import { type Property } from "@shared/schema";
-import { PropertyCard } from "@/components/PropertyCard";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Search, SlidersHorizontal } from "lucide-react";
+import { useMetaTags } from "@/hooks/useMetaTags";
 
 export default function Homes() {
-  const [statusFilter, setStatusFilter] = useState<string>("all");
-  const [priceMin, setPriceMin] = useState<string>("");
-  const [priceMax, setPriceMax] = useState<string>("");
-  const [bedroomsFilter, setBedroomsFilter] = useState<string>("all");
-  const [bathroomsFilter, setBathroomsFilter] = useState<string>("all");
-  const [sqftMin, setSqftMin] = useState<string>("");
-  const [sqftMax, setSqftMax] = useState<string>("");
-  const [amenityFilter, setAmenityFilter] = useState<string>("all");
-
-  const { data: properties, isLoading } = useQuery<Property[]>({
-    queryKey: ["/api/properties"],
+  // SEO Meta Tags
+  useMetaTags({
+    title: "Available Homes in Arcadia Homes Las Vegas | $2M-$4M Luxury Listings",
+    description: "Browse exclusive luxury homes for sale in Arcadia Homes Las Vegas, Summerlin West 89135. Guard-gated community with Red Rock Canyon views. $2M-$4M custom estates.",
+    keywords: "Arcadia Homes Las Vegas for sale, luxury homes Summerlin West, 89135 homes for sale, guard gated community Las Vegas, Arcadia Homes listings, Dr Jan Duffy listings",
+    ogTitle: "Available Homes in Arcadia Homes Las Vegas",
+    ogDescription: "Exclusive luxury homes for sale in Arcadia Homes Las Vegas. Live MLS listings updated in real-time.",
+    ogUrl: "https://arcadiahomeslasvegas.com/homes",
+    canonical: "https://arcadiahomeslasvegas.com/homes",
   });
 
-  const filteredProperties = properties?.filter((property) => {
-    if (statusFilter !== "all" && property.status !== statusFilter) return false;
-    if (priceMin && property.price < parseInt(priceMin)) return false;
-    if (priceMax && property.price > parseInt(priceMax)) return false;
-    if (bedroomsFilter !== "all" && property.bedrooms !== parseInt(bedroomsFilter)) return false;
-    return true;
-  });
+  // Ensure RealScout script is loaded
+  useEffect(() => {
+    const checkScript = () => {
+      // Check if script already exists
+      const existingScript = document.querySelector('script[src*="realscout-web-components"]');
+      if (existingScript) return;
+      
+      // Check if custom elements are already defined
+      if (customElements.get('realscout-office-listings')) return;
+
+      // Load script if not present
+      const realScoutScript = document.createElement('script');
+      realScoutScript.src = 'https://em.realscout.com/widgets/realscout-web-components.umd.js';
+      realScoutScript.type = 'module';
+      document.head.appendChild(realScoutScript);
+    };
+
+    checkScript();
+    const timer = setTimeout(checkScript, 500);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="pt-20">
@@ -66,7 +73,7 @@ export default function Homes() {
               Live MLS Listings - Summerlin West
             </h2>
             <p className="text-gray-600 text-center mb-8">
-              Authentic property listings updated directly from the MLS. Dr. Duffy's exclusive access to luxury homes $450K-$4M.
+              Authentic property listings updated directly from the MLS. Dr. Duffy's exclusive access to luxury homes $2M-$4M.
             </p>
             
             <div dangerouslySetInnerHTML={{
@@ -107,12 +114,16 @@ export default function Homes() {
             Get notified first about new Arcadia Homes Las Vegas opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="secondary" size="lg">
-              Set Up Property Alerts
-            </Button>
-            <Button variant="outline" size="lg" className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              Contact Dr. Duffy
-            </Button>
+            <Link href="/property-alerts">
+              <Button variant="secondary" size="lg">
+                Set Up Property Alerts
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button variant="outline" size="lg" className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                Contact Dr. Duffy
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
