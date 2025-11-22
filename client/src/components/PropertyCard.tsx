@@ -1,3 +1,4 @@
+import { memo, useMemo } from "react";
 import { Link } from "wouter";
 import { type Property } from "@shared/schema";
 import { formatPrice, formatSquareFeet, formatDecimal } from "@/lib/utils";
@@ -7,12 +8,16 @@ interface PropertyCardProps {
   property: Property;
 }
 
-export function PropertyCard({ property }: PropertyCardProps) {
-  const statusColors = {
-    active: "bg-green-100 text-green-800",
-    pending: "bg-yellow-100 text-yellow-800",
-    sold: "bg-gray-100 text-gray-800",
-  };
+const STATUS_COLORS = {
+  active: "bg-green-100 text-green-800",
+  pending: "bg-yellow-100 text-yellow-800",
+  sold: "bg-gray-100 text-gray-800",
+} as const;
+
+export const PropertyCard = memo(function PropertyCard({ property }: PropertyCardProps) {
+  const statusColor = useMemo(() => {
+    return STATUS_COLORS[property.status as keyof typeof STATUS_COLORS] || STATUS_COLORS.active;
+  }, [property.status]);
 
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
@@ -30,7 +35,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
             decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          <Badge className={`absolute top-4 right-4 ${statusColors[property.status as keyof typeof statusColors]}`}>
+          <Badge className={`absolute top-4 right-4 ${statusColor}`}>
             {property.status.charAt(0).toUpperCase() + property.status.slice(1)}
           </Badge>
           <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -79,4 +84,4 @@ export function PropertyCard({ property }: PropertyCardProps) {
       </div>
     </div>
   );
-}
+});
