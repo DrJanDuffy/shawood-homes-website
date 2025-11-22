@@ -41,7 +41,7 @@ export function InteractiveMap() {
       <div className="rounded-xl overflow-hidden shadow-xl mb-6">
         <div className="relative bg-gray-200">
           <iframe
-            src="https://www.google.com/maps?q=Summerlin+West,+Las+Vegas,+NV+89135&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3214.7234567891234!2d-115.4451988!3d36.1916409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzYsMTE1LjQ0NQ!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus&q=Summerlin+West,+Las+Vegas,+NV+89135"
             width="100%"
             height="500"
             style={{ border: 0 }}
@@ -127,7 +127,7 @@ export function InteractiveMap() {
         <div className="mt-8 pt-6 border-t border-gray-200">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 
-              href="https://www.google.com/maps/search/Summerlin+West,+Las+Vegas,+NV+89135"
+              href="https://maps.app.goo.gl/4g8rW5YafdgNKsoRA"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-flex items-center space-x-2"
