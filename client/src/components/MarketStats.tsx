@@ -1,24 +1,62 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
-import { TrendingUp } from "lucide-react";
+import { TrendingUp, AlertCircle, RefreshCw } from "lucide-react";
 import { type MarketData } from "@shared/schema";
 import { formatPrice, formatNumber, formatDecimal } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 export function MarketStats() {
-  const { data: marketData, isLoading } = useQuery<MarketData[]>({
+  const { data: marketData, isLoading, error, refetch } = useQuery<MarketData[]>({
     queryKey: ["/api/market-data"],
   });
 
   const latest = marketData?.[0];
 
-  if (isLoading || !latest) {
+  if (isLoading) {
+    return (
+      <section className="py-20 bg-white">
+        <div className="container-max">
+          <div className="text-center mb-16">
+            <div className="animate-pulse">
+              <div className="h-10 bg-gray-200 rounded w-80 mx-auto mb-4"></div>
+              <div className="h-6 bg-gray-200 rounded w-96 mx-auto"></div>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="space-y-6">
+              <div className="h-64 bg-gray-100 rounded-xl animate-pulse"></div>
+            </div>
+            <div className="space-y-6">
+              <div className="h-64 bg-gray-100 rounded-xl animate-pulse"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  if (error || !latest) {
     return (
       <section className="py-20 bg-white">
         <div className="container-max">
           <div className="text-center">
-            <div className="animate-pulse">
-              <div className="h-8 bg-gray-200 rounded w-64 mx-auto mb-4"></div>
-              <div className="h-4 bg-gray-200 rounded w-96 mx-auto"></div>
+            <div className="bg-red-50 border border-red-200 rounded-xl p-8 max-w-2xl mx-auto">
+              <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Unable to Load Market Data
+              </h3>
+              <p className="text-gray-600 mb-6">
+                We're having trouble loading the latest market statistics. Please try again or contact Dr. Duffy for the latest market information.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button onClick={() => refetch()} variant="outline" className="gap-2">
+                  <RefreshCw className="w-4 h-4" />
+                  Try Again
+                </Button>
+                <a href="tel:702-500-0337" className="btn-primary">
+                  Call Dr. Duffy
+                </a>
+              </div>
             </div>
           </div>
         </div>
