@@ -15,7 +15,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <SocialProofWidget />
+      <div id="home-content">
+        <SocialProofWidget />
       <CommunityOverview />
       <MarketStats />
       <FeaturedHomes />
@@ -24,6 +25,7 @@ export default function Home() {
       <WhyChooseArcadia />
       <AboutDrDuffy />
       <ContactCTA />
+      </div>
       <LeadMagnetPopup />
       <FloatingContactWidget />
     </>

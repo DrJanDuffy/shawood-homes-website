@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { type MarketData } from "@shared/schema";
 import { formatPrice, formatNumber } from "@/lib/utils";
-import { ContactForm } from "@/components/ContactForm";
+import { ArrowDown } from "lucide-react";
 
 export function Hero() {
   const { data: marketData } = useQuery<MarketData>({
@@ -51,69 +51,37 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Home Valuation Widget */}
-        <div className="bg-white bg-opacity-95 rounded-xl p-6 max-w-md mx-auto shadow-2xl mb-8">
-          <h3 className="text-xl font-semibold text-gray-900 text-center mb-4">What's Your Home Worth?</h3>
-          <p className="text-sm text-gray-600 text-center mb-4">Get your instant home value estimate</p>
-          <div dangerouslySetInnerHTML={{
-            __html: `<hvs-widget
-              apikey='2947274957274029'
-              placeholder='Enter your Address'
-              no-result-message='No Results'
-              username='drduffy@bhhsnv.com'
-              new-window='true'
-            ></hvs-widget>`
-          }} />
-          <p className="text-xs text-gray-500 text-center mt-3">
-            🔒 Secure • Free • No Obligation
-          </p>
-        </div>
-
-        {/* Property Alerts Section */}
-        <div className="bg-white bg-opacity-95 rounded-xl p-6 max-w-2xl mx-auto shadow-2xl mb-8">
-          <div className="text-center mb-6">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-2">🚨 Never Miss Your Dream Home</h3>
-            <p className="text-gray-600">Get instant alerts when luxury homes match your criteria</p>
-            <div className="bg-red-100 text-red-800 px-4 py-2 rounded-lg mt-3 text-sm font-medium">
-              Only 3 luxury homes available • Be first in line for new listings
-            </div>
-          </div>
-          
-          <div dangerouslySetInnerHTML={{
-            __html: `<realscout-advanced-search agent-encoded-id="QWdlbnQtMjI1MDUw"></realscout-advanced-search>`
-          }} />
-          
-          <p className="text-xs text-gray-500 text-center mt-3">
-            🔒 Exclusive access to off-market properties • Dr. Duffy's VIP buyer list
-          </p>
-        </div>
-
-        {/* Contact Form */}
-        <div className="bg-white bg-opacity-95 rounded-xl p-6 max-w-md mx-auto shadow-2xl mb-8">
-          <h3 className="text-xl font-semibold text-gray-900 text-center mb-4">Get Your Free Market Analysis</h3>
-          <ContactForm />
-        </div>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-          <Link href="/homes" className="btn-secondary text-lg px-8 py-4 shadow-xl">
+        {/* Primary CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+          <Link href="/homes" className="btn-primary text-lg px-8 py-4 shadow-xl hover:scale-105 transition-transform">
             View Exclusive Homes
           </Link>
-          <Link href="/market-predictions" className="btn-primary text-lg px-8 py-4 shadow-xl animate-pulse">
-            🔮 Market Predictions
+          <Link href="/contact" className="btn-secondary text-lg px-8 py-4 shadow-xl hover:scale-105 transition-transform">
+            Schedule Consultation
           </Link>
-          <Link href="/mortgage-calculator" className="btn-secondary text-lg px-8 py-4 shadow-xl">
-            🧮 Calculate Payments
+        </div>
+
+        {/* Secondary Actions */}
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
+          <Link href="/home-value" className="bg-white/90 hover:bg-white text-gray-900 px-6 py-3 rounded-lg font-medium shadow-lg transition-all hover:scale-105">
+            🏡 Home Value
           </Link>
-          <a href="mailto:DrDuffy@arcadiahomeslasvegas.com" className="btn-secondary text-lg px-8 py-4 shadow-xl flex items-center justify-center space-x-2">
+          <Link href="/property-alerts" className="bg-white/90 hover:bg-white text-gray-900 px-6 py-3 rounded-lg font-medium shadow-lg transition-all hover:scale-105">
+            🚨 Property Alerts
+          </Link>
+          <Link href="/mortgage-calculator" className="bg-white/90 hover:bg-white text-gray-900 px-6 py-3 rounded-lg font-medium shadow-lg transition-all hover:scale-105">
+            🧮 Calculator
+          </Link>
+          <a href="mailto:DrDuffy@arcadiahomeslasvegas.com" className="bg-white/90 hover:bg-white text-gray-900 px-6 py-3 rounded-lg font-medium shadow-lg transition-all hover:scale-105 flex items-center space-x-2">
             <span>✉️</span>
-            <span>Email: DrDuffy@arcadiahomeslasvegas.com</span>
+            <span>Email</span>
           </a>
         </div>
 
         {/* Urgency/Scarcity Message */}
-        <div className="bg-red-600 bg-opacity-90 rounded-lg px-6 py-3 max-w-2xl mx-auto mb-8">
-          <p className="text-white text-center font-medium">
-            🔥 Only 3 homes available • Exclusive community rarely has inventory
+        <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-lg px-6 py-4 max-w-2xl mx-auto mb-8 shadow-xl animate-pulse">
+          <p className="text-white text-center font-semibold text-lg">
+            🔥 Only 3 luxury homes available • Exclusive community rarely has inventory
           </p>
         </div>
 
@@ -148,6 +116,14 @@ export function Hero() {
             </div>
           </div>
         )}
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <Link href="#home-content" className="flex flex-col items-center text-white/80 hover:text-white transition-colors">
+            <span className="text-sm mb-2">Explore More</span>
+            <ArrowDown className="w-6 h-6" />
+          </Link>
+        </div>
       </div>
     </section>
   );
