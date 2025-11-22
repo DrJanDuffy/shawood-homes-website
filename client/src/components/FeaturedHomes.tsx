@@ -53,7 +53,7 @@ export function FeaturedHomes() {
         </div>
 
         <div className="text-center mt-12">
-          <Link href="/homes" className="btn-secondary text-lg px-8 py-4">
+          <Link href="/homes" className="btn-secondary text-lg px-8 py-4 shadow-lg hover:shadow-xl hover:scale-105 transition-all">
             View All Homes
           </Link>
         </div>

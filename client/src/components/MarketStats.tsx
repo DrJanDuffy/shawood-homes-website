@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "wouter";
 import { TrendingUp } from "lucide-react";
 import { type MarketData } from "@shared/schema";
 import { formatPrice, formatNumber, formatDecimal } from "@/lib/utils";
@@ -117,9 +118,12 @@ export function MarketStats() {
           <p className="text-primary-foreground/80 mb-6">
             Receive detailed market analysis and home valuations for Arcadia Homes Las Vegas
           </p>
-          <button className="bg-white text-primary font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
-            Download Report
-          </button>
+          <Link 
+            href="/market-report" 
+            className="inline-block bg-white text-primary font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl hover:scale-105 transform"
+          >
+            Get Your Market Report
+          </Link>
         </div>
       </div>
     </section>
