@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Download, Eye, Heart, Share2 } from "lucide-react";
 import { useMetaTags } from "@/hooks/useMetaTags";
 import { addSchemaMarkup } from "@/lib/seo";
+import { FAQSection } from "@/components/FAQSection";
 
 export default function FloorPlans() {
   // SEO Meta Tags

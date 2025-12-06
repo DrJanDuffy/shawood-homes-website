@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useMetaTags } from "@/hooks/useMetaTags";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { addSchemaMarkup } from "@/lib/seo";
+import { addSchemaMarkup, generateFAQSchema } from "@/lib/seo";
 
 export default function Homes() {
   // SEO Meta Tags
@@ -38,6 +38,43 @@ export default function Homes() {
     };
 
     const schemaId = addSchemaMarkup(itemListSchema, "homes-list-schema");
+    return () => {
+      const script = document.getElementById(schemaId);
+      if (script) script.remove();
+    };
+  }, []);
+
+  // Add FAQ Schema
+  useEffect(() => {
+    const faqs = [
+      {
+        question: "How does Dr. Duffy help buyers navigate the home buying process?",
+        answer: "Dr. Duffy provides comprehensive buyer services including property search and filtering, private showings, property analysis and comparisons, negotiation strategies, inspection coordination, and guidance through closing. Her exclusive focus on Arcadia Homes Las Vegas ensures buyers see the best properties first."
+      },
+      {
+        question: "What buyer representation services does Dr. Duffy offer?",
+        answer: "Dr. Duffy offers full buyer representation including access to off-market and pre-market properties, detailed property analysis, market insights and pricing guidance, expert negotiation on your behalf, transaction management, and post-closing support. She works exclusively for buyers' best interests."
+      },
+      {
+        question: "Can Dr. Duffy help me find off-market properties?",
+        answer: "Yes, Dr. Duffy's extensive network and reputation in Arcadia Homes Las Vegas provides access to properties before they hit the MLS. She maintains relationships with homeowners, builders, and other agents to bring exclusive opportunities to her buyer clients first."
+      },
+      {
+        question: "What makes Dr. Duffy's buyer services different?",
+        answer: "Dr. Duffy's exclusive focus on Arcadia Homes Las Vegas means she knows every property, every builder, and every aspect of the community. She provides hyper-local expertise, insider knowledge, and personalized service that general realtors cannot match."
+      },
+      {
+        question: "How does Dr. Duffy help with property analysis and pricing?",
+        answer: "Dr. Duffy provides detailed Comparative Market Analysis (CMA) for every property, including comparable sales, current market trends, pricing strategies, and investment potential. Her 15+ years of experience in this specific market provides unparalleled insights."
+      },
+      {
+        question: "What support does Dr. Duffy provide after closing?",
+        answer: "Dr. Duffy provides ongoing support after closing including introductions to trusted contractors and service providers, community information and resources, and long-term relationship building. She believes in being a trusted real estate advisor for life, not just for the transaction."
+      }
+    ];
+
+    const faqSchema = generateFAQSchema(faqs);
+    const schemaId = addSchemaMarkup(faqSchema, "homes-faq-schema");
     return () => {
       const script = document.getElementById(schemaId);
       if (script) script.remove();

@@ -5,6 +5,7 @@ import { type Amenity } from "@shared/schema";
 import { InteractiveMap } from "@/components/InteractiveMap";
 import { useMetaTags } from "@/hooks/useMetaTags";
 import { addSchemaMarkup } from "@/lib/seo";
+import { FAQSection } from "@/components/FAQSection";
 
 export default function Amenities() {
   // SEO Meta Tags

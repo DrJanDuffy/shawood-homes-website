@@ -4,7 +4,8 @@ import { CheckCircle, MapPin, Shield, Star } from "lucide-react";
 import { type Amenity } from "@shared/schema";
 import { InteractiveMap } from "@/components/InteractiveMap";
 import { useMetaTags } from "@/hooks/useMetaTags";
-import { addSchemaMarkup } from "@/lib/seo";
+import { addSchemaMarkup, generateFAQSchema } from "@/lib/seo";
+import { FAQSection } from "@/components/FAQSection";
 
 export default function Community() {
   // SEO Meta Tags
@@ -272,6 +273,39 @@ export default function Community() {
           <InteractiveMap />
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection
+        title="Frequently Asked Questions About Dr. Duffy's Community Services"
+        description="Common questions about how Dr. Jan Duffy helps buyers understand and navigate the Arcadia Homes Las Vegas community"
+        faqs={[
+          {
+            question: "How does Dr. Duffy help buyers understand the Arcadia Homes Las Vegas community?",
+            answer: "Dr. Duffy provides comprehensive community insights including HOA information, architectural guidelines, community amenities, neighborhood demographics, and lifestyle details. Her 15+ years of experience in this exclusive community gives buyers insider knowledge that general realtors cannot provide."
+          },
+          {
+            question: "What community-specific services does Dr. Duffy offer?",
+            answer: "Dr. Duffy offers specialized services including guard-gate community navigation, HOA document review, architectural guideline consultation, builder relationship introductions, and community insider knowledge. She helps buyers understand every aspect of living in Arcadia Homes Las Vegas."
+          },
+          {
+            question: "Can Dr. Duffy help with HOA and community questions?",
+            answer: "Yes, Dr. Duffy has extensive knowledge of the Arcadia Homes Las Vegas HOA, including fee structures, rules and regulations, architectural guidelines, and community amenities. She provides this information to help buyers make informed decisions about their purchase."
+          },
+          {
+            question: "How does Dr. Duffy's community expertise benefit buyers?",
+            answer: "Dr. Duffy's exclusive focus on Arcadia Homes Las Vegas means she knows the community inside and out. She can answer questions about HOA fees, community rules, builder reputations, property histories, and neighborhood dynamics that general realtors cannot provide."
+          },
+          {
+            question: "Does Dr. Duffy help buyers understand property restrictions?",
+            answer: "Yes, Dr. Duffy provides detailed information about architectural guidelines, HOA restrictions, property use limitations, and community rules. She ensures buyers fully understand what they can and cannot do with their property before making a purchase decision."
+          },
+          {
+            question: "What community resources does Dr. Duffy provide?",
+            answer: "Dr. Duffy connects buyers with trusted contractors familiar with the community, provides introductions to neighbors, shares community event information, and offers ongoing support for understanding and navigating community life in Arcadia Homes Las Vegas."
+          }
+        ]}
+        schemaId="community-faq-schema"
+      />
     </div>
   );
 }
