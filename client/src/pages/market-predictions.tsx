@@ -5,8 +5,19 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { ContactForm } from "@/components/ContactForm";
+import { useMetaTags } from "@/hooks/useMetaTags";
 
 export default function MarketPredictions() {
+  // SEO Meta Tags
+  useMetaTags({
+    title: "Summerlin West Market Predictions | Arcadia Homes Las Vegas Forecast 2025-2027",
+    description: "Dr. Jan Duffy's exclusive market predictions for Summerlin West. Price appreciation forecasts, inventory trends, and investment opportunities. Advanced analytics and 15+ years expertise.",
+    keywords: "Summerlin West market predictions, Arcadia Homes Las Vegas forecast, luxury real estate trends 2025, market forecast Las Vegas",
+    ogTitle: "Summerlin West Market Predictions 2025-2027",
+    ogDescription: "Exclusive market predictions with price appreciation forecasts, inventory trends, and investment opportunities for Summerlin West.",
+    ogUrl: "https://www.arcadiahomeslasvegas.com/market-predictions",
+    canonical: "https://www.arcadiahomeslasvegas.com/market-predictions",
+  });
   const [selectedTimeframe, setSelectedTimeframe] = useState("12months");
 
   const timeframes = [

@@ -4,8 +4,19 @@ import { type MarketData } from "@shared/schema";
 import { formatPrice, formatNumber, formatDecimal } from "@/lib/utils";
 import { ContactForm } from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
+import { useMetaTags } from "@/hooks/useMetaTags";
 
 export default function MarketReport() {
+  // SEO Meta Tags
+  useMetaTags({
+    title: "Arcadia Homes Las Vegas Market Report | Real Estate Trends & Statistics",
+    description: "Comprehensive market report for Arcadia Homes Las Vegas. Current prices, trends, inventory, and investment outlook. Download free detailed market analysis report.",
+    keywords: "Arcadia Homes Las Vegas market report, Summerlin West real estate trends, luxury home market analysis, 89135 market data",
+    ogTitle: "Arcadia Homes Las Vegas Market Report",
+    ogDescription: "Comprehensive market report with current prices, trends, inventory, and investment outlook. Download free detailed analysis.",
+    ogUrl: "https://www.arcadiahomeslasvegas.com/market-report",
+    canonical: "https://www.arcadiahomeslasvegas.com/market-report",
+  });
   const { data: marketData, isLoading } = useQuery<MarketData[]>({
     queryKey: ["/api/market-data"],
   });

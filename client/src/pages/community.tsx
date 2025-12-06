@@ -1,9 +1,62 @@
+import { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { CheckCircle, MapPin, Shield, Star } from "lucide-react";
 import { type Amenity } from "@shared/schema";
 import { InteractiveMap } from "@/components/InteractiveMap";
+import { useMetaTags } from "@/hooks/useMetaTags";
+import { addSchemaMarkup } from "@/lib/seo";
 
 export default function Community() {
+  // SEO Meta Tags
+  useMetaTags({
+    title: "Arcadia Homes Las Vegas Community | Guard-Gated Luxury in Summerlin West",
+    description: "Exclusive guard-gated luxury community in Summerlin West. 95 custom homes, 24/7 security, Red Rock Canyon views. HOA information, community guidelines, and neighborhood details.",
+    keywords: "Arcadia Homes Las Vegas community, guard gated Summerlin West, 89135 luxury community, HOA information, guard gated community Las Vegas",
+    ogTitle: "Arcadia Homes Las Vegas Community - Guard-Gated Luxury",
+    ogDescription: "Exclusive guard-gated community with 95 custom homes, 24/7 security, and Red Rock Canyon views. HOA information and community guidelines.",
+    ogUrl: "https://www.arcadiahomeslasvegas.com/community",
+    canonical: "https://www.arcadiahomeslasvegas.com/community",
+  });
+
+  // Add Place/ResidentialCommunity Schema
+  useEffect(() => {
+    const placeSchema = {
+      "@context": "https://schema.org",
+      "@type": "ResidentialComplex",
+      "name": "Arcadia Homes Las Vegas",
+      "description": "Exclusive guard-gated luxury community in Summerlin West with custom-built homes and Red Rock Canyon views.",
+      "url": "https://www.arcadiahomeslasvegas.com/community",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Las Vegas",
+        "addressRegion": "NV",
+        "postalCode": "89135",
+        "addressCountry": "US"
+      },
+      "numberOfBedrooms": {
+        "@type": "QuantitativeValue",
+        "minValue": 4,
+        "maxValue": 6
+      },
+      "numberOfBathroomsTotal": {
+        "@type": "QuantitativeValue",
+        "minValue": 3,
+        "maxValue": 6
+      },
+      "floorSize": {
+        "@type": "QuantitativeValue",
+        "minValue": 3200,
+        "maxValue": 8000,
+        "unitCode": "SQM"
+      }
+    };
+
+    const schemaId = addSchemaMarkup(placeSchema, "community-place-schema");
+    return () => {
+      const script = document.getElementById(schemaId);
+      if (script) script.remove();
+    };
+  }, []);
   const { data: amenities, isLoading } = useQuery<Amenity[]>({
     queryKey: ["/api/amenities"],
   });

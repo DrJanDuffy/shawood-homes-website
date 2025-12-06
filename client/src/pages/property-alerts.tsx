@@ -1,4 +1,16 @@
+import { useMetaTags } from "@/hooks/useMetaTags";
+
 export default function PropertyAlerts() {
+  // SEO Meta Tags
+  useMetaTags({
+    title: "Property Alerts - Arcadia Homes Las Vegas | Never Miss Your Dream Home",
+    description: "Get instant alerts when luxury homes in Arcadia Homes Las Vegas match your criteria. Exclusive off-market opportunities and new listings. Be the first to know about price reductions.",
+    keywords: "property alerts Arcadia Homes Las Vegas, luxury home notifications, Summerlin West real estate alerts, off-market properties",
+    ogTitle: "Property Alerts - Arcadia Homes Las Vegas",
+    ogDescription: "Get instant alerts for luxury homes matching your criteria. Exclusive off-market opportunities and new listings.",
+    ogUrl: "https://www.arcadiahomeslasvegas.com/property-alerts",
+    canonical: "https://www.arcadiahomeslasvegas.com/property-alerts",
+  });
   return (
     <div className="min-h-screen bg-gradient-to-br from-warm-brown via-cream to-sage-green">
       {/* Hero Section */}
@@ -141,10 +153,10 @@ export default function PropertyAlerts() {
                 href="tel:702-500-0337" 
                 className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
-                Call Now: (702) 222-1964
+                Call Now: (702) 500-0337
               </a>
               <a 
-                href="mailto:janet.duffy@bhhsnv.com" 
+                href="mailto:DrDuffy@arcadiahomeslasvegas.com" 
                 className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Email Dr. Duffy

@@ -1,8 +1,19 @@
 import { useQuery } from "@tanstack/react-query";
 import { GraduationCap, MapPin, Star, ExternalLink, Users, Award } from "lucide-react";
 import { type School } from "@shared/schema";
+import { useMetaTags } from "@/hooks/useMetaTags";
 
 export default function Schools() {
+  // SEO Meta Tags
+  useMetaTags({
+    title: "Schools Near Arcadia Homes Las Vegas | Top-Rated Education in Summerlin West",
+    description: "Arcadia Homes Las Vegas students attend top-rated schools in Clark County School District. Elementary, middle, and high school information. A-rated district with excellent academic programs.",
+    keywords: "Arcadia Homes Las Vegas schools, Summerlin West schools, Clark County School District, 89135 schools, top rated schools Las Vegas",
+    ogTitle: "Schools Near Arcadia Homes Las Vegas",
+    ogDescription: "Top-rated schools in Clark County School District. Elementary, middle, and high school information for Arcadia Homes Las Vegas families.",
+    ogUrl: "https://www.arcadiahomeslasvegas.com/schools",
+    canonical: "https://www.arcadiahomeslasvegas.com/schools",
+  });
   const { data: schools, isLoading } = useQuery<School[]>({
     queryKey: ["/api/schools"],
   });

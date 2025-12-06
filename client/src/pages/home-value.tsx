@@ -1,6 +1,16 @@
-
+import { useMetaTags } from "@/hooks/useMetaTags";
 
 export default function HomeValue() {
+  // SEO Meta Tags
+  useMetaTags({
+    title: "Free Home Valuation - Arcadia Homes Las Vegas | Instant Property Value",
+    description: "Get a free, instant home valuation for your Arcadia Homes Las Vegas property. Expert market analysis from Dr. Jan Duffy. Accurate estimates using latest MLS data.",
+    keywords: "home value Arcadia Homes Las Vegas, property valuation Summerlin West, free home estimate, home value calculator 89135",
+    ogTitle: "Free Home Valuation - Arcadia Homes Las Vegas",
+    ogDescription: "Get instant, accurate home valuation for your Arcadia Homes Las Vegas property. Expert market analysis from Dr. Jan Duffy.",
+    ogUrl: "https://www.arcadiahomeslasvegas.com/home-value",
+    canonical: "https://www.arcadiahomeslasvegas.com/home-value",
+  });
   return (
     <>
 
@@ -92,10 +102,10 @@ export default function HomeValue() {
                   href="tel:702-500-0337" 
                   className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
                 >
-                  Call Dr. Duffy: (702) 222-1964
+                  Call Dr. Duffy: (702) 500-0337
                 </a>
                 <a 
-                  href="mailto:janet.duffy@bhhsnv.com" 
+                  href="mailto:DrDuffy@arcadiahomeslasvegas.com" 
                   className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
                 >
                   Email for Analysis

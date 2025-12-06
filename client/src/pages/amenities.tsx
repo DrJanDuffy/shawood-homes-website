@@ -2,8 +2,19 @@ import { useQuery } from "@tanstack/react-query";
 import { MapPin, Clock, Star, ExternalLink } from "lucide-react";
 import { type Amenity } from "@shared/schema";
 import { InteractiveMap } from "@/components/InteractiveMap";
+import { useMetaTags } from "@/hooks/useMetaTags";
 
 export default function Amenities() {
+  // SEO Meta Tags
+  useMetaTags({
+    title: "Amenities Near Arcadia Homes Las Vegas | Shopping, Dining, Recreation",
+    description: "Discover world-class amenities near Arcadia Homes Las Vegas. Downtown Summerlin, Red Rock Canyon, championship golf courses, and premium shopping within minutes of your home.",
+    keywords: "Arcadia Homes Las Vegas amenities, Summerlin West shopping, Red Rock Canyon, Downtown Summerlin, luxury amenities Las Vegas",
+    ogTitle: "Amenities Near Arcadia Homes Las Vegas",
+    ogDescription: "World-class amenities within minutes: Downtown Summerlin shopping, Red Rock Canyon, championship golf, fine dining, and premium entertainment.",
+    ogUrl: "https://www.arcadiahomeslasvegas.com/amenities",
+    canonical: "https://www.arcadiahomeslasvegas.com/amenities",
+  });
   const { data: amenities, isLoading } = useQuery<Amenity[]>({
     queryKey: ["/api/amenities"],
   });

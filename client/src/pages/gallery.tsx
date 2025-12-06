@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { imageUrls } from "@/lib/imageUrls";
+import { useMetaTags } from "@/hooks/useMetaTags";
+import { addSchemaMarkup } from "@/lib/seo";
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
@@ -48,7 +50,40 @@ export default function Gallery() {
     }
   ];
 
+  // SEO Meta Tags
+  useMetaTags({
+    title: "Arcadia Homes Las Vegas Photo Gallery | Luxury Homes & Community",
+    description: "Explore stunning photos of Arcadia Homes Las Vegas. Luxury interiors, exteriors, Red Rock Canyon views, and community amenities. Virtual tours available.",
+    keywords: "Arcadia Homes Las Vegas photos, luxury home gallery, Summerlin West real estate photos, Arcadia Homes images",
+    ogTitle: "Arcadia Homes Las Vegas Photo Gallery",
+    ogDescription: "Stunning photos of luxury homes, interiors, exteriors, and Red Rock Canyon views in Arcadia Homes Las Vegas.",
+    ogUrl: "https://www.arcadiahomeslasvegas.com/gallery",
+    canonical: "https://www.arcadiahomeslasvegas.com/gallery",
+  });
+
   const allImages = galleries.flatMap(gallery => gallery.images);
+
+  // Add ImageGallery Schema
+  useEffect(() => {
+    const imageGallerySchema = {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "Arcadia Homes Las Vegas Gallery",
+      "description": "Photo gallery showcasing luxury homes, interiors, exteriors, and community amenities in Arcadia Homes Las Vegas",
+      "url": "https://www.arcadiahomeslasvegas.com/gallery",
+      "image": allImages.slice(0, 10).map(img => ({
+        "@type": "ImageObject",
+        "contentUrl": img,
+        "description": "Arcadia Homes Las Vegas luxury home"
+      }))
+    };
+
+    const schemaId = addSchemaMarkup(imageGallerySchema, "gallery-schema");
+    return () => {
+      const script = document.getElementById(schemaId);
+      if (script) script.remove();
+    };
+  }, [allImages]);
 
   const openLightbox = (galleryIndex: number, imageIndex: number) => {
     const globalIndex = galleries.slice(0, galleryIndex).reduce((acc, gallery) => acc + gallery.images.length, 0) + imageIndex;
@@ -107,6 +142,10 @@ export default function Gallery() {
                       src={image}
                       alt={`${gallery.title} ${imageIndex + 1}`}
                       className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                      decoding="async"
+                      width="400"
+                      height="256"
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
                       <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -131,6 +170,8 @@ export default function Gallery() {
               src={allImages[selectedImage]}
               alt="Gallery image"
               className="max-w-full max-h-[80vh] object-contain"
+              loading="eager"
+              decoding="async"
             />
             
             {/* Close button */}

@@ -1,6 +1,17 @@
 import { MapPin, Clock, Star, Users, TrendingUp } from "lucide-react";
+import { useMetaTags } from "@/hooks/useMetaTags";
 
 export default function Neighborhood() {
+  // SEO Meta Tags
+  useMetaTags({
+    title: "Summerlin West Neighborhood | 89135 ZIP Code Demographics & Lifestyle",
+    description: "Discover Summerlin West neighborhood. Demographics, lifestyle, amenities, and why the 89135 ZIP code is Las Vegas's most desirable area. Median income $128,500, 91% homeownership.",
+    keywords: "Summerlin West neighborhood, 89135 demographics, Las Vegas best neighborhoods, Summerlin West lifestyle",
+    ogTitle: "Summerlin West Neighborhood - 89135 ZIP Code",
+    ogDescription: "Las Vegas's most desirable neighborhood. Demographics, lifestyle, and amenities in the 89135 ZIP code.",
+    ogUrl: "https://www.arcadiahomeslasvegas.com/neighborhood",
+    canonical: "https://www.arcadiahomeslasvegas.com/neighborhood",
+  });
   const demographics = [
     { label: "Median Household Income", value: "$128,500", icon: TrendingUp },
     { label: "Average Age", value: "42 years", icon: Users },

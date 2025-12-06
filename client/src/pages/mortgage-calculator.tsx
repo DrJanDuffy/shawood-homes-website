@@ -5,8 +5,19 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useMetaTags } from "@/hooks/useMetaTags";
 
 export default function MortgageCalculator() {
+  // SEO Meta Tags
+  useMetaTags({
+    title: "Luxury Home Mortgage Calculator | Jumbo Loans for Arcadia Homes Las Vegas",
+    description: "Calculate monthly payments for luxury homes in Arcadia Homes Las Vegas. Jumbo loan calculator for $2M-$4M properties. Current rates included. Get pre-qualified with preferred lenders.",
+    keywords: "mortgage calculator luxury homes, jumbo loan calculator, Summerlin West mortgage rates, luxury home financing calculator",
+    ogTitle: "Luxury Home Mortgage Calculator - Arcadia Homes Las Vegas",
+    ogDescription: "Jumbo loan calculator for $2M-$4M luxury properties. Calculate monthly payments with current rates.",
+    ogUrl: "https://www.arcadiahomeslasvegas.com/mortgage-calculator",
+    canonical: "https://www.arcadiahomeslasvegas.com/mortgage-calculator",
+  });
   const [homePrice, setHomePrice] = useState(3000000);
   const [downPayment, setDownPayment] = useState(600000);
   const [interestRate, setInterestRate] = useState(7.5);
@@ -275,7 +286,7 @@ export default function MortgageCalculator() {
                         Call Dr. Duffy
                       </a>
                       <a 
-                        href="mailto:janet.duffy@bhhsnv.com"
+                        href="mailto:DrDuffy@arcadiahomeslasvegas.com"
                         className="btn-outline text-center py-2"
                       >
                         Email Expert

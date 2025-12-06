@@ -1,6 +1,17 @@
 import { Calendar, Coffee, Mountain, ShoppingBag, Utensils, Target } from "lucide-react";
+import { useMetaTags } from "@/hooks/useMetaTags";
 
 export default function Lifestyle() {
+  // SEO Meta Tags
+  useMetaTags({
+    title: "Summerlin West Lifestyle | Arcadia Homes Las Vegas Living",
+    description: "Experience the perfect blend of luxury living, outdoor recreation, and urban sophistication in Summerlin West. Red Rock Canyon, golf, dining, and entertainment.",
+    keywords: "Summerlin West lifestyle, Arcadia Homes Las Vegas living, Red Rock Canyon, Las Vegas lifestyle, Summerlin West activities",
+    ogTitle: "Summerlin West Lifestyle - Arcadia Homes Las Vegas",
+    ogDescription: "Perfect blend of luxury living, outdoor recreation, and urban sophistication. Red Rock Canyon, golf, dining, and entertainment.",
+    ogUrl: "https://www.arcadiahomeslasvegas.com/lifestyle",
+    canonical: "https://www.arcadiahomeslasvegas.com/lifestyle",
+  });
   const activities = [
     {
       icon: Mountain,

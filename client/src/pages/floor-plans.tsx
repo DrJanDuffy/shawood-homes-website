@@ -1,6 +1,17 @@
 import { Download, Eye, Heart, Share2 } from "lucide-react";
+import { useMetaTags } from "@/hooks/useMetaTags";
 
 export default function FloorPlans() {
+  // SEO Meta Tags
+  useMetaTags({
+    title: "Custom Floor Plans - Arcadia Homes Las Vegas | 3,200-8,000 Sq Ft",
+    description: "Explore custom floor plans for Arcadia Homes Las Vegas. Luxury homes from 3,200 to 8,000 square feet. Download PDFs, view details, and schedule consultations for your dream home.",
+    keywords: "Arcadia Homes Las Vegas floor plans, custom home designs Summerlin West, luxury home floor plans, 89135 floor plans",
+    ogTitle: "Custom Floor Plans - Arcadia Homes Las Vegas",
+    ogDescription: "Luxury custom floor plans from 3,200 to 8,000 square feet. Download PDFs and schedule consultations.",
+    ogUrl: "https://www.arcadiahomeslasvegas.com/floor-plans",
+    canonical: "https://www.arcadiahomeslasvegas.com/floor-plans",
+  });
   const floorPlans = [
     {
       id: 1,

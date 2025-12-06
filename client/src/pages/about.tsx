@@ -1,7 +1,56 @@
+import { useEffect } from "react";
 import { Award, Star, Home, Users, Phone, Mail, Calendar, MapPin } from "lucide-react";
 import { imageUrls } from "@/lib/imageUrls";
+import { useMetaTags } from "@/hooks/useMetaTags";
+import { addSchemaMarkup } from "@/lib/seo";
 
 export default function About() {
+  // SEO Meta Tags
+  useMetaTags({
+    title: "About Dr. Jan Duffy - Arcadia Homes Las Vegas Realtor | 15+ Years Experience",
+    description: "Meet Dr. Jan Duffy, the only realtor exclusively focused on Arcadia Homes Las Vegas. 15+ years experience, Top 1% agent, $180M+ in sales. Hyper-local expertise in Summerlin West 89135.",
+    keywords: "Dr Jan Duffy realtor, Arcadia Homes Las Vegas specialist, Summerlin West real estate agent, luxury home expert, Top 1% Las Vegas realtor",
+    ogTitle: "About Dr. Jan Duffy - Arcadia Homes Las Vegas Specialist",
+    ogDescription: "The only realtor exclusively focused on Arcadia Homes Las Vegas. Hyper-local expertise, service-focused approach. 15+ years, Top 1% agent.",
+    ogImage: imageUrls.about.professional,
+    ogUrl: "https://www.arcadiahomeslasvegas.com/about",
+    canonical: "https://www.arcadiahomeslasvegas.com/about",
+  });
+
+  // Add Person Schema Markup
+  useEffect(() => {
+    const personSchema = {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Dr. Jan Duffy",
+      "jobTitle": "Luxury Real Estate Specialist",
+      "description": "The only realtor exclusively focused on Arcadia Homes Las Vegas. 15+ years of experience, Top 1% Las Vegas Realtor.",
+      "url": "https://www.arcadiahomeslasvegas.com/about",
+      "image": imageUrls.about.professional,
+      "telephone": "(702) 500-0337",
+      "email": "DrDuffy@arcadiahomeslasvegas.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1980 Festival Plaza Drive",
+        "addressLocality": "Las Vegas",
+        "addressRegion": "NV",
+        "postalCode": "89135",
+        "addressCountry": "US"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Business Administration Doctoral Program"
+      },
+      "knowsAbout": ["Arcadia Homes Las Vegas", "Summerlin West", "Luxury Real Estate", "Guard Gated Communities"],
+      "award": "Top 1% Las Vegas Realtors 2023"
+    };
+
+    const schemaId = addSchemaMarkup(personSchema, "about-person-schema");
+    return () => {
+      const script = document.getElementById(schemaId);
+      if (script) script.remove();
+    };
+  }, []);
   return (
     <div className="pt-20">
       {/* Hero Section */}
