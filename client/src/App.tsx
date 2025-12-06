@@ -28,6 +28,9 @@ import MarketPredictions from "@/pages/market-predictions";
 import BuyingGuide from "@/pages/buying-guide";
 import SellingGuide from "@/pages/selling-guide";
 import Resources from "@/pages/resources";
+import Investment from "@/pages/investment";
+import PrivacyPolicy from "@/pages/privacy-policy";
+import TermsOfService from "@/pages/terms-of-service";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -54,6 +57,9 @@ function Router() {
       <Route path="/buying-guide" component={BuyingGuide} />
       <Route path="/selling-guide" component={SellingGuide} />
       <Route path="/resources" component={Resources} />
+      <Route path="/investment" component={Investment} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
+      <Route path="/terms-of-service" component={TermsOfService} />
       <Route component={NotFound} />
     </Switch>
   );

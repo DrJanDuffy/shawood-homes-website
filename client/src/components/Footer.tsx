@@ -169,11 +169,9 @@ export function Footer() {
               <p className="mt-1 text-xs">Licensed in Nevada • Equal Housing Opportunity</p>
             </div>
             <div className="flex flex-wrap justify-center md:justify-end gap-4 text-gray-400 text-sm">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
               <span className="text-gray-600">•</span>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-              <span className="text-gray-600">•</span>
-              <a href="#" className="hover:text-white transition-colors">Accessibility</a>
+              <a href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</a>
               <span className="text-gray-600">•</span>
               <a href="/sitemap.xml" className="hover:text-white transition-colors">Sitemap</a>
             </div>
