@@ -1,6 +1,18 @@
+import { useEffect } from "react";
 import { Star, Quote } from "lucide-react";
+import { useMetaTags } from "@/hooks/useMetaTags";
+import { addSchemaMarkup, generateReviewSchema } from "@/lib/seo";
 
 export default function Testimonials() {
+  // SEO Meta Tags
+  useMetaTags({
+    title: "Client Testimonials - Dr. Jan Duffy | Arcadia Homes Las Vegas Reviews",
+    description: "Read authentic testimonials from Arcadia Homes Las Vegas clients. 98% satisfaction, $180M+ in sales, 15+ years of excellence. Real reviews from luxury home buyers and sellers.",
+    keywords: "Dr Jan Duffy reviews, Arcadia Homes Las Vegas testimonials, Summerlin West realtor reviews, luxury real estate agent reviews",
+    ogTitle: "Client Testimonials - Dr. Jan Duffy | Arcadia Homes Las Vegas",
+    ogDescription: "98% client satisfaction. Read authentic reviews from Arcadia Homes Las Vegas clients who trusted Dr. Jan Duffy with their luxury real estate investment.",
+    canonical: "https://www.arcadiahomeslasvegas.com/testimonials",
+  });
   const testimonials = [
     {
       id: 1,
@@ -64,6 +76,30 @@ export default function Testimonials() {
     { number: "$180M+", label: "Total Sales Volume" },
     { number: "15+", label: "Years Experience" }
   ];
+
+  // Add Review Schema Markup
+  useEffect(() => {
+    const reviewSchema = {
+      "@context": "https://schema.org",
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": testimonials.length,
+      "bestRating": "5",
+      "worstRating": "1",
+      "itemReviewed": {
+        "@type": "RealEstateAgent",
+        "name": "Dr. Jan Duffy",
+        "url": "https://www.arcadiahomeslasvegas.com"
+      }
+    };
+
+    const schemaId = addSchemaMarkup(reviewSchema, "testimonials-schema");
+
+    return () => {
+      const script = document.getElementById(schemaId);
+      if (script) script.remove();
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50">

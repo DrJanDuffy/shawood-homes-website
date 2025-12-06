@@ -1,6 +1,8 @@
+import { useEffect } from "react";
 import { Phone, Mail, MapPin, Clock, MessageSquare, Calendar } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 import { useMetaTags } from "@/hooks/useMetaTags";
+import { addSchemaMarkup, generateFAQSchema } from "@/lib/seo";
 
 export default function Contact() {
   useMetaTags({
@@ -9,8 +11,46 @@ export default function Contact() {
     keywords: "contact Dr Jan Duffy, Arcadia Homes Las Vegas realtor, Summerlin West real estate agent, (702) 500-0337, luxury home consultation",
     ogTitle: "Contact Dr. Jan Duffy - Arcadia Homes Las Vegas Specialist",
     ogDescription: "Get in touch with Dr. Jan Duffy for expert real estate services in Arcadia Homes Las Vegas. Available 7 days a week.",
-    canonical: "https://arcadiahomeslasvegas.com/contact",
+    canonical: "https://www.arcadiahomeslasvegas.com/contact",
   });
+
+  // Add FAQ Schema Markup
+  useEffect(() => {
+    const faqs = [
+      {
+        question: "How long have you been selling in Arcadia Homes Las Vegas?",
+        answer: "I've been specializing in Arcadia Homes Las Vegas since 2008 and have sold over 200 properties in this exclusive community. My deep knowledge of the neighborhood gives my clients a significant advantage."
+      },
+      {
+        question: "Do you represent both buyers and sellers?",
+        answer: "Yes, I provide comprehensive services to both buyers and sellers in Arcadia Homes Las Vegas. My expertise allows me to effectively represent clients on either side of the transaction."
+      },
+      {
+        question: "What sets Arcadia Homes Las Vegas apart from other communities?",
+        answer: "Arcadia Homes Las Vegas offers a unique combination of 24/7 guard-gated security, stunning Red Rock Canyon views, custom luxury homes, and proximity to top amenities in Summerlin West."
+      },
+      {
+        question: "How quickly do homes sell in Arcadia Homes Las Vegas?",
+        answer: "Currently, well-priced homes in Arcadia Homes Las Vegas typically sell within 18-25 days. The exact timeframe depends on pricing, condition, and market conditions at the time of listing."
+      },
+      {
+        question: "Do you have access to off-market properties?",
+        answer: "Yes, my network and reputation in Arcadia Homes Las Vegas often gives me access to properties before they hit the market. This can be a significant advantage for serious buyers."
+      },
+      {
+        question: "What's your commission structure?",
+        answer: "My commission is competitive and negotiable based on the specific circumstances of your transaction. I believe in providing exceptional value for the service I deliver."
+      }
+    ];
+
+    const faqSchema = generateFAQSchema(faqs);
+    const schemaId = addSchemaMarkup(faqSchema, "contact-faq-schema");
+
+    return () => {
+      const script = document.getElementById(schemaId);
+      if (script) script.remove();
+    };
+  }, []);
 
   return (
     <div className="pt-20">

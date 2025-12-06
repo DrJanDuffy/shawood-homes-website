@@ -3,6 +3,17 @@
 
 This guide will help you set up and verify your website in Google Search Console.
 
+## ⚠️ Important: What to Submit
+
+- ✅ **SUBMIT:** `sitemap.xml` (this is your sitemap)
+- ❌ **DO NOT SUBMIT:** `robots.txt` (this is NOT a sitemap - it's read automatically)
+
+**If you accidentally submitted robots.txt:**
+1. Go to Sitemaps section
+2. Find robots.txt in the list
+3. Click ⋮ (three dots) → Delete
+4. Only keep `sitemap.xml` in your sitemaps list
+
 ---
 
 ## Files Created
@@ -63,20 +74,28 @@ This guide will help you set up and verify your website in Google Search Console
 
 1. **In Google Search Console**
    - Go to "Sitemaps" in the left sidebar
-   - Enter: `sitemap.xml`
+   - Enter: `sitemap.xml` (ONLY submit sitemap.xml, NOT robots.txt)
    - Click "Submit"
 
 2. **Verify Sitemap**
    - Google will check if the sitemap is accessible
    - Should show: `https://www.arcadiahomeslasvegas.com/sitemap.xml`
    - Status should be "Success"
+   - **Important:** Only submit `sitemap.xml`. Do NOT submit `robots.txt` as a sitemap.
+
+3. **If You Accidentally Submitted robots.txt**
+   - In the Sitemaps section, find the robots.txt entry
+   - Click the three dots (⋮) next to it
+   - Select "Delete" to remove it
+   - robots.txt is NOT a sitemap - it's a robots file that references the sitemap
 
 ### Step 3: Verify robots.txt
 
-1. **Test robots.txt**
+1. **Test robots.txt (NOT as a sitemap)**
    - In Google Search Console, go to "Settings" > "robots.txt Tester"
    - Verify it's accessible at: `https://www.arcadiahomeslasvegas.com/robots.txt`
    - Check that it allows crawling of your important pages
+   - **Note:** robots.txt should NOT be submitted as a sitemap. It's automatically read by Google when it crawls your site.
 
 ---
 
@@ -137,6 +156,21 @@ The sitemap includes all major pages:
 ---
 
 ## Troubleshooting
+
+### robots.txt Submitted as Sitemap (ERROR)
+**Problem:** robots.txt appears in the sitemaps list with "Unknown" type and errors.
+
+**Solution:**
+1. Go to "Sitemaps" in Google Search Console
+2. Find the `robots.txt` entry in the list
+3. Click the three dots (⋮) menu next to it
+4. Select "Delete" to remove it
+5. **Only submit `sitemap.xml`** - robots.txt should NOT be in the sitemaps list
+6. robots.txt is automatically read by Google when crawling - no need to submit it
+
+**Why this happens:** robots.txt and sitemap.xml are different:
+- **sitemap.xml** = List of pages to index (SUBMIT THIS)
+- **robots.txt** = Instructions for crawlers (DO NOT SUBMIT - it's read automatically)
 
 ### Sitemap Not Found
 - Verify the file exists at `client/public/sitemap.xml`

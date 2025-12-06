@@ -9,6 +9,10 @@ interface MetaTags {
   ogImage?: string;
   ogUrl?: string;
   canonical?: string;
+  robots?: string;
+  themeColor?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
 }
 
 export function useMetaTags(meta: MetaTags) {
@@ -67,6 +71,22 @@ export function useMetaTags(meta: MetaTags) {
         document.head.appendChild(canonical);
       }
       canonical.setAttribute("href", meta.canonical);
+    }
+
+    // Robots meta tag
+    if (meta.robots) {
+      updateMetaTag("robots", meta.robots);
+    } else if (meta.noindex || meta.nofollow) {
+      const robotsValue = [
+        meta.noindex ? "noindex" : "index",
+        meta.nofollow ? "nofollow" : "follow"
+      ].join(", ");
+      updateMetaTag("robots", robotsValue);
+    }
+
+    // Theme color
+    if (meta.themeColor) {
+      updateMetaTag("theme-color", meta.themeColor);
     }
 
     // Cleanup function to restore defaults (optional)
