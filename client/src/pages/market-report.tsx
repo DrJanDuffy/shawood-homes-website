@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { TrendingUp, BarChart, Home, Calendar, Download, DollarSign } from "lucide-react";
 import { type MarketData } from "@shared/schema";
@@ -5,6 +6,7 @@ import { formatPrice, formatNumber, formatDecimal } from "@/lib/utils";
 import { ContactForm } from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
 import { useMetaTags } from "@/hooks/useMetaTags";
+import { addSchemaMarkup, generateArticleSchema } from "@/lib/seo";
 
 export default function MarketReport() {
   // SEO Meta Tags

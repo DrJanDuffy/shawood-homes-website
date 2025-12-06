@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import { Calendar, Coffee, Mountain, ShoppingBag, Utensils, Target } from "lucide-react";
 import { useMetaTags } from "@/hooks/useMetaTags";
+import { addSchemaMarkup } from "@/lib/seo";
 
 export default function Lifestyle() {
   // SEO Meta Tags

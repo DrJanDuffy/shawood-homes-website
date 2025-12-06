@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { useMetaTags } from "@/hooks/useMetaTags";
+import { addSchemaMarkup } from "@/lib/seo";
 
 export default function HomeValue() {
   // SEO Meta Tags

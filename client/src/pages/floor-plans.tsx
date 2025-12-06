@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import { Download, Eye, Heart, Share2 } from "lucide-react";
 import { useMetaTags } from "@/hooks/useMetaTags";
+import { addSchemaMarkup } from "@/lib/seo";
 
 export default function FloorPlans() {
   // SEO Meta Tags
@@ -66,6 +68,56 @@ export default function FloorPlans() {
       popular: true
     }
   ];
+
+  // Add Product Schema for floor plans
+  useEffect(() => {
+    const itemListSchema = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Custom Floor Plans - Arcadia Homes Las Vegas",
+      "description": "Luxury custom floor plans for Arcadia Homes Las Vegas from 3,200 to 8,000 square feet",
+      "url": "https://www.arcadiahomeslasvegas.com/floor-plans",
+      "numberOfItems": floorPlans.length,
+      "itemListElement": floorPlans.map((plan, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "Product",
+          "name": plan.name,
+          "description": `${plan.sqft} sqft, ${plan.bedrooms} bedroom, ${plan.bathrooms} bathroom floor plan`,
+          "category": "Real Estate Floor Plan",
+          "offers": {
+            "@type": "Offer",
+            "priceRange": plan.priceRange,
+            "priceCurrency": "USD"
+          },
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Square Feet",
+              "value": plan.sqft
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Bedrooms",
+              "value": plan.bedrooms
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Bathrooms",
+              "value": plan.bathrooms
+            }
+          ]
+        }
+      }))
+    };
+
+    const schemaId = addSchemaMarkup(itemListSchema, "floor-plans-schema");
+    return () => {
+      const script = document.getElementById(schemaId);
+      if (script) script.remove();
+    };
+  }, []);
 
   const customOptions = [
     {

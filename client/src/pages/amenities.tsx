@@ -1,8 +1,10 @@
+import { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { MapPin, Clock, Star, ExternalLink } from "lucide-react";
 import { type Amenity } from "@shared/schema";
 import { InteractiveMap } from "@/components/InteractiveMap";
 import { useMetaTags } from "@/hooks/useMetaTags";
+import { addSchemaMarkup } from "@/lib/seo";
 
 export default function Amenities() {
   // SEO Meta Tags
@@ -18,6 +20,42 @@ export default function Amenities() {
   const { data: amenities, isLoading } = useQuery<Amenity[]>({
     queryKey: ["/api/amenities"],
   });
+
+  // Add ItemList Schema for amenities
+  useEffect(() => {
+    if (amenities && amenities.length > 0) {
+      const itemListSchema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Amenities Near Arcadia Homes Las Vegas",
+        "description": "World-class amenities including shopping, dining, recreation, and entertainment near Arcadia Homes Las Vegas",
+        "url": "https://www.arcadiahomeslasvegas.com/amenities",
+        "numberOfItems": amenities.length,
+        "itemListElement": amenities.slice(0, 20).map((amenity, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "item": {
+            "@type": "LocalBusiness",
+            "name": amenity.name,
+            "description": amenity.description,
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Las Vegas",
+              "addressRegion": "NV",
+              "postalCode": "89135"
+            },
+            "category": amenity.category
+          }
+        }))
+      };
+
+      const schemaId = addSchemaMarkup(itemListSchema, "amenities-list-schema");
+      return () => {
+        const script = document.getElementById(schemaId);
+        if (script) script.remove();
+      };
+    }
+  }, [amenities]);
 
   const categorizeAmenities = (amenities: Amenity[]) => {
     return amenities.reduce((acc, amenity) => {

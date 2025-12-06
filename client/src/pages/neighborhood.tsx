@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import { MapPin, Clock, Star, Users, TrendingUp } from "lucide-react";
 import { useMetaTags } from "@/hooks/useMetaTags";
+import { addSchemaMarkup } from "@/lib/seo";
 
 export default function Neighborhood() {
   // SEO Meta Tags

@@ -37,18 +37,20 @@ export function FloatingContactWidget() {
       {isExpanded && (
         <div className="mb-4 space-y-3 animate-fade-in" role="menu" aria-label="Contact options">
           {/* Call Button */}
-          <a
+          <AnalyticsAnchor
             href="tel:702-500-0337"
             role="menuitem"
             aria-label="Call Dr. Duffy at (702) 500-0337"
             className="flex items-center space-x-3 bg-green-600 hover:bg-green-700 text-white px-3 py-2 sm:px-4 sm:py-3 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400"
+            trackAs="phone"
+            analyticsLabel="Floating Widget"
           >
             <Phone className="w-5 h-5" />
             <div>
               <div className="font-semibold text-sm">Call Dr. Duffy</div>
               <div className="text-xs opacity-90">(702) 500-0337</div>
             </div>
-          </a>
+          </AnalyticsAnchor>
 
           {/* Text/SMS Button */}
           <a

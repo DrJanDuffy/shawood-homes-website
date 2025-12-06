@@ -12,6 +12,7 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { insertLeadSchema } from "@shared/schema";
 import { CheckCircle2, Loader2 } from "lucide-react";
+import { trackFormSubmit } from "@/lib/analytics";
 
 const formSchema = insertLeadSchema.extend({
   source: z.string().default("Contact Form"),
@@ -67,6 +68,7 @@ export function ContactForm() {
   });
 
   const onSubmit = (data: FormData) => {
+    trackFormSubmit("Contact Form", data.interest);
     createLead.mutate(data);
   };
 

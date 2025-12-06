@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { useMetaTags } from "@/hooks/useMetaTags";
+import { addSchemaMarkup } from "@/lib/seo";
 
 export default function PropertyAlerts() {
   // SEO Meta Tags
@@ -11,6 +13,39 @@ export default function PropertyAlerts() {
     ogUrl: "https://www.arcadiahomeslasvegas.com/property-alerts",
     canonical: "https://www.arcadiahomeslasvegas.com/property-alerts",
   });
+
+  // Add Service Schema
+  useEffect(() => {
+    const serviceSchema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Property Alerts - Arcadia Homes Las Vegas",
+      "description": "Get instant alerts when luxury homes in Arcadia Homes Las Vegas match your criteria. Exclusive off-market opportunities and new listings.",
+      "url": "https://www.arcadiahomeslasvegas.com/property-alerts",
+      "provider": {
+        "@type": "RealEstateAgent",
+        "name": "Dr. Jan Duffy",
+        "url": "https://www.arcadiahomeslasvegas.com"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Las Vegas"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free property alert service"
+      }
+    };
+
+    const schemaId = addSchemaMarkup(serviceSchema, "property-alerts-schema");
+    return () => {
+      const script = document.getElementById(schemaId);
+      if (script) script.remove();
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-warm-brown via-cream to-sage-green">
       {/* Hero Section */}

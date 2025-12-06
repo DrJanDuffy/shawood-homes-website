@@ -1,7 +1,9 @@
+import { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { GraduationCap, MapPin, Star, ExternalLink, Users, Award } from "lucide-react";
 import { type School } from "@shared/schema";
 import { useMetaTags } from "@/hooks/useMetaTags";
+import { addSchemaMarkup } from "@/lib/seo";
 
 export default function Schools() {
   // SEO Meta Tags
@@ -17,6 +19,42 @@ export default function Schools() {
   const { data: schools, isLoading } = useQuery<School[]>({
     queryKey: ["/api/schools"],
   });
+
+  // Add ItemList Schema for schools
+  useEffect(() => {
+    if (schools && schools.length > 0) {
+      const itemListSchema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Schools Near Arcadia Homes Las Vegas",
+        "description": "Top-rated schools in Clark County School District serving Arcadia Homes Las Vegas students",
+        "url": "https://www.arcadiahomeslasvegas.com/schools",
+        "numberOfItems": schools.length,
+        "itemListElement": schools.map((school, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "item": {
+            "@type": "EducationalOrganization",
+            "name": school.name,
+            "description": `${school.level} school in Clark County School District`,
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Las Vegas",
+              "addressRegion": "NV",
+              "postalCode": "89135"
+            },
+            "educationalCredentialAwarded": school.level
+          }
+        }))
+      };
+
+      const schemaId = addSchemaMarkup(itemListSchema, "schools-list-schema");
+      return () => {
+        const script = document.getElementById(schemaId);
+        if (script) script.remove();
+      };
+    }
+  }, [schools]);
 
   const groupSchoolsByLevel = (schools: School[]) => {
     return schools.reduce((acc, school) => {

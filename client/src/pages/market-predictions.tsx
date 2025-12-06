@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TrendingUp, TrendingDown, Target, AlertTriangle, DollarSign, Calendar, BarChart3, PieChart } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { ContactForm } from "@/components/ContactForm";
 import { useMetaTags } from "@/hooks/useMetaTags";
+import { addSchemaMarkup, generateArticleSchema } from "@/lib/seo";
 
 export default function MarketPredictions() {
   // SEO Meta Tags

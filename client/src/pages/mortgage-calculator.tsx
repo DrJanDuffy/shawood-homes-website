@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useMetaTags } from "@/hooks/useMetaTags";
+import { addSchemaMarkup } from "@/lib/seo";
 
 export default function MortgageCalculator() {
   // SEO Meta Tags
@@ -22,6 +23,31 @@ export default function MortgageCalculator() {
   const [downPayment, setDownPayment] = useState(600000);
   const [interestRate, setInterestRate] = useState(7.5);
   const [loanTerm, setLoanTerm] = useState(30);
+
+  // Add WebApplication Schema
+  useEffect(() => {
+    const webAppSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Luxury Home Mortgage Calculator",
+      "description": "Calculate monthly payments for luxury homes in Arcadia Homes Las Vegas. Jumbo loan calculator for $2M-$4M properties.",
+      "url": "https://www.arcadiahomeslasvegas.com/mortgage-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free mortgage calculator"
+      }
+    };
+
+    const schemaId = addSchemaMarkup(webAppSchema, "mortgage-calculator-schema");
+    return () => {
+      const script = document.getElementById(schemaId);
+      if (script) script.remove();
+    };
+  }, []);
 
   // Initialize Homebot widget
   useEffect(() => {

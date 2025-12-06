@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useMetaTags } from "@/hooks/useMetaTags";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { addSchemaMarkup } from "@/lib/seo";
 
 export default function Homes() {
   // SEO Meta Tags
@@ -15,6 +16,33 @@ export default function Homes() {
     ogUrl: "https://arcadiahomeslasvegas.com/homes",
     canonical: "https://arcadiahomeslasvegas.com/homes",
   });
+
+  // Add ItemList Schema for property listings
+  useEffect(() => {
+    const itemListSchema = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Available Homes in Arcadia Homes Las Vegas",
+      "description": "Exclusive luxury homes for sale in Arcadia Homes Las Vegas, Summerlin West 89135",
+      "url": "https://www.arcadiahomeslasvegas.com/homes",
+      "numberOfItems": "Multiple",
+      "itemListElement": {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "RealEstateAgent",
+          "name": "Dr. Jan Duffy",
+          "url": "https://www.arcadiahomeslasvegas.com"
+        }
+      }
+    };
+
+    const schemaId = addSchemaMarkup(itemListSchema, "homes-list-schema");
+    return () => {
+      const script = document.getElementById(schemaId);
+      if (script) script.remove();
+    };
+  }, []);
 
   // Ensure RealScout script is loaded
   useEffect(() => {

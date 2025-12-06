@@ -60,6 +60,7 @@ export function Hero() {
             href="/homes" 
             className="btn-primary text-lg px-8 py-4 shadow-xl hover:scale-105 transition-transform"
             aria-label="View available luxury homes in Arcadia Homes Las Vegas"
+            onClick={() => trackButtonClick("View Exclusive Homes", "Hero")}
           >
             View Exclusive Homes
           </Link>
@@ -67,6 +68,7 @@ export function Hero() {
             href="/contact" 
             className="btn-secondary text-lg px-8 py-4 shadow-xl hover:scale-105 transition-transform"
             aria-label="Schedule a consultation with Dr. Jan Duffy"
+            onClick={() => trackButtonClick("Schedule Consultation", "Hero")}
           >
             Schedule Consultation
           </Link>
@@ -83,14 +85,16 @@ export function Hero() {
           <Link href="/mortgage-calculator" className="bg-white/90 hover:bg-white text-gray-900 px-6 py-3 rounded-lg font-medium shadow-lg transition-all hover:scale-105">
             🧮 Calculator
           </Link>
-          <a 
+          <AnalyticsAnchor 
             href="mailto:DrDuffy@arcadiahomeslasvegas.com" 
             className="bg-white/90 hover:bg-white text-gray-900 px-6 py-3 rounded-lg font-medium shadow-lg transition-all hover:scale-105 flex items-center space-x-2"
             aria-label="Email Dr. Jan Duffy at DrDuffy@arcadiahomeslasvegas.com"
+            trackAs="email"
+            analyticsLabel="Hero Email"
           >
             <span>✉️</span>
             <span>Email</span>
-          </a>
+          </AnalyticsAnchor>
         </div>
 
         {/* Urgency/Scarcity Message */}
