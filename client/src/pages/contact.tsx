@@ -19,28 +19,28 @@ export default function Contact() {
   useEffect(() => {
     const faqs = [
       {
-        question: "How long have you been selling in Arcadia Homes Las Vegas?",
-        answer: "I've been specializing in Arcadia Homes Las Vegas since 2008 and have sold over 200 properties in this exclusive community. My deep knowledge of the neighborhood gives my clients a significant advantage."
+        question: "Why should I work with Dr. Jan Duffy for Arcadia Homes Las Vegas real estate?",
+        answer: "Dr. Jan Duffy has been specializing exclusively in Arcadia Homes Las Vegas since 2008, making her the most experienced realtor in this exclusive guard-gated community. With over 200 properties sold and $180M+ in sales volume, she is your trusted partner for luxury real estate in Summerlin West."
       },
       {
-        question: "Do you represent both buyers and sellers?",
-        answer: "Yes, I provide comprehensive services to both buyers and sellers in Arcadia Homes Las Vegas. My expertise allows me to effectively represent clients on either side of the transaction."
+        question: "What makes Arcadia Homes Las Vegas different from other Summerlin West communities?",
+        answer: "Arcadia Homes Las Vegas is an exclusive guard-gated community with only 95 custom-built luxury homes, 24/7 security, Red Rock Canyon views, and prime Summerlin West location. The community offers unparalleled privacy, luxury, and exclusivity that sets it apart from other neighborhoods."
       },
       {
-        question: "What sets Arcadia Homes Las Vegas apart from other communities?",
-        answer: "Arcadia Homes Las Vegas offers a unique combination of 24/7 guard-gated security, stunning Red Rock Canyon views, custom luxury homes, and proximity to top amenities in Summerlin West."
+        question: "How can I contact Dr. Jan Duffy about Arcadia Homes Las Vegas?",
+        answer: "You can contact Dr. Jan Duffy by calling or texting (702) 500-0337, emailing DrDuffy@arcadiahomeslasvegas.com, or using the contact form on this page. She typically responds within 24 hours and is available for immediate assistance with urgent matters related to Arcadia Homes Las Vegas."
       },
       {
-        question: "How quickly do homes sell in Arcadia Homes Las Vegas?",
-        answer: "Currently, well-priced homes in Arcadia Homes Las Vegas typically sell within 18-25 days. The exact timeframe depends on pricing, condition, and market conditions at the time of listing."
+        question: "Does Dr. Duffy have access to off-market properties in Arcadia Homes Las Vegas?",
+        answer: "Yes, Dr. Jan Duffy's exclusive network and 15+ years of specialization in Arcadia Homes Las Vegas provides access to off-market and pre-market properties before they're listed publicly. Her relationships with homeowners, builders, and other agents give clients first access to exclusive opportunities."
       },
       {
-        question: "Do you have access to off-market properties?",
-        answer: "Yes, my network and reputation in Arcadia Homes Las Vegas often gives me access to properties before they hit the market. This can be a significant advantage for serious buyers."
+        question: "What price range are luxury homes in Arcadia Homes Las Vegas?",
+        answer: "Luxury homes in Arcadia Homes Las Vegas typically range from $2M to $4M, depending on size, features, and location within the community. Custom-built homes with Red Rock Canyon views command premium prices. Dr. Duffy provides detailed market analysis for current pricing trends."
       },
       {
-        question: "What's your commission structure?",
-        answer: "My commission is competitive and negotiable based on the specific circumstances of your transaction. I believe in providing exceptional value for the service I deliver."
+        question: "How long has Dr. Jan Duffy been specializing in Arcadia Homes Las Vegas?",
+        answer: "Dr. Jan Duffy has been specializing exclusively in Arcadia Homes Las Vegas since 2008, making her the most experienced and trusted realtor in this exclusive guard-gated community. Her deep knowledge and relationships provide clients with significant advantages in Summerlin West luxury real estate."
       }
     ];
 
@@ -278,33 +278,28 @@ export default function Contact() {
             <div className="space-y-8">
               <div className="bg-gray-50 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  How long have you been selling in Arcadia Homes Las Vegas?
+                  Why should I work with Dr. Jan Duffy for Arcadia Homes Las Vegas real estate?
                 </h3>
                 <p className="text-gray-600">
-                  I've been specializing in Arcadia Homes Las Vegas since 2008 and have sold over 200 properties 
-                  in this exclusive community. My deep knowledge of the neighborhood gives my clients 
-                  a significant advantage.
+                  Dr. Jan Duffy has been specializing exclusively in Arcadia Homes Las Vegas since 2008, making her the most experienced realtor in this exclusive guard-gated community. With over 200 properties sold and $180M+ in sales volume, she is your trusted partner for luxury real estate in Summerlin West.
                 </p>
               </div>
 
               <div className="bg-gray-50 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  Do you represent both buyers and sellers?
+                  What makes Arcadia Homes Las Vegas different from other Summerlin West communities?
                 </h3>
                 <p className="text-gray-600">
-                  Yes, I provide comprehensive services to both buyers and sellers in Arcadia Homes Las Vegas. 
-                  My expertise allows me to effectively represent clients on either side of the transaction.
+                  Arcadia Homes Las Vegas is an exclusive guard-gated community with only 95 custom-built luxury homes, 24/7 security, Red Rock Canyon views, and prime Summerlin West location. The community offers unparalleled privacy, luxury, and exclusivity that sets it apart from other neighborhoods.
                 </p>
               </div>
 
               <div className="bg-gray-50 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  What sets Arcadia Homes Las Vegas apart from other communities?
+                  How can I contact Dr. Jan Duffy about Arcadia Homes Las Vegas?
                 </h3>
                 <p className="text-gray-600">
-                  Arcadia Homes Las Vegas offers a unique combination of 24/7 guard-gated security, stunning 
-                  Red Rock Canyon views, custom luxury homes, and proximity to top amenities in 
-                  Summerlin West.
+                  You can contact Dr. Jan Duffy by calling or texting (702) 500-0337, emailing DrDuffy@arcadiahomeslasvegas.com, or using the contact form on this page. She typically responds within 24 hours and is available for immediate assistance with urgent matters related to Arcadia Homes Las Vegas.
                 </p>
               </div>
             </div>
@@ -312,31 +307,28 @@ export default function Contact() {
             <div className="space-y-8">
               <div className="bg-gray-50 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  How quickly do homes sell in Arcadia Homes Las Vegas?
+                  Does Dr. Duffy have access to off-market properties in Arcadia Homes Las Vegas?
                 </h3>
                 <p className="text-gray-600">
-                  Currently, well-priced homes in Arcadia Homes Las Vegas typically sell within 18-25 days. The exact 
-                  timeframe depends on pricing, condition, and market conditions at the time of listing.
+                  Yes, Dr. Jan Duffy's exclusive network and 15+ years of specialization in Arcadia Homes Las Vegas provides access to off-market and pre-market properties before they're listed publicly. Her relationships with homeowners, builders, and other agents give clients first access to exclusive opportunities.
                 </p>
               </div>
 
               <div className="bg-gray-50 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  Do you have access to off-market properties?
+                  What price range are luxury homes in Arcadia Homes Las Vegas?
                 </h3>
                 <p className="text-gray-600">
-                  Yes, my network and reputation in Arcadia Homes Las Vegas often gives me access to properties 
-                  before they hit the market. This can be a significant advantage for serious buyers.
+                  Luxury homes in Arcadia Homes Las Vegas typically range from $2M to $4M, depending on size, features, and location within the community. Custom-built homes with Red Rock Canyon views command premium prices. Dr. Duffy provides detailed market analysis for current pricing trends.
                 </p>
               </div>
 
               <div className="bg-gray-50 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  What's your commission structure?
+                  How long has Dr. Jan Duffy been specializing in Arcadia Homes Las Vegas?
                 </h3>
                 <p className="text-gray-600">
-                  My commission is competitive and negotiable based on the specific circumstances 
-                  of your transaction. I believe in providing exceptional value for the service I deliver.
+                  Dr. Jan Duffy has been specializing exclusively in Arcadia Homes Las Vegas since 2008, making her the most experienced and trusted realtor in this exclusive guard-gated community. Her deep knowledge and relationships provide clients with significant advantages in Summerlin West luxury real estate.
                 </p>
               </div>
             </div>

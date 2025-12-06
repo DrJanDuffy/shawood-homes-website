@@ -276,32 +276,32 @@ export default function Community() {
 
       {/* FAQ Section */}
       <FAQSection
-        title="Frequently Asked Questions About Dr. Duffy's Community Services"
-        description="Common questions about how Dr. Jan Duffy helps buyers understand and navigate the Arcadia Homes Las Vegas community"
+        title="Frequently Asked Questions About Arcadia Homes Las Vegas Community"
+        description="Common questions about this exclusive guard-gated luxury community in Summerlin West"
         faqs={[
           {
-            question: "How does Dr. Duffy help buyers understand the Arcadia Homes Las Vegas community?",
-            answer: "Dr. Duffy provides comprehensive community insights including HOA information, architectural guidelines, community amenities, neighborhood demographics, and lifestyle details. Her 15+ years of experience in this exclusive community gives buyers insider knowledge that general realtors cannot provide."
+            question: "What is the Arcadia Homes Las Vegas community like?",
+            answer: "Arcadia Homes Las Vegas is an exclusive guard-gated luxury community in Summerlin West featuring approximately 95 custom-built homes. The community offers 24/7 security, Red Rock Canyon views, strict architectural guidelines, and a close-knit neighborhood atmosphere. Dr. Jan Duffy has been specializing in this community since 2008."
           },
           {
-            question: "What community-specific services does Dr. Duffy offer?",
-            answer: "Dr. Duffy offers specialized services including guard-gate community navigation, HOA document review, architectural guideline consultation, builder relationship introductions, and community insider knowledge. She helps buyers understand every aspect of living in Arcadia Homes Las Vegas."
+            question: "What are the HOA fees and rules in Arcadia Homes Las Vegas?",
+            answer: "HOA fees in Arcadia Homes Las Vegas typically range from $300-$500 per month, covering guard-gated security, common area maintenance, landscaping, and community amenities. The community has strict architectural guidelines to maintain its luxury aesthetic, with all construction plans reviewed and approved by the HOA."
           },
           {
-            question: "Can Dr. Duffy help with HOA and community questions?",
-            answer: "Yes, Dr. Duffy has extensive knowledge of the Arcadia Homes Las Vegas HOA, including fee structures, rules and regulations, architectural guidelines, and community amenities. She provides this information to help buyers make informed decisions about their purchase."
+            question: "How many homes are in Arcadia Homes Las Vegas?",
+            answer: "Arcadia Homes Las Vegas is an exclusive community with only 95 custom-built luxury homes, making inventory extremely limited. The small number of homes ensures privacy, exclusivity, and a close-knit community atmosphere. This limited inventory creates high demand for available properties."
           },
           {
-            question: "How does Dr. Duffy's community expertise benefit buyers?",
-            answer: "Dr. Duffy's exclusive focus on Arcadia Homes Las Vegas means she knows the community inside and out. She can answer questions about HOA fees, community rules, builder reputations, property histories, and neighborhood dynamics that general realtors cannot provide."
+            question: "What makes Arcadia Homes Las Vegas guard-gated security special?",
+            answer: "Arcadia Homes Las Vegas features 24/7 guard-gated security with controlled access entry points. Security personnel monitor all vehicles and visitors, providing residents with peace of mind, privacy, and protection. This level of security is a key feature that sets the community apart in Summerlin West."
           },
           {
-            question: "Does Dr. Duffy help buyers understand property restrictions?",
-            answer: "Yes, Dr. Duffy provides detailed information about architectural guidelines, HOA restrictions, property use limitations, and community rules. She ensures buyers fully understand what they can and cannot do with their property before making a purchase decision."
+            question: "Are there age restrictions in Arcadia Homes Las Vegas?",
+            answer: "No, Arcadia Homes Las Vegas does not have age restrictions. The community welcomes families, professionals, and retirees, creating a diverse and vibrant neighborhood. The inclusive atmosphere combined with luxury amenities makes it appealing to buyers at all life stages."
           },
           {
-            question: "What community resources does Dr. Duffy provide?",
-            answer: "Dr. Duffy connects buyers with trusted contractors familiar with the community, provides introductions to neighbors, shares community event information, and offers ongoing support for understanding and navigating community life in Arcadia Homes Las Vegas."
+            question: "What community amenities are included in Arcadia Homes Las Vegas?",
+            answer: "Arcadia Homes Las Vegas HOA fees cover 24/7 guard-gated security, common area landscaping and maintenance, street lighting, community infrastructure, and access to community parks and recreational areas. The community is also close to Downtown Summerlin, Red Rock Canyon, and championship golf courses."
           }
         ]}
         schemaId="community-faq-schema"

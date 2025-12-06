@@ -48,28 +48,28 @@ export default function Homes() {
   useEffect(() => {
     const faqs = [
       {
-        question: "How does Dr. Duffy help buyers navigate the home buying process?",
-        answer: "Dr. Duffy provides comprehensive buyer services including property search and filtering, private showings, property analysis and comparisons, negotiation strategies, inspection coordination, and guidance through closing. Her exclusive focus on Arcadia Homes Las Vegas ensures buyers see the best properties first."
+        question: "What luxury homes are currently available in Arcadia Homes Las Vegas?",
+        answer: "Arcadia Homes Las Vegas typically has 2-5 luxury homes available at any given time, priced between $2M and $4M. These are custom-built estates ranging from 3,200 to 8,000 square feet with premium features. Dr. Jan Duffy maintains real-time MLS access and can show you all available properties in this exclusive guard-gated community."
       },
       {
-        question: "What buyer representation services does Dr. Duffy offer?",
-        answer: "Dr. Duffy offers full buyer representation including access to off-market and pre-market properties, detailed property analysis, market insights and pricing guidance, expert negotiation on your behalf, transaction management, and post-closing support. She works exclusively for buyers' best interests."
+        question: "How quickly do luxury homes sell in Arcadia Homes Las Vegas?",
+        answer: "Well-priced luxury homes in Arcadia Homes Las Vegas typically sell within 18-25 days due to high demand and limited inventory. The community's exclusivity, guard-gated security, and Red Rock Canyon views make properties highly desirable. Dr. Duffy's expertise helps buyers act quickly when the right property becomes available."
       },
       {
-        question: "Can Dr. Duffy help me find off-market properties?",
-        answer: "Yes, Dr. Duffy's extensive network and reputation in Arcadia Homes Las Vegas provides access to properties before they hit the MLS. She maintains relationships with homeowners, builders, and other agents to bring exclusive opportunities to her buyer clients first."
+        question: "What price range should I expect for luxury homes in Arcadia Homes Las Vegas?",
+        answer: "Luxury homes in Arcadia Homes Las Vegas typically range from $2M to $4M, depending on size, features, and location within the community. Custom-built homes with Red Rock Canyon views command premium prices. Dr. Duffy provides detailed market analysis to help buyers understand current pricing trends."
       },
       {
-        question: "What makes Dr. Duffy's buyer services different?",
-        answer: "Dr. Duffy's exclusive focus on Arcadia Homes Las Vegas means she knows every property, every builder, and every aspect of the community. She provides hyper-local expertise, insider knowledge, and personalized service that general realtors cannot match."
+        question: "Are there off-market properties available in Arcadia Homes Las Vegas?",
+        answer: "Yes, Dr. Jan Duffy's exclusive network in Arcadia Homes Las Vegas often provides access to off-market and pre-market properties before they're listed publicly. Her 15+ years of specialization in this community and relationships with homeowners and builders give buyers first access to exclusive opportunities."
       },
       {
-        question: "How does Dr. Duffy help with property analysis and pricing?",
-        answer: "Dr. Duffy provides detailed Comparative Market Analysis (CMA) for every property, including comparable sales, current market trends, pricing strategies, and investment potential. Her 15+ years of experience in this specific market provides unparalleled insights."
+        question: "What features do luxury homes in Arcadia Homes Las Vegas typically include?",
+        answer: "Luxury homes in Arcadia Homes Las Vegas feature premium amenities like wine cellars, home theaters, outdoor kitchens, guest casitas, smart home automation, and Red Rock Canyon views. Homes are custom-built with 4-6 bedrooms, 3-6 bathrooms, and range from 3,200 to 8,000 square feet."
       },
       {
-        question: "What support does Dr. Duffy provide after closing?",
-        answer: "Dr. Duffy provides ongoing support after closing including introductions to trusted contractors and service providers, community information and resources, and long-term relationship building. She believes in being a trusted real estate advisor for life, not just for the transaction."
+        question: "Why is Arcadia Homes Las Vegas inventory so limited?",
+        answer: "Arcadia Homes Las Vegas has only 95 custom-built homes in the entire community, making inventory extremely limited. The guard-gated exclusivity, prime Summerlin West location, and Red Rock Canyon views create high demand. Dr. Duffy helps buyers stay informed about new listings and off-market opportunities."
       }
     ];
 

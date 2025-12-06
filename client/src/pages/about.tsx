@@ -57,28 +57,28 @@ export default function About() {
   useEffect(() => {
     const faqs = [
       {
-        question: "What realtor services does Dr. Jan Duffy provide?",
-        answer: "Dr. Jan Duffy provides comprehensive real estate services including buyer representation, seller representation, market analysis, property valuation, negotiation, transaction management, and post-closing support. She specializes exclusively in Arcadia Homes Las Vegas luxury properties."
+        question: "What is Arcadia Homes Las Vegas?",
+        answer: "Arcadia Homes Las Vegas is an exclusive guard-gated luxury community in Summerlin West, featuring approximately 95 custom-built homes ranging from $2M to $4M. This prestigious community offers 24/7 security, stunning Red Rock Canyon views, and proximity to world-class amenities. Dr. Jan Duffy has been specializing in this community since 2008."
       },
       {
-        question: "How does Dr. Duffy help buyers find their dream home?",
-        answer: "Dr. Duffy offers personalized buyer services including access to off-market properties, pre-market previews, comprehensive property analysis, negotiation expertise, and guidance through the entire purchase process. Her exclusive focus on Arcadia Homes Las Vegas means she knows every property and can match buyers with their perfect home."
+        question: "Why choose Arcadia Homes Las Vegas for luxury real estate?",
+        answer: "Arcadia Homes Las Vegas offers the perfect combination of guard-gated security, custom luxury homes (3,200-8,000 sq ft), breathtaking Red Rock Canyon views, and prime Summerlin West location. The community provides privacy, exclusivity, and access to top-rated schools, championship golf courses, and premium shopping at Downtown Summerlin."
       },
       {
-        question: "What seller services does Dr. Duffy offer?",
-        answer: "Dr. Duffy provides sellers with professional pricing strategies, comprehensive market analysis, professional photography and staging guidance, targeted marketing campaigns, extensive network access, and expert negotiation to maximize sale price and minimize time on market."
+        question: "What makes Summerlin West luxury real estate special?",
+        answer: "Summerlin West is Las Vegas's most desirable neighborhood, featuring guard-gated communities, custom-built luxury homes, Red Rock Canyon access, and world-class amenities. The 89135 ZIP code has a median household income of $128,500 and 91% homeownership rate, making it ideal for luxury real estate investment."
       },
       {
-        question: "Does Dr. Duffy provide market analysis and pricing services?",
-        answer: "Yes, Dr. Duffy offers detailed Comparative Market Analysis (CMA) reports, current market trend analysis, pricing strategies for optimal results, and investment opportunity assessments. Her 15+ years of experience in Arcadia Homes Las Vegas provides unparalleled market insights."
+        question: "How long has Dr. Jan Duffy specialized in Arcadia Homes Las Vegas?",
+        answer: "Dr. Jan Duffy has been specializing exclusively in Arcadia Homes Las Vegas since 2008, making her the most experienced realtor in this community. With over 200 properties sold and $180M+ in sales volume, she is your trusted partner for luxury real estate in this exclusive guard-gated community."
       },
       {
-        question: "What makes Dr. Duffy's realtor services unique?",
-        answer: "Dr. Duffy is the only realtor exclusively focused on Arcadia Homes Las Vegas, providing hyper-local expertise, access to off-market properties, relationships with custom builders, guard-gate community insights, and Red Rock Canyon view assessments. Her service-focused approach ensures every client receives personalized attention."
+        question: "What types of luxury homes are available in Arcadia Homes Las Vegas?",
+        answer: "Arcadia Homes Las Vegas features custom-built luxury homes ranging from 3,200 to 8,000 square feet, with 4-6 bedrooms and 3-6 bathrooms. Homes include premium features like wine cellars, home theaters, outdoor kitchens, guest casitas, and Red Rock Canyon views. Prices typically range from $2M to $4M."
       },
       {
-        question: "How does Dr. Duffy handle the transaction process?",
-        answer: "Dr. Duffy manages every aspect of the transaction including contract preparation and review, coordination with lenders and inspectors, timeline management, problem-solving throughout the process, and ensuring a smooth closing. Her attention to detail and experience prevent common transaction pitfalls."
+        question: "Why is Arcadia Homes Las Vegas considered exclusive?",
+        answer: "Arcadia Homes Las Vegas is exclusive due to its 24/7 guard-gated security, limited inventory of only 95 custom homes, strict architectural guidelines, prime Summerlin West location, and Red Rock Canyon views. The community offers privacy, luxury, and a close-knit neighborhood atmosphere that attracts discerning buyers."
       }
     ];
 
@@ -415,65 +415,65 @@ export default function About() {
         <div className="container-max">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-display font-bold text-gray-900 mb-6">
-              Frequently Asked Questions About Dr. Jan Duffy
+              Frequently Asked Questions About Arcadia Homes Las Vegas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Common questions about working with Dr. Duffy and her expertise in Arcadia Homes Las Vegas
+              Common questions about this exclusive guard-gated community in Summerlin West and luxury real estate
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                What realtor services does Dr. Jan Duffy provide?
+                What is Arcadia Homes Las Vegas?
               </h3>
               <p className="text-gray-600">
-                Dr. Jan Duffy provides comprehensive real estate services including buyer representation, seller representation, market analysis, property valuation, negotiation, transaction management, and post-closing support. She specializes exclusively in Arcadia Homes Las Vegas luxury properties.
+                Arcadia Homes Las Vegas is an exclusive guard-gated luxury community in Summerlin West, featuring approximately 95 custom-built homes ranging from $2M to $4M. This prestigious community offers 24/7 security, stunning Red Rock Canyon views, and proximity to world-class amenities. Dr. Jan Duffy has been specializing in this community since 2008.
               </p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                How does Dr. Duffy help buyers find their dream home?
+                Why choose Arcadia Homes Las Vegas for luxury real estate?
               </h3>
               <p className="text-gray-600">
-                Dr. Duffy offers personalized buyer services including access to off-market properties, pre-market previews, comprehensive property analysis, negotiation expertise, and guidance through the entire purchase process. Her exclusive focus on Arcadia Homes Las Vegas means she knows every property and can match buyers with their perfect home.
+                Arcadia Homes Las Vegas offers the perfect combination of guard-gated security, custom luxury homes (3,200-8,000 sq ft), breathtaking Red Rock Canyon views, and prime Summerlin West location. The community provides privacy, exclusivity, and access to top-rated schools, championship golf courses, and premium shopping at Downtown Summerlin.
               </p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                What seller services does Dr. Duffy offer?
+                What makes Summerlin West luxury real estate special?
               </h3>
               <p className="text-gray-600">
-                Dr. Duffy provides sellers with professional pricing strategies, comprehensive market analysis, professional photography and staging guidance, targeted marketing campaigns, extensive network access, and expert negotiation to maximize sale price and minimize time on market.
+                Summerlin West is Las Vegas's most desirable neighborhood, featuring guard-gated communities, custom-built luxury homes, Red Rock Canyon access, and world-class amenities. The 89135 ZIP code has a median household income of $128,500 and 91% homeownership rate, making it ideal for luxury real estate investment.
               </p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                Does Dr. Duffy provide market analysis and pricing services?
+                How long has Dr. Jan Duffy specialized in Arcadia Homes Las Vegas?
               </h3>
               <p className="text-gray-600">
-                Yes, Dr. Duffy offers detailed Comparative Market Analysis (CMA) reports, current market trend analysis, pricing strategies for optimal results, and investment opportunity assessments. Her 15+ years of experience in Arcadia Homes Las Vegas provides unparalleled market insights.
+                Dr. Jan Duffy has been specializing exclusively in Arcadia Homes Las Vegas since 2008, making her the most experienced realtor in this community. With over 200 properties sold and $180M+ in sales volume, she is your trusted partner for luxury real estate in this exclusive guard-gated community.
               </p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                What makes Dr. Duffy's realtor services unique?
+                What types of luxury homes are available in Arcadia Homes Las Vegas?
               </h3>
               <p className="text-gray-600">
-                Dr. Duffy is the only realtor exclusively focused on Arcadia Homes Las Vegas, providing hyper-local expertise, access to off-market properties, relationships with custom builders, guard-gate community insights, and Red Rock Canyon view assessments. Her service-focused approach ensures every client receives personalized attention.
+                Arcadia Homes Las Vegas features custom-built luxury homes ranging from 3,200 to 8,000 square feet, with 4-6 bedrooms and 3-6 bathrooms. Homes include premium features like wine cellars, home theaters, outdoor kitchens, guest casitas, and Red Rock Canyon views. Prices typically range from $2M to $4M.
               </p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                How does Dr. Duffy handle the transaction process?
+                Why is Arcadia Homes Las Vegas considered exclusive?
               </h3>
               <p className="text-gray-600">
-                Dr. Duffy manages every aspect of the transaction including contract preparation and review, coordination with lenders and inspectors, timeline management, problem-solving throughout the process, and ensuring a smooth closing. Her attention to detail and experience prevent common transaction pitfalls.
+                Arcadia Homes Las Vegas is exclusive due to its 24/7 guard-gated security, limited inventory of only 95 custom homes, strict architectural guidelines, prime Summerlin West location, and Red Rock Canyon views. The community offers privacy, luxury, and a close-knit neighborhood atmosphere that attracts discerning buyers.
               </p>
             </div>
           </div>
