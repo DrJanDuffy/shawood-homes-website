@@ -1,47 +1,82 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
+import fs from "fs";
+import path from "path";
 import { storage } from "./storage";
 import { insertLeadSchema, insertPropertySchema, insertMarketDataSchema } from "@shared/schema";
 import { crmIntegration } from "./crm-integration";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // SEO Routes
+  // SEO Routes - Serve sitemap.xml
   app.get("/sitemap.xml", (req, res) => {
-    res.set('Content-Type', 'text/xml');
-    res.send(`<?xml version="1.0" encoding="UTF-8"?>
+    const sitemapPath = path.resolve(
+      import.meta.dirname,
+      "..",
+      "client",
+      "public",
+      "sitemap.xml"
+    );
+    
+    // In production, try dist/public first
+    const prodSitemapPath = path.resolve(
+      import.meta.dirname,
+      "..",
+      "dist",
+      "public",
+      "sitemap.xml"
+    );
+    
+    const filePath = fs.existsSync(prodSitemapPath) ? prodSitemapPath : sitemapPath;
+    
+    if (fs.existsSync(filePath)) {
+      res.set('Content-Type', 'application/xml');
+      res.sendFile(filePath);
+    } else {
+      // Fallback to inline sitemap if file doesn't exist
+      res.set('Content-Type', 'application/xml');
+      res.send(`<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://arcadiahomeslasvegas.com/</loc>
-    <lastmod>2025-01-28</lastmod>
+    <loc>https://www.arcadiahomeslasvegas.com/</loc>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://arcadiahomeslasvegas.com/homes</loc>
-    <lastmod>2025-01-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://arcadiahomeslasvegas.com/about</loc>
-    <lastmod>2025-01-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://arcadiahomeslasvegas.com/home-value</loc>
-    <lastmod>2025-01-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
 </urlset>`);
+    }
   });
 
+  // SEO Routes - Serve robots.txt
   app.get("/robots.txt", (req, res) => {
-    res.set('Content-Type', 'text/plain');
-    res.send(`User-agent: *
+    const robotsPath = path.resolve(
+      import.meta.dirname,
+      "..",
+      "client",
+      "public",
+      "robots.txt"
+    );
+    
+    // In production, try dist/public first
+    const prodRobotsPath = path.resolve(
+      import.meta.dirname,
+      "..",
+      "dist",
+      "public",
+      "robots.txt"
+    );
+    
+    const filePath = fs.existsSync(prodRobotsPath) ? prodRobotsPath : robotsPath;
+    
+    if (fs.existsSync(filePath)) {
+      res.set('Content-Type', 'text/plain');
+      res.sendFile(filePath);
+    } else {
+      // Fallback to inline robots.txt if file doesn't exist
+      res.set('Content-Type', 'text/plain');
+      res.send(`User-agent: *
 Allow: /
-Sitemap: https://arcadiahomeslasvegas.com/sitemap.xml`);
+Sitemap: https://www.arcadiahomeslasvegas.com/sitemap.xml`);
+    }
   });
 
   // Properties
