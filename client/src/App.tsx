@@ -25,6 +25,9 @@ import HomeValue from "@/pages/home-value";
 import PropertyAlerts from "@/pages/property-alerts";
 import MortgageCalculator from "@/pages/mortgage-calculator";
 import MarketPredictions from "@/pages/market-predictions";
+import BuyingGuide from "@/pages/buying-guide";
+import SellingGuide from "@/pages/selling-guide";
+import Resources from "@/pages/resources";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -48,6 +51,9 @@ function Router() {
       <Route path="/property-alerts" component={PropertyAlerts} />
       <Route path="/mortgage-calculator" component={MortgageCalculator} />
       <Route path="/market-predictions" component={MarketPredictions} />
+      <Route path="/buying-guide" component={BuyingGuide} />
+      <Route path="/selling-guide" component={SellingGuide} />
+      <Route path="/resources" component={Resources} />
       <Route component={NotFound} />
     </Switch>
   );
