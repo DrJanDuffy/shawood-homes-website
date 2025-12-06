@@ -152,7 +152,7 @@
     <priority>0.6</priority>
   </url>
   
-  <!-- Investment & Legal -->
+  <!-- Investment & Services -->
   <url>
     <loc>https://www.arcadiahomeslasvegas.com/investment</loc>
     <lastmod>2025-12-06</lastmod>
@@ -160,6 +160,21 @@
     <priority>0.7</priority>
   </url>
   
+  <url>
+    <loc>https://www.arcadiahomeslasvegas.com/virtual-tours</loc>
+    <lastmod>2025-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.arcadiahomeslasvegas.com/relocation</loc>
+    <lastmod>2025-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Legal -->
   <url>
     <loc>https://www.arcadiahomeslasvegas.com/privacy-policy</loc>
     <lastmod>2025-12-06</lastmod>

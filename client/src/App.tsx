@@ -29,6 +29,8 @@ import BuyingGuide from "@/pages/buying-guide";
 import SellingGuide from "@/pages/selling-guide";
 import Resources from "@/pages/resources";
 import Investment from "@/pages/investment";
+import VirtualTours from "@/pages/virtual-tours";
+import Relocation from "@/pages/relocation";
 import PrivacyPolicy from "@/pages/privacy-policy";
 import TermsOfService from "@/pages/terms-of-service";
 import NotFound from "@/pages/not-found";
@@ -58,6 +60,8 @@ function Router() {
       <Route path="/selling-guide" component={SellingGuide} />
       <Route path="/resources" component={Resources} />
       <Route path="/investment" component={Investment} />
+      <Route path="/virtual-tours" component={VirtualTours} />
+      <Route path="/relocation" component={Relocation} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-of-service" component={TermsOfService} />
       <Route component={NotFound} />
