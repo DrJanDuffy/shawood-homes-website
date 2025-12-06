@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, Calendar } from "lucide-reac
 import { ContactForm } from "@/components/ContactForm";
 import { useMetaTags } from "@/hooks/useMetaTags";
 import { addSchemaMarkup, generateFAQSchema } from "@/lib/seo";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export default function Contact() {
   useMetaTags({
@@ -54,6 +55,7 @@ export default function Contact() {
 
   return (
     <div className="pt-20">
+      <Breadcrumbs items={[{ name: "Contact", url: "/contact" }]} />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
         <div className="container-max">

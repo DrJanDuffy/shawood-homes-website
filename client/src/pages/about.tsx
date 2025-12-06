@@ -3,6 +3,7 @@ import { Award, Star, Home, Users, Phone, Mail, Calendar, MapPin } from "lucide-
 import { imageUrls } from "@/lib/imageUrls";
 import { useMetaTags } from "@/hooks/useMetaTags";
 import { addSchemaMarkup } from "@/lib/seo";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export default function About() {
   // SEO Meta Tags
@@ -53,6 +54,7 @@ export default function About() {
   }, []);
   return (
     <div className="pt-20">
+      <Breadcrumbs items={[{ name: "About", url: "/about" }]} />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
         <div className="container-max">

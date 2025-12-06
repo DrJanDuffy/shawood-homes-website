@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ContactForm } from "@/components/ContactForm";
 import { useMetaTags } from "@/hooks/useMetaTags";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export default function HomeDetails() {
   const { id } = useParams();
@@ -150,13 +151,10 @@ export default function HomeDetails() {
 
   return (
     <div className="pt-20">
-      {/* Back Button */}
-      <div className="container-max py-4">
-        <Link href="/homes" className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors">
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to All Homes</span>
-        </Link>
-      </div>
+      <Breadcrumbs items={[
+        { name: "Available Homes", url: "/homes" },
+        { name: property?.address || "Property Details", url: `/homes/${id}` }
+      ]} />
 
       {/* Property Images */}
       <section className="pb-8">

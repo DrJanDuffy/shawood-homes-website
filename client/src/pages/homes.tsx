@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useMetaTags } from "@/hooks/useMetaTags";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export default function Homes() {
   // SEO Meta Tags
@@ -39,6 +40,7 @@ export default function Homes() {
 
   return (
     <div className="pt-20">
+      <Breadcrumbs items={[{ name: "Available Homes", url: "/homes" }]} />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
         <div className="container-max">
