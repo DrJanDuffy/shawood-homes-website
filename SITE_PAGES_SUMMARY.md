@@ -2,7 +2,7 @@
 ## Arcadia Homes Las Vegas Website
 
 **Date:** December 6, 2025  
-**Total Pages:** 23 pages
+**Total Pages:** 25 pages
 
 ---
 
@@ -52,8 +52,25 @@
    - Quick tools and calculators
    - WebPage schema
 
+7. **Virtual Tours** (`/virtual-tours`) ⭐ NEW
+   - 3D Matterport tours
+   - Drone footage
+   - Live virtual showings
+   - Benefits of virtual tours
+   - FAQ section
+   - Service schema
+
+8. **Relocation Guide** (`/relocation`) ⭐ NEW
+   - Complete relocation assistance
+   - Area orientation
+   - School information
+   - Service provider referrals
+   - Relocation process steps
+   - FAQ section
+   - Article schema
+
 ### 🏘️ Community & Location
-7. **Community** (`/community`)
+9. **Community** (`/community`)
    - Guard-gated community information
    - HOA details
    - Community features
@@ -61,20 +78,20 @@
    - FAQ section
    - ResidentialComplex schema
 
-8. **Neighborhood** (`/neighborhood`)
-   - Summerlin West demographics
-   - Area statistics
-   - Lifestyle information
-   - Place schema
+10. **Neighborhood** (`/neighborhood`)
+    - Summerlin West demographics
+    - Area statistics
+    - Lifestyle information
+    - Place schema
 
-9. **Lifestyle** (`/lifestyle`)
-   - Outdoor adventures
-   - Golf courses
-   - Shopping and dining
-   - Entertainment options
-   - WebPage schema
+11. **Lifestyle** (`/lifestyle`)
+    - Outdoor adventures
+    - Golf courses
+    - Shopping and dining
+    - Entertainment options
+    - WebPage schema
 
-10. **Amenities** (`/amenities`)
+12. **Amenities** (`/amenities`)
     - Shopping centers
     - Restaurants
     - Recreation facilities
@@ -82,7 +99,7 @@
     - FAQ section
     - ItemList schema with LocalBusiness items
 
-11. **Schools** (`/schools`)
+13. **Schools** (`/schools`)
     - Elementary schools
     - Middle schools
     - High schools
@@ -90,14 +107,14 @@
     - ItemList schema with EducationalOrganization items
 
 ### 🏡 Property Information
-12. **Floor Plans** (`/floor-plans`)
+14. **Floor Plans** (`/floor-plans`)
     - Custom floor plan options
     - Square footage ranges
     - Bedroom/bathroom counts
     - Customization options
     - ItemList schema with Product items
 
-13. **Gallery** (`/gallery`)
+15. **Gallery** (`/gallery`)
     - Home exteriors
     - Luxury interiors
     - Red Rock Canyon views
@@ -105,21 +122,21 @@
     - ImageGallery schema
 
 ### 📊 Market & Tools
-14. **Market Report** (`/market-report`)
+16. **Market Report** (`/market-report`)
     - Current market trends
     - Price statistics
     - Inventory data
     - Market analysis
     - Article schema
 
-15. **Market Predictions** (`/market-predictions`)
+17. **Market Predictions** (`/market-predictions`)
     - 2025-2027 forecasts
     - Price appreciation predictions
     - Inventory trends
     - Investment outlook
     - Article schema
 
-16. **Investment** (`/investment`) ⭐ NEW
+18. **Investment** (`/investment`) ⭐ NEW
     - ROI analysis
     - Investment benefits
     - Market metrics
@@ -127,39 +144,39 @@
     - FAQ section
     - Article schema
 
-17. **Home Value** (`/home-value`)
+19. **Home Value** (`/home-value`)
     - Free home valuation
     - RealScout widget
     - Market analysis request
     - Service schema
 
-18. **Property Alerts** (`/property-alerts`)
+20. **Property Alerts** (`/property-alerts`)
     - Custom property alerts
     - RealScout advanced search
     - Off-market notifications
     - Service schema
 
-19. **Mortgage Calculator** (`/mortgage-calculator`)
+21. **Mortgage Calculator** (`/mortgage-calculator`)
     - Jumbo loan calculator
     - Monthly payment calculations
     - Homebot widget integration
     - WebApplication schema
 
 ### 👤 About & Contact
-20. **About Dr. Duffy** (`/about`)
+22. **About Dr. Duffy** (`/about`)
     - Professional background
     - Credentials and awards
     - Experience and expertise
     - FAQ section
     - Person schema
 
-21. **Testimonials** (`/testimonials`)
+23. **Testimonials** (`/testimonials`)
     - Client reviews
     - Success stories
     - Statistics
     - AggregateRating schema
 
-22. **Contact** (`/contact`)
+24. **Contact** (`/contact`)
     - Contact form
     - Office information
     - Map location
@@ -167,14 +184,14 @@
     - FAQPage schema
 
 ### ⚖️ Legal Pages
-23. **Privacy Policy** (`/privacy-policy`) ⭐ NEW
+25. **Privacy Policy** (`/privacy-policy`) ⭐ NEW
     - Information collection
     - Data usage
     - User rights
     - Contact information
     - Noindex (legal page)
 
-24. **Terms of Service** (`/terms-of-service`) ⭐ NEW
+26. **Terms of Service** (`/terms-of-service`) ⭐ NEW
     - Use license
     - Service terms
     - Liability limitations
@@ -187,7 +204,7 @@
 
 ### By Purpose
 - **Property Listings:** 2 pages (Homes, Home Details)
-- **Guides & Education:** 3 pages (Buying Guide, Selling Guide, Resources)
+- **Guides & Education:** 5 pages (Buying Guide, Selling Guide, Resources, Virtual Tours, Relocation)
 - **Community Information:** 5 pages (Community, Neighborhood, Lifestyle, Amenities, Schools)
 - **Property Information:** 2 pages (Floor Plans, Gallery)
 - **Market Data:** 3 pages (Market Report, Market Predictions, Investment)
@@ -302,7 +319,7 @@
 
 ## Summary
 
-The site now includes **23 comprehensive pages** covering:
+The site now includes **25 comprehensive pages** covering:
 - ✅ Property listings and details
 - ✅ Complete buying and selling guides
 - ✅ Market analysis and investment information
